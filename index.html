@@ -613,25 +613,41 @@
 
     <script>
         function showPage(pageId) {
+            const targetPage = document.getElementById(pageId);
+            
+            // Safety check: Only proceed if the section actually exists
+            if (!targetPage) {
+                console.error("Oops! Could not find a section with the ID: " + pageId);
+                return; 
+            }
+
+            // Hide all pages
             document.querySelectorAll('.page-view').forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            document.getElementById('dropdown').classList.remove('active'); // Close dropdown on click
+            // Show the requested page
+            targetPage.classList.add('active');
+            
+            // Close dropdown securely
+            const dropdown = document.getElementById('dropdown');
+            if (dropdown) dropdown.classList.remove('active');
+            
+            // Scroll to the top of the newly opened page
             window.scrollTo(0, 0);
         }
 
         function toggleDropdown() {
-            document.getElementById('dropdown').classList.toggle('active');
+            const dropdown = document.getElementById('dropdown');
+            if (dropdown) dropdown.classList.toggle('active');
         }
 
         function selectTeam(teamId) {
             showPage(teamId);
         }
 
-        // Close dropdown when clicking outside
+        // Close dropdown when clicking anywhere else on the screen
         window.onclick = function(event) {
             if (!event.target.matches('button') && !event.target.closest('button')) {
-                var dropdowns = document.getElementsByClassName("dropdown-menu");
-                for (var i = 0; i < dropdowns.length; i++) {
+                const dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
                     dropdowns[i].classList.remove('active');
                 }
             }
