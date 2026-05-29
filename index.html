@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Sefton Borough FC | Club Portal</title>
+    <title>South Sefton Borough FC | Official Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -27,7 +27,7 @@
         .dropdown-menu.active { display: block; }
     </style>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
+<body class="bg-gray-100 font-sans text-gray-800 flex flex-col min-h-screen">
 
     <!-- NAVIGATION BAR -->
     <nav class="bg-boroughNavy text-white sticky top-0 z-50 shadow-md">
@@ -46,11 +46,11 @@
                         <button onclick="toggleDropdown()" class="flex items-center gap-1 hover:text-boroughGold transition focus:text-boroughGold">
                             Teams <i class="fa-solid fa-chevron-down text-xs"></i>
                         </button>
-                        <div id="dropdown" class="dropdown-menu absolute right-0 mt-3 w-48 bg-white text-boroughNavy rounded shadow-xl py-2 z-50 border-t-4 border-boroughGold">
-                            <button onclick="selectTeam('under-7')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Under 7</button>
-                            <button onclick="selectTeam('under-9')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Under 9</button>
-                            <button onclick="selectTeam('under-11')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Under 11</button>
-                            <button onclick="selectTeam('under-14')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Under 14</button>
+                        <div id="dropdown" class="dropdown-menu absolute right-0 mt-3 w-64 bg-white text-boroughNavy rounded shadow-xl py-2 z-50 border-t-4 border-boroughGold">
+                            <button onclick="selectTeam('under-7')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">South Sefton U7</button>
+                            <button onclick="selectTeam('under-9')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">South Sefton U9</button>
+                            <button onclick="selectTeam('under-11')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">South Sefton Tornadoes U11</button>
+                            <button onclick="selectTeam('under-14')" class="block w-full text-left px-4 py-2 hover:bg-gray-100">South Sefton U14</button>
                         </div>
                     </div>
                 </div>
@@ -58,103 +58,270 @@
         </div>
     </nav>
 
-    <div id="main-content" class="min-h-screen">
+    <div id="main-content" class="flex-grow">
         
-        <!-- HOME PAGE -->
-        <section id="home" class="page-view active max-w-7xl mx-auto px-4 py-16">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl font-black uppercase text-boroughNavy mb-4">Club Portal</h1>
-                <p class="text-gray-600">Select a team from the top menu or below to view fixtures, results, and standings.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div onclick="showPage('under-7')" class="cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-b-8 border-boroughGold hover:shadow-2xl transition group text-center">
-                    <h2 class="text-2xl font-black text-boroughNavy mb-2 group-hover:text-boroughSky">Under 7</h2>
+        <!-- ORIGINAL HOME PAGE FORMAT -->
+        <div id="home" class="page-view active">
+            <!-- HERO SECTION -->
+            <header class="relative bg-boroughSky text-white py-32 px-4 text-center overflow-hidden">
+                <!-- Overlay graphic for texture -->
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="relative max-w-4xl mx-auto z-10">
+                    <span class="bg-boroughGold text-boroughNavy px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Est. 2024</span>
+                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight mt-4 mb-6">
+                        Our Borough. <br class="sm:hidden"><span class="text-boroughGold">Our Club.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 font-light">
+                        Welcome to the official home of South Sefton Borough Football Club. Driven by community, passion, and local pride.
+                    </p>
                 </div>
-                <div onclick="showPage('under-9')" class="cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-b-8 border-boroughSky hover:shadow-2xl transition group text-center">
-                    <h2 class="text-2xl font-black text-boroughNavy mb-2 group-hover:text-boroughSky">Under 9</h2>
-                </div>
-                <div onclick="showPage('under-11')" class="cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-b-8 border-boroughGold hover:shadow-2xl transition group text-center">
-                    <h2 class="text-2xl font-black text-boroughNavy mb-2 group-hover:text-boroughSky">Under 11</h2>
-                </div>
-                <div onclick="showPage('under-14')" class="cursor-pointer bg-white p-8 rounded-2xl shadow-lg border-b-8 border-boroughSky hover:shadow-2xl transition group text-center">
-                    <h2 class="text-2xl font-black text-boroughNavy mb-2 group-hover:text-boroughSky">Under 14</h2>
-                </div>
-            </div>
-        </section>
+            </header>
 
-        <!-- TEAM TEMPLATE (YOUTH TEAMS) -->
+            <!-- LATEST NEWS SECTION -->
+            <section class="bg-gray-50 py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-black text-boroughNavy uppercase border-l-4 border-boroughGold pl-3 mb-8">Latest News</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Article 1 -->
+                        <div class="bg-white rounded-lg shadow overflow-hidden group">
+                            <div class="h-48 bg-boroughSky flex items-center justify-center text-white text-4xl">
+                                <i class="fa-solid fa-newspaper opacity-40 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-boroughGold uppercase">Club Update</span>
+                                <h3 class="font-bold text-xl my-2 text-boroughNavy group-hover:text-boroughSky transition">Borough Secure New Main Shirt Sponsor</h3>
+                                <p class="text-gray-600 text-sm line-clamp-3">South Sefton Borough is delighted to announce a brand new partnership with local business Sefton Logistics for the upcoming season...</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="bg-white rounded-lg shadow overflow-hidden group">
+                            <div class="h-48 bg-boroughNavy flex items-center justify-center text-white text-4xl">
+                                <i class="fa-solid fa-users opacity-40 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-boroughGold uppercase">Match Report</span>
+                                <h3 class="font-bold text-xl my-2 text-boroughNavy group-hover:text-boroughSky transition">Strong Performances Across Youth Squads</h3>
+                                <p class="text-gray-600 text-sm line-clamp-3">It was a brilliant weekend of football for the academy teams, with the Under 11s securing a hard-fought away victory...</p>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="bg-white rounded-lg shadow overflow-hidden group">
+                            <div class="h-48 bg-boroughSky flex items-center justify-center text-white text-4xl">
+                                <i class="fa-solid fa-shuttle-space opacity-40 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-boroughGold uppercase">Community</span>
+                                <h3 class="font-bold text-xl my-2 text-boroughNavy group-hover:text-boroughSky transition">Youth Academy Trials Announced</h3>
+                                <p class="text-gray-600 text-sm line-clamp-3">Are you the next South Sefton star? Open trials for our junior squads are taking place next month. Register today...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT / CLUB INFO -->
+            <section class="bg-boroughNavy text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-black uppercase text-boroughGold mb-4">Get In Touch</h2>
+                        <p class="text-gray-400 mb-6">Want to trial for the academy, inquire about sponsorship, or just get directions to our next home match? Drop us a message!</p>
+                        <div class="space-y-4 text-sm text-gray-300">
+                            <p><i class="fa-solid fa-location-dot text-boroughGold mr-2 w-5"></i> Sefton Sports Ground, L30 2BB</p>
+                            <p><i class="fa-solid fa-envelope text-boroughGold mr-2 w-5"></i> info@southseftonboroughfc.co.uk</p>
+                            <p><i class="fa-solid fa-phone text-boroughGold mr-2 w-5"></i> 0151 555 0199</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Basic Contact Form -->
+                    <form class="space-y-4 text-gray-900">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="p-3 rounded focus:outline-boroughGold w-full">
+                            <input type="email" placeholder="Your Email" class="p-3 rounded focus:outline-boroughGold w-full">
+                        </div>
+                        <textarea placeholder="Your Message..." rows="4" class="p-3 rounded focus:outline-boroughGold w-full"></textarea>
+                        <button type="button" class="bg-boroughGold text-boroughNavy font-black uppercase tracking-wider text-xs px-6 py-3 rounded shadow hover:bg-white w-full transition">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- TEAM TEMPLATE: UNDER 7 -->
         <section id="under-7" class="page-view max-w-7xl mx-auto px-4 py-12">
             <div class="mb-8 border-l-4 border-boroughGold pl-4">
-                <h2 class="text-4xl font-black text-boroughNavy uppercase">Under 7 Dashboard</h2>
+                <h2 class="text-4xl font-black text-boroughNavy uppercase">South Sefton U7</h2>
             </div>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 space-y-8">
+                    <!-- Last Result Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughNavy">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-boroughGold"></i> Last Result</h3>
+                        <div class="flex items-center justify-between text-center bg-gray-50 rounded p-4 border border-gray-100">
+                            <div class="w-1/3">
+                                <p class="font-bold text-gray-600 text-sm sm:text-base">Opponent FC</p>
+                            </div>
+                            <div class="w-1/3 flex justify-center items-center gap-2">
+                                <span class="text-2xl font-black text-gray-600">0</span>
+                                <span class="text-sm font-bold text-gray-400">-</span>
+                                <span class="text-2xl font-black text-boroughNavy">0</span>
+                            </div>
+                            <div class="w-1/3">
+                                <p class="font-bold text-boroughNavy text-sm sm:text-base">Borough U7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="bg-white p-6 rounded-xl shadow">
                         <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-calendar-days text-boroughGold"></i> Upcoming Fixtures</h3>
                         <p class="text-gray-400 text-sm italic">Edit fixtures here.</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow">
-                    <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
-                    <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
+                        <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- TEAM TEMPLATE: UNDER 9 -->
         <section id="under-9" class="page-view max-w-7xl mx-auto px-4 py-12">
             <div class="mb-8 border-l-4 border-boroughGold pl-4">
-                <h2 class="text-4xl font-black text-boroughNavy uppercase">Under 9 Dashboard</h2>
+                <h2 class="text-4xl font-black text-boroughNavy uppercase">South Sefton U9</h2>
             </div>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 space-y-8">
+                    <!-- Last Result Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughNavy">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-boroughGold"></i> Last Result</h3>
+                        <div class="flex items-center justify-between text-center bg-gray-50 rounded p-4 border border-gray-100">
+                            <div class="w-1/3">
+                                <p class="font-bold text-gray-600 text-sm sm:text-base">Opponent FC</p>
+                            </div>
+                            <div class="w-1/3 flex justify-center items-center gap-2">
+                                <span class="text-2xl font-black text-gray-600">0</span>
+                                <span class="text-sm font-bold text-gray-400">-</span>
+                                <span class="text-2xl font-black text-boroughNavy">0</span>
+                            </div>
+                            <div class="w-1/3">
+                                <p class="font-bold text-boroughNavy text-sm sm:text-base">Borough U9</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="bg-white p-6 rounded-xl shadow">
                         <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-calendar-days text-boroughGold"></i> Upcoming Fixtures</h3>
                         <p class="text-gray-400 text-sm italic">Edit fixtures here.</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow">
-                    <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
-                    <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
+                        <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- TEAM TEMPLATE: UNDER 11 (TORNADOES) -->
         <section id="under-11" class="page-view max-w-7xl mx-auto px-4 py-12">
             <div class="mb-8 border-l-4 border-boroughGold pl-4">
-                <h2 class="text-4xl font-black text-boroughNavy uppercase">Under 11 Dashboard</h2>
+                <h2 class="text-4xl font-black text-boroughNavy uppercase">The South Sefton Tornadoes U11</h2>
             </div>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 space-y-8">
+                    <!-- Last Result Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughNavy">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-boroughGold"></i> Last Result</h3>
+                        <div class="flex items-center justify-between text-center bg-gray-50 rounded p-4 border border-gray-100">
+                            <div class="w-1/3">
+                                <p class="font-bold text-gray-600 text-sm sm:text-base">Opponent FC</p>
+                            </div>
+                            <div class="w-1/3 flex justify-center items-center gap-2">
+                                <span class="text-2xl font-black text-gray-600">0</span>
+                                <span class="text-sm font-bold text-gray-400">-</span>
+                                <span class="text-2xl font-black text-boroughNavy">0</span>
+                            </div>
+                            <div class="w-1/3">
+                                <p class="font-bold text-boroughNavy text-sm sm:text-base">Tornadoes U11</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="bg-white p-6 rounded-xl shadow">
                         <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-calendar-days text-boroughGold"></i> Upcoming Fixtures</h3>
                         <p class="text-gray-400 text-sm italic">Edit fixtures here.</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow">
-                    <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
-                    <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                <div class="space-y-8">
+                    <!-- Sponsor Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughGold text-center flex flex-col items-center justify-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Official Team Sponsor</span>
+                        <img src="Screenshot 2026-05-29 4.59.10 PM.png" alt="Squires & Beaumont Sponsor" class="max-h-28 w-auto object-contain">
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
+                        <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- TEAM TEMPLATE: UNDER 14 -->
         <section id="under-14" class="page-view max-w-7xl mx-auto px-4 py-12">
             <div class="mb-8 border-l-4 border-boroughGold pl-4">
-                <h2 class="text-4xl font-black text-boroughNavy uppercase">Under 14 Dashboard</h2>
+                <h2 class="text-4xl font-black text-boroughNavy uppercase">South Sefton U14</h2>
             </div>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 space-y-8">
+                    <!-- Last Result Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughNavy">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-boroughGold"></i> Last Result</h3>
+                        <div class="flex items-center justify-between text-center bg-gray-50 rounded p-4 border border-gray-100">
+                            <div class="w-1/3">
+                                <p class="font-bold text-gray-600 text-sm sm:text-base">Opponent FC</p>
+                            </div>
+                            <div class="w-1/3 flex justify-center items-center gap-2">
+                                <span class="text-2xl font-black text-gray-600">0</span>
+                                <span class="text-sm font-bold text-gray-400">-</span>
+                                <span class="text-2xl font-black text-boroughNavy">0</span>
+                            </div>
+                            <div class="w-1/3">
+                                <p class="font-bold text-boroughNavy text-sm sm:text-base">Borough U14</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="bg-white p-6 rounded-xl shadow">
                         <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-calendar-days text-boroughGold"></i> Upcoming Fixtures</h3>
                         <p class="text-gray-400 text-sm italic">Edit fixtures here.</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow">
-                    <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
-                    <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-black text-boroughSky uppercase mb-4 flex items-center gap-2"><i class="fa-solid fa-table text-boroughGold"></i> League Table</h3>
+                        <p class="text-gray-400 text-sm italic">Edit league table here.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
     </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-500 text-xs py-8 text-center border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 South Sefton Borough FC. All Rights Reserved.</p>
+            <div class="flex gap-4 text-lg">
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function showPage(pageId) {
@@ -174,7 +341,7 @@
 
         // Close dropdown when clicking outside
         window.onclick = function(event) {
-            if (!event.target.matches('button')) {
+            if (!event.target.matches('button') && !event.target.closest('button')) {
                 var dropdowns = document.getElementsByClassName("dropdown-menu");
                 for (var i = 0; i < dropdowns.length; i++) {
                     dropdowns[i].classList.remove('active');
