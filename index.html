@@ -64,16 +64,14 @@
         <div id="home" class="page-view active">
             <!-- HERO SECTION -->
             <header class="relative text-white py-32 px-4 text-center overflow-hidden bg-cover bg-center" style="background-image: url('IMG-20260529-WA0001.jpg');">
-                <!-- Color overlay so the text is readable -->
-                <div class="absolute inset-0 bg-boroughBlue opacity-80"></div>
                 <!-- Overlay graphic for texture -->
                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 <div class="relative max-w-4xl mx-auto z-10">
-                    <span class="bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Est. 2001</span>
-                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight mt-4 mb-6">
-                        South Sefton <br class="sm:hidden"><span class="text-boroughYellow">Football Club</span>
+                    <span class="bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow">Est. 2001</span>
+                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight mt-4 mb-6 drop-shadow-2xl">
+                        South Sefton <br class="sm:hidden"><span class="text-boroughYellow drop-shadow-2xl">Football Club</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 font-light shadow-sm">
+                    <p class="text-lg md:text-xl text-white font-semibold max-w-2xl mx-auto mb-8 drop-shadow-lg">
                         Welcome to the official home of South Sefton Football Club. Driven by community, passion, and local pride.
                     </p>
                 </div>
@@ -637,7 +635,7 @@
     </footer>
 
     <script>
-        function showPage(pageId) {
+        function showPage(pageId, addToHistory = true) {
             const targetPage = document.getElementById(pageId);
             
             // Safety check: Only proceed if the section actually exists
@@ -657,7 +655,41 @@
             
             // Scroll to the top of the newly opened page
             window.scrollTo(0, 0);
+
+            // Update the browser's URL and history so the back button works
+            if (addToHistory) {
+                history.pushState({ pageId: pageId }, '', '#' + pageId);
+            }
         }
+
+        // Listen for the user pressing the browser's Back or Forward buttons
+        window.addEventListener('popstate', function(event) {
+            let pageId = 'home'; // Default to home
+            
+            // Check if there is history state or a hash in the URL
+            if (event.state && event.state.pageId) {
+                pageId = event.state.pageId;
+            } else if (window.location.hash) {
+                pageId = window.location.hash.substring(1);
+            }
+            
+            // Show the page but tell it NOT to add to history again
+            showPage(pageId, false);
+        });
+
+        // Run when the page first loads (handles people clicking direct links to specific sections)
+        window.addEventListener('DOMContentLoaded', function() {
+            let pageId = 'home';
+            if (window.location.hash) {
+                const hashId = window.location.hash.substring(1);
+                if (document.getElementById(hashId)) {
+                    pageId = hashId;
+                }
+            }
+            // Set the initial history state
+            history.replaceState({ pageId: pageId }, '', '#' + pageId);
+            showPage(pageId, false);
+        });
 
         function toggleDropdown() {
             const dropdown = document.getElementById('dropdown');
