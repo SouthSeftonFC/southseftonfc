@@ -138,19 +138,22 @@
                         <p class="text-gray-400 mb-6">Want to trial for the academy, inquire about sponsorship, or just get directions to our next home match? Drop us a message!</p>
                         <div class="space-y-4 text-sm text-gray-300">
                             <p><i class="fa-solid fa-location-dot text-boroughGold mr-2 w-5"></i> Sefton Sports Ground, L30 2BB</p>
-                            <p><i class="fa-solid fa-envelope text-boroughGold mr-2 w-5"></i> info@southseftonboroughfc.co.uk</p>
+                            <p><i class="fa-solid fa-envelope text-boroughGold mr-2 w-5"></i> southseftonfootballclub@gmail.com</p>
                             <p><i class="fa-solid fa-phone text-boroughGold mr-2 w-5"></i> 0151 555 0199</p>
                         </div>
                     </div>
                     
-                    <!-- Basic Contact Form -->
-                    <form class="space-y-4 text-gray-900">
+                    <!-- FormSubmit Contact Form -->
+                    <form action="https://formsubmit.co/southseftonfootballclub@gmail.com" method="POST" class="space-y-4 text-gray-900">
+                        <!-- Disables the annoying captcha screen -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <div class="grid grid-cols-2 gap-4">
-                            <input type="text" placeholder="Your Name" class="p-3 rounded focus:outline-boroughGold w-full">
-                            <input type="email" placeholder="Your Email" class="p-3 rounded focus:outline-boroughGold w-full">
+                            <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded focus:outline-boroughGold w-full">
+                            <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded focus:outline-boroughGold w-full">
                         </div>
-                        <textarea placeholder="Your Message..." rows="4" class="p-3 rounded focus:outline-boroughGold w-full"></textarea>
-                        <button type="button" class="bg-boroughGold text-boroughNavy font-black uppercase tracking-wider text-xs px-6 py-3 rounded shadow hover:bg-white w-full transition">Send Message</button>
+                        <textarea name="message" placeholder="Your Message..." rows="4" required class="p-3 rounded focus:outline-boroughGold w-full"></textarea>
+                        <button type="submit" class="bg-boroughGold text-boroughNavy font-black uppercase tracking-wider text-xs px-6 py-3 rounded shadow hover:bg-white w-full transition">Send Message</button>
                     </form>
                 </div>
             </section>
@@ -582,6 +585,26 @@
                                     <tr>
                                         <td class="px-2 py-2 font-medium">4</td>
                                         <td class="px-2 py-2">Burscough Dynamo</td>
+                                        <td class="px-2 py-2 text-center">10</td>
+                                        <td class="px-2 py-2 text-center">3</td>
+                                        <td class="px-2 py-2 text-center">1</td>
+                                        <td class="px-2 py-2 text-center">6</td>
+                                        <td class="px-2 py-2 text-center">-8</td>
+                                        <td class="px-2 py-2 text-center font-bold">10</td>
+                                    </tr> 
+                                    <tr class="border-b">
+                                        <td class="px-2 py-2 font-medium">5</td>
+                                        <td class="px-2 py-2">New Team FC</td>
+                                        <td class="px-2 py-2 text-center">10</td>
+                                        <td class="px-2 py-2 text-center">3</td>
+                                        <td class="px-2 py-2 text-center">1</td>
+                                        <td class="px-2 py-2 text-center">6</td>
+                                        <td class="px-2 py-2 text-center">-8</td>
+                                        <td class="px-2 py-2 text-center font-bold">10</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="px-2 py-2 font-medium">5</td>
+                                        <td class="px-2 py-2">New Team FC</td>
                                         <td class="px-2 py-2 text-center">10</td>
                                         <td class="px-2 py-2 text-center">3</td>
                                         <td class="px-2 py-2 text-center">1</td>
