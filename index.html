@@ -37,10 +37,10 @@
                 
                 <div class="flex items-center space-x-3 sm:space-x-6 font-semibold uppercase tracking-wider text-xs sm:text-sm">
                     <button onclick="showPage('home')" class="hover:text-boroughYellow transition">Home</button>
-                    <button onclick="showPage('under-7')" class="hover:text-boroughYellow transition">U7</button>
-                    <button onclick="showPage('under-9')" class="hover:text-boroughYellow transition">U9</button>
-                    <button onclick="showPage('under-11')" class="hover:text-boroughYellow transition">U11</button>
-                    <button onclick="showPage('under-14')" class="hover:text-boroughYellow transition">U14</button>
+                    <button onclick="showPage('under-7')" class="hover:text-boroughYellow transition">South Sefton U7</button>
+                    <button onclick="showPage('under-9')" class="hover:text-boroughYellow transition">South Sefton U9</button>
+                    <button onclick="showPage('under-11')" class="hover:text-boroughYellow transition">South Sefton Tornadoes</button>
+                    <button onclick="showPage('under-14')" class="hover:text-boroughYellow transition">South Sefton U14</button>
                 </div>
             </div>
         </div>
@@ -511,7 +511,7 @@
                     <div onclick="showPage('roster-under-11')" class="bg-boroughBlue text-white p-6 rounded-xl shadow cursor-pointer hover:bg-boroughLightBlue transition duration-300 flex items-center justify-between group border-l-4 border-boroughYellow">
                         <div>
                             <h3 class="font-black uppercase text-boroughYellow mb-1 text-xl">Meet the Players</h3>
-                            <p class="text-sm text-gray-200">View the full U11 squad</p>
+                            <p class="text-sm text-gray-200">View the full Tornadoes Squad</p>
                         </div>
                         <i class="fa-solid fa-arrow-right text-2xl group-hover:translate-x-2 transition text-boroughYellow"></i>
                     </div>
@@ -555,8 +555,18 @@
                                         <td class="px-2 py-2 text-center font-bold">22</td>
                                     </tr>
                                     <tr class="bg-blue-50 border-b font-bold text-boroughBlue border-l-4 border-l-boroughYellow">
+                                        <td class="px-2 py-2 pl-1">2</td>
+                                        <td class="px-2 py-2">South Sefton Tornadoes</td>
+                                        <td class="px-2 py-2 text-center">8</td>
+                                        <td class="px-2 py-2 text-center">5</td>
+                                        <td class="px-2 py-2 text-center">0</td>
+                                        <td class="px-2 py-2 text-center">3</td>
+                                        <td class="px-2 py-2 text-center">+6</td>
+                                        <td class="px-2 py-2 text-center">15</td>
+                                    </tr>
+                                    <tr class="border-b">
                                         <td class="px-2 py-2 pl-1">3</td>
-                                        <td class="px-2 py-2">Tornadoes U11</td>
+                                        <td class="px-2 py-2">Test Team</td>
                                         <td class="px-2 py-2 text-center">8</td>
                                         <td class="px-2 py-2 text-center">5</td>
                                         <td class="px-2 py-2 text-center">0</td>
@@ -697,38 +707,124 @@
             <!-- Squad List -->
             <div class="mb-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- EDIT THIS: Player Card -->
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
-                            <!-- EDIT THIS: Add real image src here. If no image, it shows the icon -->
+                    <!-- Player 1 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <!-- EDIT THIS: Player Name -->
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <!-- EDIT THIS: Squad Number -->
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 2 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 3 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 4 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 5 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 6 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 7 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 8 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 9 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 10 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
                 </div>
@@ -746,51 +842,124 @@
             <!-- Squad List -->
             <div class="mb-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- EDIT THIS: Player Card -->
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
-                            <!-- EDIT THIS: Add real image src here. If no image, it shows the icon -->
+                    <!-- Player 1 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <!-- EDIT THIS: Player Name -->
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <!-- EDIT THIS: Squad Number -->
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                    
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 2 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Two</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 3 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 4 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 5 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 6 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 7 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 8 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 9 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 10 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
                 </div>
@@ -801,54 +970,141 @@
         <section id="roster-under-11" class="page-view max-w-7xl mx-auto px-4 py-12">
             <button onclick="showPage('under-11')" class="mb-6 text-boroughLightBlue hover:text-boroughYellow font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition"><i class="fa-solid fa-arrow-left"></i> Back to U11 Team</button>
             <div class="mb-8 border-l-4 border-boroughYellow pl-4">
-                <h2 class="text-4xl font-black text-boroughBlue uppercase">South Sefton Tornadoes U11 Squad</h2>
+                <h2 class="text-4xl font-black text-boroughBlue uppercase">South Sefton Tornadoes</h2>
                 <p class="text-gray-500 mt-1">Meet the players for the current season.</p>
             </div>
 
             <!-- Squad List -->
             <div class="mb-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
-                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                    
+                    <!-- Player 1 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="PXL_20260307_105852145.RAW-01.jpg" alt="Harry Turner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
-                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
-                        </div>
-                        <div>
-                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Harry Turner</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Goalkeeper</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 1</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 2 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Two</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Tom McCormick</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Defender</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 4</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 3 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
-                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Squad No. --</p>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Jack McGrady</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Defender</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 11</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 4 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Harrison Rotherham</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Defender</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 5</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 5 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Tommy</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Defender</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 10</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 6 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Jesse Ryan</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Midfielder</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 2</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 7 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Archie McKenna</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Midfielder</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 8</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 8 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Mason Rotherham</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Midfielder</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 3</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 9 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Theo Rowley</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Midfielder/Striker</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 9</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 10 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Noah Burton</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Striker</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 15</p>
                         </div>
                     </div>
                 </div>
@@ -863,69 +1119,127 @@
                 <p class="text-gray-500 mt-1">Meet the players for the current season.</p>
             </div>
 
-            <!-- Goalkeepers -->
+            <!-- Squad List -->
             <div class="mb-10">
-                <h3 class="font-black text-xl text-boroughLightBlue uppercase mb-4 border-b-2 border-gray-200 pb-2">Goalkeepers</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 1 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Goalkeeper</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Defenders -->
-            <div class="mb-10">
-                <h3 class="font-black text-xl text-boroughLightBlue uppercase mb-4 border-b-2 border-gray-200 pb-2">Defenders</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 2 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Defender</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Midfielders -->
-            <div class="mb-10">
-                <h3 class="font-black text-xl text-boroughLightBlue uppercase mb-4 border-b-2 border-gray-200 pb-2">Midfielders</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 3 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Midfielder</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Strikers -->
-            <div class="mb-10">
-                <h3 class="font-black text-xl text-boroughLightBlue uppercase mb-4 border-b-2 border-gray-200 pb-2">Strikers</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow border border-gray-100 hover:shadow-md transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                    <!-- Player 4 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
                             <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-2xl hidden" style="display: block;"></i>
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
                         </div>
-                        <div>
+                        <div class="w-full">
                             <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Striker</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 5 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 6 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 7 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 8 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 9 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
+                        </div>
+                    </div>
+                    <!-- Player 10 -->
+                    <div class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-md transition text-center">
+                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400">
+                            <img src="" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-3xl hidden" style="display: block;"></i>
+                        </div>
+                        <div class="w-full">
+                            <p class="font-bold text-boroughBlue text-lg leading-tight">Player Name</p>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Position</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Squad No. --</p>
                         </div>
                     </div>
                 </div>
