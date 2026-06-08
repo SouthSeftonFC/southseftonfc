@@ -36,13 +36,32 @@
                     <span class="font-black text-xl uppercase tracking-tight hidden sm:block">South Sefton <span class="text-boroughYellow">Football Club</span></span>
                 </div>
                 
-                <div class="flex items-center space-x-3 sm:space-x-6 font-semibold uppercase tracking-wider text-xs sm:text-sm">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6 font-semibold uppercase tracking-wider text-xs sm:text-sm">
+                    <button onclick="showPage('about')" class="hover:text-boroughYellow transition">About</button>
                     <button onclick="showPage('under-7')" class="hover:text-boroughYellow transition">U7</button>
                     <button onclick="showPage('under-9')" class="hover:text-boroughYellow transition">U9</button>
                     <button onclick="showPage('under-11')" class="hover:text-boroughYellow transition">U11</button>
                     <button onclick="showPage('under-14')" class="hover:text-boroughYellow transition">U14</button>
+                    <button onclick="showPage('sponsors')" class="bg-boroughYellow text-boroughBlue px-4 py-2 rounded font-black hover:bg-white transition shadow-sm">Sponsors</button>
                 </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover:text-boroughYellow transition p-2 focus:outline-none" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-boroughBlue shadow-lg flex-col border-t border-blue-800 font-semibold uppercase tracking-wider text-sm absolute w-full left-0 z-40">
+            <button onclick="showPage('home')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">Home</button>
+            <button onclick="showPage('about')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">About Us</button>
+            <button onclick="showPage('under-7')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U7</button>
+            <button onclick="showPage('under-9')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U9</button>
+            <button onclick="showPage('under-11')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U11</button>
+            <button onclick="showPage('under-14')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U14</button>
+            <button onclick="showPage('sponsors')" class="py-4 text-boroughYellow hover:text-white hover:bg-blue-900 transition w-full text-center">Sponsorship</button>
         </div>
     </nav>
 
@@ -153,6 +172,27 @@
                 </div>
             </section>
 
+            <!-- CHARITY SUPPORT SECTION -->
+            <section class="bg-white py-16 border-b border-gray-200">
+                <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
+                    <!-- 🟦 TEXT: Charity Heading -->
+                    <h2 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 block">Proud Supporters Of</h2>
+                    <h3 class="text-3xl md:text-4xl font-black text-red-600 uppercase mb-6 flex items-center justify-center gap-3">
+                        Darby Rimmer MND Foundation
+                    </h3>
+                    
+                    <div class="bg-red-50 p-6 sm:p-8 rounded-2xl border-l-4 border-red-600 shadow-sm">
+                        <!-- 🟦 TEXT: Charity Message -->
+                        <p class="text-gray-700 text-lg font-medium mb-6 leading-relaxed">
+                            South Sefton Football Club stands with the Darby Rimmer MND Foundation. We are dedicated to raising awareness, supporting those affected, and helping fund vital research to find a cure for Motor Neurone Disease.
+                        </p>
+                        <a href="https://darbyrimmermnd.co.uk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 text-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-red-700 hover:-translate-y-1 transition duration-300">
+                            Visit The Foundation <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             <!-- CONTACT / CLUB INFO -->
             <section class="bg-boroughBlue text-white py-16">
                 <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
@@ -181,6 +221,149 @@
                 </div>
             </section>
         </div>
+
+        <!-- ABOUT US PAGE -->
+        <section id="about" class="page-view max-w-5xl mx-auto px-4 py-12">
+            <div class="mb-10 text-center">
+                <!-- 🟦 TEXT: About Header -->
+                <h2 class="text-4xl md:text-5xl font-black text-boroughBlue uppercase mb-4">About Our Club</h2>
+                <div class="h-1 w-24 bg-boroughYellow mx-auto"></div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border-t-4 border-boroughLightBlue p-8 md:p-12 mb-12">
+                <!-- 🟦 TEXT: Club History -->
+                <h3 class="text-2xl font-black text-boroughBlue uppercase mb-4 border-l-4 border-boroughYellow pl-3">Our History & Ethos</h3>
+                <div class="text-gray-700 space-y-4 leading-relaxed">
+                    <p>Established in 2001, South Sefton Football Club has been a cornerstone of the local community for over two decades. What started as a small group of volunteers wanting to give local children a place to play has blossomed into a thriving grassroots organization.</p>
+                    <p>Our philosophy is simple: <strong>Football for all.</strong> We believe in developing not just great footballers, but great young people. We emphasize teamwork, respect, discipline, and above all, enjoying the beautiful game.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Committee Info -->
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-boroughBlue p-8">
+                    <!-- 🟦 TEXT: Committee Members -->
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 flex items-center gap-3"><i class="fa-solid fa-users-gear text-boroughYellow"></i> Club Committee</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 p-3 bg-gray-50 rounded border border-gray-100">
+                            <i class="fa-solid fa-user-tie text-boroughLightBlue text-2xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Arthur McCumiskey</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Club Chairman</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 p-3 bg-gray-50 rounded border border-gray-100">
+                            <i class="fa-solid fa-pen-clip text-boroughLightBlue text-2xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Kevin Darby</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Club Secretary</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 p-3 bg-gray-50 rounded border border-gray-100">
+                            <i class="fa-solid fa-shield-halved text-boroughLightBlue text-2xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">[Name Here]</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Welfare & Safeguarding Officer</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ground Info -->
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-boroughYellow p-8">
+                    <!-- 🟦 TEXT: Ground Details -->
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 flex items-center gap-3"><i class="fa-solid fa-map-location-dot text-boroughYellow"></i> Our Ground</h3>
+                    <div class="rounded overflow-hidden shadow-inner bg-gray-100 h-40 mb-4 flex items-center justify-center relative">
+                        <!-- 🟩 IMAGE: Picture of the pitch/ground -->
+                        <img src="1780094651286.png" alt="Our Ground" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                    </div>
+                    <p class="text-gray-700 font-medium mb-1">Mill Dam Field</p>
+                    <p class="text-gray-500 text-sm mb-4">Lunt Road, Sefton, L29 7WA</p>
+                    <a href="https://maps.google.com/?q=Mill+Dam+Field+Lunt+Road+Sefton+L29+7WA" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-boroughLightBlue hover:text-boroughYellow transition">
+                        Open in Google Maps &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPONSORSHIP PAGE -->
+        <section id="sponsors" class="page-view max-w-7xl mx-auto px-4 py-12">
+            <div class="mb-10 text-center">
+                <!-- 🟦 TEXT: Sponsorship Header -->
+                <h2 class="text-4xl md:text-5xl font-black text-boroughBlue uppercase mb-4">Partner With Us</h2>
+                <div class="h-1 w-24 bg-boroughYellow mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Grassroots football survives on the generosity of local businesses. Align your brand with community values, youth development, and a passionate local following.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Package 1 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-xl transition duration-300 overflow-hidden flex flex-col border border-gray-100">
+                    <div class="bg-amber-600 p-4 text-center">
+                        <!-- 🟦 TEXT: Bronze Package Name -->
+                        <h3 class="font-black text-white uppercase tracking-wider text-xl">Match Ball Sponsor</h3>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col text-center">
+                        <!-- 🟧 NUMBER: Bronze Price -->
+                        <span class="text-3xl font-black text-boroughBlue mb-4">£100 <span class="text-sm text-gray-400 font-normal">/ season</span></span>
+                        <ul class="text-gray-600 space-y-3 mb-8 text-sm text-left mx-auto">
+                            <!-- 🟦 TEXT: Bronze Details -->
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Name on social media graphics</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Shoutout on website match reports</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Great for small local support</li>
+                        </ul>
+                        <button onclick="showPage('home')" class="mt-auto border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white font-bold uppercase text-xs py-3 px-4 rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col transform md:-translate-y-4 border-2 border-boroughYellow relative">
+                    <div class="absolute top-0 right-0 bg-boroughYellow text-boroughBlue text-[10px] font-black uppercase px-3 py-1 rounded-bl-lg">Most Popular</div>
+                    <div class="bg-boroughBlue p-6 text-center">
+                        <!-- 🟦 TEXT: Gold Package Name -->
+                        <h3 class="font-black text-white uppercase tracking-wider text-2xl">Main Kit Sponsor</h3>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col text-center">
+                        <!-- 🟧 NUMBER: Gold Price -->
+                        <span class="text-4xl font-black text-boroughBlue mb-4">£500 <span class="text-sm text-gray-400 font-normal">/ season</span></span>
+                        <ul class="text-gray-600 space-y-3 mb-8 text-sm text-left mx-auto">
+                            <!-- 🟦 TEXT: Gold Details -->
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Front-of-shirt logo placement</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Prominent logo on team website page</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Framed signed shirt at end of season</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Dedicated social media announcements</li>
+                        </ul>
+                        <button onclick="showPage('home')" class="mt-auto bg-boroughBlue text-white hover:bg-boroughLightBlue font-bold uppercase text-xs py-3 px-4 rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-xl transition duration-300 overflow-hidden flex flex-col border border-gray-100">
+                    <div class="bg-slate-400 p-4 text-center">
+                        <!-- 🟦 TEXT: Silver Package Name -->
+                        <h3 class="font-black text-white uppercase tracking-wider text-xl">Training Wear</h3>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col text-center">
+                        <!-- 🟧 NUMBER: Silver Price -->
+                        <span class="text-3xl font-black text-boroughBlue mb-4">£400 <span class="text-sm text-gray-400 font-normal">/ season</span></span>
+                        <ul class="text-gray-600 space-y-3 mb-8 text-sm text-left mx-auto">
+                            <!-- 🟦 TEXT: Silver Details -->
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Logo on tracksuits/rain jackets</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Logo on team website page</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Brand exposure on matchdays</li>
+                        </ul>
+                        <button onclick="showPage('home')" class="mt-auto border-2 border-slate-400 text-slate-500 hover:bg-slate-400 hover:text-white font-bold uppercase text-xs py-3 px-4 rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="bg-boroughLightBlue text-white rounded-xl p-8 text-center shadow-lg">
+                <h3 class="text-2xl font-black uppercase mb-2">Ready to support grassroots football?</h3>
+                <p class="mb-6 text-blue-100">Get in touch with Arthur McCumiskey today to discuss tailoring a package that works for your business.</p>
+                <button onclick="showPage('home')" class="bg-boroughYellow text-boroughBlue font-black uppercase tracking-wider text-sm px-8 py-3 rounded-full shadow hover:bg-white transition">Contact Us Now</button>
+            </div>
+        </section>
 
         <!-- NEWS ARTICLE 1 FULL PAGE -->
         <section id="news-1" class="page-view max-w-4xl mx-auto px-4 py-12">
@@ -1194,19 +1377,27 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     
                     <!-- Player 1: Harry Turner (Clickable to Instagram) -->
-                    <a href="https://www.instagram.com/harrythesweeperkeeper/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-lg hover:border-boroughYellow transition text-center group cursor-pointer">
-                        <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400 group-hover:scale-105 transition duration-300">
-                            <!-- 🟩 IMAGE: Player Photo -->
-                            <img src="PXL_20260307_105852145.RAW-01.jpg" alt="Harry Turner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
-                            <i class="fa-solid fa-user text-3xl hidden"></i>
+                    <a href="https://www.instagram.com/harrythesweeperkeeper/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-between gap-3 bg-white p-5 rounded-xl shadow border border-gray-100 hover:shadow-lg hover:border-pink-500 transition text-center group cursor-pointer relative overflow-hidden">
+                        <div class="flex flex-col items-center justify-center gap-3 w-full">
+                            <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border-2 border-boroughYellow text-gray-400 group-hover:scale-105 transition duration-300">
+                                <!-- 🟩 IMAGE: Player Photo -->
+                                <img src="PXL_20260307_105852145.RAW-01.jpg" alt="Harry Turner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                                <i class="fa-solid fa-user text-3xl hidden"></i>
+                            </div>
+                            <div class="w-full">
+                                <!-- 🟦 TEXT: Player Name -->
+                                <p class="font-bold text-boroughBlue text-lg leading-tight group-hover:text-pink-600 transition flex items-center justify-center gap-1">Harry Turner <i class="fa-brands fa-instagram text-pink-600 text-sm"></i></p>
+                                <!-- 🟦 TEXT: Player Position -->
+                                <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Goalkeeper</p>
+                                <!-- 🟧 NUMBER: Squad Number -->
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 1</p>
+                            </div>
                         </div>
-                        <div class="w-full">
-                            <!-- 🟦 TEXT: Player Name -->
-                            <p class="font-bold text-boroughBlue text-lg leading-tight group-hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Harry Turner <i class="fa-brands fa-instagram text-pink-600 text-sm"></i></p>
-                            <!-- 🟦 TEXT: Player Position -->
-                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mt-1 mx-auto">Goalkeeper</p>
-                            <!-- 🟧 NUMBER: Squad Number -->
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 mx-auto">Number 1</p>
+                        
+                        <!-- 🟩 IMAGE: Harry QR Code -->
+                        <div class="mt-2 pt-3 border-t border-gray-100 w-full flex flex-col items-center justify-center gap-1">
+                            <img src="harrythesweeperkeeper_qr.jpg" alt="QR Code" class="w-16 h-16 rounded shadow-sm border border-gray-100 group-hover:scale-110 transition duration-300">
+                            <span class="text-[9px] font-bold text-gray-400 group-hover:text-pink-600 transition">Scan or Click</span>
                         </div>
                     </a>
 
@@ -1527,6 +1718,18 @@
     </footer>
 
     <script>
+        // NEW: Toggle mobile menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+
         function showPage(pageId, addToHistory = true) {
             const targetPage = document.getElementById(pageId);
             
@@ -1544,6 +1747,13 @@
             // Close dropdown securely
             const dropdown = document.getElementById('dropdown');
             if (dropdown) dropdown.classList.remove('active');
+            
+            // Close mobile menu if it's open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
             
             // Scroll to the top of the newly opened page
             window.scrollTo(0, 0);
