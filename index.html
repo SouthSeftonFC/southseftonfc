@@ -22,12 +22,36 @@
     <style>
         .page-view { display: none; }
         .page-view.active { display: block; }
+        .marquee {
+            display: flex;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 40s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800 flex flex-col min-h-screen">
 
+    <!-- ROLLING TICKER -->
+    <div class="bg-boroughYellow text-boroughBlue py-2 overflow-hidden border-b-2 border-yellow-500 font-bold text-xs sm:text-sm uppercase tracking-wider sticky top-0 z-[60]">
+        <div class="marquee">
+            <span class="mx-8"><strong class="text-black">U7:</strong> <i class="fa-solid fa-handshake text-boroughBlue mx-1"></i> LAST RESULT: Crosby Athletic 2-2 South Sefton</span>
+            <span class="mx-8"><strong class="text-black">U7:</strong> <i class="fa-regular fa-calendar text-boroughBlue mx-1"></i> NEXT MATCH: Sat, 9:00 AM vs Formby United</span>
+            <span class="mx-8"><strong class="text-black">U9:</strong> <i class="fa-solid fa-trophy text-boroughBlue mx-1"></i> LAST RESULT: South Sefton 4-1 Litherland REMYCA (WIN)</span>
+            <span class="mx-8"><strong class="text-black">U9:</strong> <i class="fa-regular fa-calendar text-boroughBlue mx-1"></i> NEXT MATCH: Sun, 11:30 AM vs Maghull FC</span>
+            <span class="mx-8"><strong class="text-black">U11:</strong> <i class="fa-solid fa-trophy text-boroughBlue mx-1"></i> LAST RESULT: Tornadoes 2-0 Marine Youth (WIN)</span>
+            <span class="mx-8"><strong class="text-black">U11:</strong> <i class="fa-regular fa-calendar text-boroughBlue mx-1"></i> NEXT MATCH: Sat, 10:00 AM vs North Wanderers</span>
+            <span class="mx-8"><strong class="text-black">U14:</strong> <i class="fa-solid fa-trophy text-boroughBlue mx-1"></i> LAST RESULT: South Sefton 3-1 City United (WIN)</span>
+            <span class="mx-8"><strong class="text-black">U14:</strong> <i class="fa-regular fa-calendar text-boroughBlue mx-1"></i> NEXT MATCH: Sun, 1:00 PM vs Bootle FC</span>
+        </div>
+    </div>
+
     <!-- NAVIGATION BAR -->
-    <nav class="bg-boroughBlue text-white sticky top-0 z-50 shadow-md">
+    <nav class="bg-boroughBlue text-white sticky top-9 sm:top-10 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3 cursor-pointer" onclick="showPage('home')">
@@ -37,30 +61,36 @@
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-4 lg:space-x-6 font-semibold uppercase tracking-wider text-xs sm:text-sm">
+                <div class="hidden lg:flex items-center space-x-2 lg:space-x-4 font-semibold uppercase tracking-wider text-[10px] lg:text-xs">
                     <button onclick="showPage('about')" class="hover:text-boroughYellow transition">About</button>
                     <button onclick="showPage('under-7')" class="hover:text-boroughYellow transition">U7</button>
                     <button onclick="showPage('under-9')" class="hover:text-boroughYellow transition">U9</button>
                     <button onclick="showPage('under-11')" class="hover:text-boroughYellow transition">U11</button>
                     <button onclick="showPage('under-14')" class="hover:text-boroughYellow transition">U14</button>
-                    <button onclick="showPage('sponsors')" class="bg-boroughYellow text-boroughBlue px-4 py-2 rounded font-black hover:bg-white transition shadow-sm">Sponsors</button>
+                    <button onclick="showPage('gallery')" class="hover:text-boroughYellow transition">Gallery</button>
+                    <button onclick="showPage('safeguarding')" class="hover:text-boroughYellow transition">Safeguard</button>
+                    <button onclick="showPage('join-us')" class="hover:text-boroughYellow transition">Join</button>
+                    <button onclick="showPage('sponsors')" class="bg-boroughYellow text-boroughBlue px-3 py-2 rounded font-black hover:bg-white transition shadow-sm">Sponsors</button>
                 </div>
 
                 <!-- Mobile Hamburger Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover:text-boroughYellow transition p-2 focus:outline-none" onclick="toggleMobileMenu()">
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl hover:text-boroughYellow transition p-2 focus:outline-none" onclick="toggleMobileMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-boroughBlue shadow-lg flex-col border-t border-blue-800 font-semibold uppercase tracking-wider text-sm absolute w-full left-0 z-40">
+        <div id="mobile-menu" class="hidden lg:hidden bg-boroughBlue shadow-lg flex-col border-t border-blue-800 font-semibold uppercase tracking-wider text-sm absolute w-full left-0 top-full z-40">
             <button onclick="showPage('home')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">Home</button>
             <button onclick="showPage('about')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">About Us</button>
             <button onclick="showPage('under-7')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U7</button>
             <button onclick="showPage('under-9')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U9</button>
             <button onclick="showPage('under-11')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U11</button>
             <button onclick="showPage('under-14')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">U14</button>
+            <button onclick="showPage('gallery')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">Gallery</button>
+            <button onclick="showPage('safeguarding')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">Safeguarding</button>
+            <button onclick="showPage('join-us')" class="py-4 border-b border-blue-800 hover:text-boroughYellow hover:bg-blue-900 transition w-full text-center">Join Us / Trials</button>
             <button onclick="showPage('sponsors')" class="py-4 text-boroughYellow hover:text-white hover:bg-blue-900 transition w-full text-center">Sponsorship</button>
         </div>
     </nav>
@@ -155,6 +185,70 @@
                 </div>
             </section>
 
+            <!-- MEET THE COACHING STAFF SECTION -->
+            <section class="bg-gray-50 py-16 border-t border-gray-200">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-black text-boroughBlue uppercase mb-4">Meet The Coaching Staff</h2>
+                        <div class="h-1 w-24 bg-boroughYellow mx-auto mb-4"></div>
+                        <p class="text-gray-600 max-w-2xl mx-auto">Our FA qualified coaches are dedicated to creating a safe, inclusive, and challenging environment to help every player reach their full potential.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        <!-- Coach 1 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center group hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                            <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-400 border-4 border-boroughYellow mb-4 overflow-hidden relative">
+                                <i class="fa-solid fa-user-tie text-4xl"></i>
+                            </div>
+                            <h3 class="font-black text-boroughBlue text-lg">Alice Smith</h3>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mb-3">U7 Lead Coach</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold mb-4"><i class="fa-solid fa-certificate text-boroughYellow mr-1"></i> FA Playmaker</span>
+                            <p class="text-sm text-gray-500 italic leading-relaxed">"Promoting inclusivity, basic fundamentals, and ensuring everyone falls in love with the game."</p>
+                        </div>
+                        <!-- Coach 2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center group hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                            <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-400 border-4 border-boroughYellow mb-4 overflow-hidden relative">
+                                <i class="fa-solid fa-user-tie text-4xl"></i>
+                            </div>
+                            <h3 class="font-black text-boroughBlue text-lg">Kevin Darby</h3>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mb-3">U9 Lead Coach</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold mb-4"><i class="fa-solid fa-certificate text-boroughYellow mr-1"></i> FA Level 1</span>
+                            <p class="text-sm text-gray-500 italic leading-relaxed">"Developing technical skills and emphasizing teamwork on and off the pitch."</p>
+                        </div>
+                        <!-- Coach 3 (U11 Coach 1) -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center group hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                            <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-400 border-4 border-boroughYellow mb-4 overflow-hidden relative">
+                                <i class="fa-solid fa-user-tie text-4xl"></i>
+                            </div>
+                            <h3 class="font-black text-boroughBlue text-lg">Coach Name 1</h3>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mb-3">U11 Coach</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold mb-4"><i class="fa-solid fa-certificate text-boroughYellow mr-1"></i> FA Qualified</span>
+                            <p class="text-sm text-gray-500 italic leading-relaxed">"Focusing on tactical intelligence, match awareness, and building confidence."</p>
+                        </div>
+                        <!-- Coach 4 (U11 Coach 2) -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center group hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                            <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-400 border-4 border-boroughYellow mb-4 overflow-hidden relative">
+                                <i class="fa-solid fa-user-tie text-4xl"></i>
+                            </div>
+                            <h3 class="font-black text-boroughBlue text-lg">Coach Name 2</h3>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mb-3">U11 Coach</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold mb-4"><i class="fa-solid fa-certificate text-boroughYellow mr-1"></i> FA Qualified</span>
+                            <p class="text-sm text-gray-500 italic leading-relaxed">"Creating a positive environment for players to develop their skills together."</p>
+                        </div>
+                        <!-- Coach 5 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center group hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                            <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-400 border-4 border-boroughYellow mb-4 overflow-hidden relative">
+                                <i class="fa-solid fa-user-tie text-4xl"></i>
+                            </div>
+                            <h3 class="font-black text-boroughBlue text-lg">Arthur McCumiskey</h3>
+                            <p class="text-[10px] font-bold text-boroughLightBlue uppercase tracking-widest mb-3">U14 Lead Coach</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold mb-4"><i class="fa-solid fa-certificate text-boroughYellow mr-1"></i> UEFA B License</span>
+                            <p class="text-sm text-gray-500 italic leading-relaxed">"Preparing young athletes for the next level with high-intensity drills and discipline."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- INSTAGRAM SECTION -->
             <section class="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 py-16 text-white text-center shadow-inner">
                 <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
@@ -169,6 +263,39 @@
                             @southseftonfootballclub
                         </div>
                     </a>
+                </div>
+            </section>
+
+            <!-- GET INVOLVED / SPONSOR & VOLUNTEER SECTION -->
+            <section class="bg-gray-50 py-16 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-black text-boroughBlue uppercase mb-4">Get Involved</h2>
+                        <div class="h-1 w-24 bg-boroughYellow mx-auto mb-4"></div>
+                        <p class="text-gray-600 max-w-2xl mx-auto">South Sefton FC is a community-driven club. Discover how you can support our players and make a difference on and off the pitch.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Sponsor Card -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughYellow flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
+                            <div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-handshake text-4xl text-boroughYellow"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Become a Sponsor</h3>
+                            <p class="text-gray-600 mb-8 flex-grow">Align your business with community values and youth development. We offer packages ranging from match ball sponsorship to main front-of-shirt branding.</p>
+                            <button onclick="showPage('sponsors')" class="bg-boroughBlue text-white font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughLightBlue transition w-full">View Packages</button>
+                        </div>
+
+                        <!-- Volunteer Card -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughBlue flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-hands-holding-child text-4xl text-boroughLightBlue"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Join as a Volunteer</h3>
+                            <p class="text-gray-600 mb-8 flex-grow">We are always looking for passionate people to help out! Whether it's coaching, matchday assistance, or administrative support, we'd love to have you on the team.</p>
+                            <button onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughBlue hover:text-white transition w-full">Register Interest</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -194,7 +321,7 @@
             </section>
 
             <!-- CONTACT / CLUB INFO -->
-            <section class="bg-boroughBlue text-white py-16">
+            <section id="contact-section" class="bg-boroughBlue text-white py-16">
                 <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
                     <div>
                         <h2 class="text-3xl font-black uppercase text-boroughYellow mb-4">Get In Touch</h2>
@@ -262,7 +389,7 @@
                         <li class="flex items-center gap-4 p-3 bg-gray-50 rounded border border-gray-100">
                             <i class="fa-solid fa-shield-halved text-boroughLightBlue text-2xl"></i>
                             <div>
-                                <p class="font-bold text-gray-800">[Name Here]</p>
+                                <p class="font-bold text-gray-800">Jim Fitzpatrick</p>
                                 <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Welfare & Safeguarding Officer</p>
                             </div>
                         </li>
@@ -362,6 +489,199 @@
                 <h3 class="text-2xl font-black uppercase mb-2">Ready to support grassroots football?</h3>
                 <p class="mb-6 text-blue-100">Get in touch with Arthur McCumiskey today to discuss tailoring a package that works for your business.</p>
                 <button onclick="showPage('home')" class="bg-boroughYellow text-boroughBlue font-black uppercase tracking-wider text-sm px-8 py-3 rounded-full shadow hover:bg-white transition">Contact Us Now</button>
+            </div>
+        </section>
+
+        <!-- SAFEGUARDING PAGE -->
+        <section id="safeguarding" class="page-view max-w-5xl mx-auto px-4 py-12">
+            <div class="mb-10 text-center">
+                <!-- 🟦 TEXT: Safeguarding Header -->
+                <h2 class="text-4xl md:text-5xl font-black text-boroughBlue uppercase mb-4">Safeguarding & Welfare</h2>
+                <div class="h-1 w-24 bg-boroughYellow mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">South Sefton Football Club is committed to ensuring that every child and young person has a safe, positive, and enjoyable experience playing football.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg border-t-4 border-boroughBlue p-8">
+                    <!-- 🟦 TEXT: Welfare Officer Info -->
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 flex items-center gap-3"><i class="fa-solid fa-shield-heart text-boroughYellow"></i> Club Welfare Officer</h3>
+                    <p class="text-gray-600 mb-6">If you have any concerns regarding the welfare of a child or the behavior of an adult, please contact our designated Welfare Officer immediately.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-50 rounded border border-gray-100">
+                            <p class="font-bold text-gray-800 text-lg">Jim Fitzpatrick</p>
+                            <p class="text-xs font-bold text-boroughLightBlue uppercase tracking-widest mb-2">Lead Welfare Officer</p>
+                            <p class="text-sm text-gray-600"><i class="fa-solid fa-phone mr-2 w-4"></i> 07825348866</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl shadow-lg border-t-4 border-boroughYellow p-8">
+                        <!-- 🟦 TEXT: Club Policies Links -->
+                        <h3 class="text-2xl font-black text-boroughBlue uppercase mb-4 flex items-center gap-3"><i class="fa-solid fa-file-contract text-boroughYellow"></i> Club Policies</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Safeguarding Children Policy</a></li>
+                            <li><a href="#" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Anti-Bullying Policy</a></li>
+                            <li><a href="#" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Code of Conduct for Coaches</a></li>
+                            <li><a href="#" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Code of Conduct for Parents</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                        <h4 class="font-black text-boroughBlue uppercase mb-2">The FA Respect Campaign</h4>
+                        <p class="text-sm text-gray-600 mb-4">We are a proud supporter of The FA's Respect campaign, ensuring a positive environment for everyone on the pitch.</p>
+                        <a href="https://www.thefa.com/get-involved/respect" target="_blank" rel="noopener noreferrer" class="text-xs font-bold bg-boroughBlue text-white px-4 py-2 rounded uppercase tracking-wider hover:bg-boroughLightBlue transition inline-block">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN US / TRIALS PAGE -->
+        <section id="join-us" class="page-view max-w-4xl mx-auto px-4 py-12">
+            <div class="mb-10 text-center">
+                <!-- 🟦 TEXT: Join Us Header -->
+                <h2 class="text-4xl md:text-5xl font-black text-boroughBlue uppercase mb-4">Join The Club</h2>
+                <div class="h-1 w-24 bg-boroughYellow mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600">Looking for a new team? Register your interest for upcoming squad trials or training sessions using the form below.</p>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border-t-4 border-boroughYellow">
+                <!-- 🟦 TEXT: Change the email address in the 'action' link below if you want it sent somewhere else -->
+                <form action="https://formsubmit.co/southseftonfootballclub@gmail.com" method="POST" target="_blank" onsubmit="setTimeout(() => this.reset(), 100);" class="space-y-6">
+                    <input type="hidden" name="_subject" value="New Trial Registration Form Submission!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <h3 class="font-black text-boroughBlue uppercase border-b border-gray-200 pb-2 mb-4">Player Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Player Name *</label>
+                            <input type="text" name="Player_Name" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Date of Birth *</label>
+                            <input type="date" name="Date_Of_Birth" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Preferred Position</label>
+                            <select name="Preferred_Position" class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                                <option value="Goalkeeper">Goalkeeper</option>
+                                <option value="Defender">Defender</option>
+                                <option value="Midfielder">Midfielder</option>
+                                <option value="Attacker">Attacker</option>
+                                <option value="Any">Any Position</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Current/Previous Club</label>
+                            <input type="text" name="Previous_Club" placeholder="Leave blank if none" class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                    </div>
+
+                    <h3 class="font-black text-boroughBlue uppercase border-b border-gray-200 pb-2 mb-4 mt-8">Parent/Guardian Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Parent/Guardian Name *</label>
+                            <input type="text" name="Parent_Name" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Contact Number *</label>
+                            <input type="tel" name="Phone_Number" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Additional Medical Info / Notes</label>
+                            <textarea name="Notes" rows="3" class="w-full p-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-boroughYellow focus:ring-1 focus:ring-boroughYellow transition"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-boroughBlue text-white font-black uppercase tracking-wider text-sm px-6 py-4 rounded shadow hover:bg-boroughLightBlue transition duration-300 mt-4">
+                        Submit Registration
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- MEDIA GALLERY PAGE -->
+        <section id="gallery" class="page-view max-w-7xl mx-auto px-4 py-12">
+            <div class="mb-10 text-center">
+                <!-- 🟦 TEXT: Gallery Header -->
+                <h2 class="text-4xl md:text-5xl font-black text-boroughBlue uppercase mb-4">Club Gallery</h2>
+                <div class="h-1 w-24 bg-boroughYellow mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600">Highlights and moments from matchdays, tournaments, and events.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                
+                <!-- Gallery Item 1 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 1 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 2 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 3 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 4 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 5 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden relative group shadow-sm border border-gray-100">
+                    <!-- 🟩 IMAGE: Gallery Photo 6 -->
+                    <img src="" alt="Gallery Image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 hidden">
+                        <i class="fa-regular fa-image text-4xl mb-2 text-boroughYellow"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Add Photo</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="https://www.instagram.com/southseftonfootballclub/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:scale-105 transition duration-300">
+                    <i class="fa-brands fa-instagram text-lg"></i> View More on Instagram
+                </a>
             </div>
         </section>
 
@@ -496,6 +816,22 @@
                             <p class="font-bold text-gray-500 text-lg">Edit fixtures here.</p>
                         </div>
                     </div>
+
+                    <!-- Man of the Match Card -->
+                    <div class="bg-gradient-to-br from-boroughBlue to-boroughLightBlue rounded-xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-center sm:items-start gap-6 relative overflow-hidden">
+                        <i class="fa-solid fa-medal absolute -bottom-4 -right-4 text-8xl text-white opacity-10"></i>
+                        <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white border-4 border-boroughYellow flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- 🟩 IMAGE: U7 MOTM Photo -->
+                            <img src="" alt="Man of the Match" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-4xl text-gray-300 hidden"></i>
+                        </div>
+                        <div class="text-center sm:text-left z-10 flex-grow">
+                            <span class="text-xs font-bold bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">Man of the Match</span>
+                            <h3 class="text-2xl font-black uppercase mb-2">Player Name</h3>
+                            <p class="text-sm text-blue-100 leading-relaxed">Awarded for an outstanding performance in the last match. Fantastic effort, teamwork, and dedication on the pitch!</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="space-y-8">
                     
@@ -516,6 +852,16 @@
                             <div class="w-full h-24 bg-gray-50 flex items-center justify-center rounded border-2 border-dashed border-gray-200 text-gray-400 hidden">
                                 <span class="font-bold text-xs uppercase tracking-wider">Add Sponsor Logo</span>
                             </div>
+                        </a>
+                    </div>
+
+                    <!-- Hightown JFL Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughBlue text-center flex flex-col items-center justify-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Official League Portal</span>
+                        <h3 class="font-black text-boroughBlue uppercase mb-3 text-lg">Hightown JFL</h3>
+                        <p class="text-sm text-gray-500 mb-5 leading-relaxed">View all official fixtures, results, and comprehensive league tables for our division.</p>
+                        <a href="https://fulltime.thefa.com/index.html?league=540302684" target="_blank" rel="noopener noreferrer" class="w-full bg-boroughBlue text-white font-bold uppercase tracking-wider text-xs px-4 py-3 rounded shadow hover:bg-boroughLightBlue transition flex items-center justify-center gap-2 group">
+                            Visit Portal <i class="fa-solid fa-arrow-up-right-from-square group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition"></i>
                         </a>
                     </div>
 
@@ -651,6 +997,22 @@
                             <p class="font-bold text-gray-500 text-lg">Edit fixtures here.</p>
                         </div>
                     </div>
+
+                    <!-- Man of the Match Card -->
+                    <div class="bg-gradient-to-br from-boroughBlue to-boroughLightBlue rounded-xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-center sm:items-start gap-6 relative overflow-hidden">
+                        <i class="fa-solid fa-medal absolute -bottom-4 -right-4 text-8xl text-white opacity-10"></i>
+                        <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white border-4 border-boroughYellow flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- 🟩 IMAGE: U9 MOTM Photo -->
+                            <img src="" alt="Man of the Match" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-4xl text-gray-300 hidden"></i>
+                        </div>
+                        <div class="text-center sm:text-left z-10 flex-grow">
+                            <span class="text-xs font-bold bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">Man of the Match</span>
+                            <h3 class="text-2xl font-black uppercase mb-2">Player Name</h3>
+                            <p class="text-sm text-blue-100 leading-relaxed">Awarded for an outstanding performance in the last match. Fantastic effort, teamwork, and dedication on the pitch!</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="space-y-8">
                     
@@ -671,6 +1033,16 @@
                             <div class="w-full h-24 bg-gray-50 flex items-center justify-center rounded border-2 border-dashed border-gray-200 text-gray-400 hidden">
                                 <span class="font-bold text-xs uppercase tracking-wider">Add Sponsor Logo</span>
                             </div>
+                        </a>
+                    </div>
+
+                    <!-- Hightown JFL Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughBlue text-center flex flex-col items-center justify-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Official League Portal</span>
+                        <h3 class="font-black text-boroughBlue uppercase mb-3 text-lg">Hightown JFL</h3>
+                        <p class="text-sm text-gray-500 mb-5 leading-relaxed">View all official fixtures, results, and comprehensive league tables for our division.</p>
+                        <a href="https://fulltime.thefa.com/index.html?league=540302684" target="_blank" rel="noopener noreferrer" class="w-full bg-boroughBlue text-white font-bold uppercase tracking-wider text-xs px-4 py-3 rounded shadow hover:bg-boroughLightBlue transition flex items-center justify-center gap-2 group">
+                            Visit Portal <i class="fa-solid fa-arrow-up-right-from-square group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition"></i>
                         </a>
                     </div>
 
@@ -806,6 +1178,22 @@
                             <p class="font-bold text-gray-500 text-lg">Edit fixtures here.</p>
                         </div>
                     </div>
+
+                    <!-- Man of the Match Card -->
+                    <div class="bg-gradient-to-br from-boroughBlue to-boroughLightBlue rounded-xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-center sm:items-start gap-6 relative overflow-hidden">
+                        <i class="fa-solid fa-medal absolute -bottom-4 -right-4 text-8xl text-white opacity-10"></i>
+                        <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white border-4 border-boroughYellow flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- 🟩 IMAGE: U11 MOTM Photo -->
+                            <img src="PXL_20260307_105852145.RAW-01.jpg" alt="Man of the Match" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-4xl text-gray-300 hidden"></i>
+                        </div>
+                        <div class="text-center sm:text-left z-10 flex-grow">
+                            <span class="text-xs font-bold bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">Man of the Match</span>
+                            <h3 class="text-2xl font-black uppercase mb-2">Harry Turner</h3>
+                            <p class="text-sm text-blue-100 leading-relaxed">Awarded for an incredible penalty save and commanding his box during the Tornadoes U11s hard-fought victory at the weekend! Brilliant performance.</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="space-y-8">
                     <!-- NEW MEET THE PLAYERS BUTTON -->
@@ -818,13 +1206,14 @@
                     </div>
 
                     <!-- Team Instagram Card -->
-                    <div class="bg-gradient-to-tr from-purple-600 to-pink-500 p-6 rounded-xl shadow border-t-4 border-boroughYellow text-center flex flex-col items-center justify-center group transition duration-300 hover:shadow-xl">
-                        <span class="text-xs font-bold text-white uppercase tracking-widest mb-4 flex items-center gap-2"><i class="fa-brands fa-instagram text-lg"></i> Follow The Team</span>
+                    <div class="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 p-6 rounded-xl shadow-lg border-t-4 border-boroughYellow text-center flex flex-col items-center justify-center transition duration-300">
+                        <i class="fa-brands fa-instagram text-4xl mb-2 text-white drop-shadow-md"></i>
+                        <h3 class="font-black uppercase text-white mb-4 text-xl drop-shadow-md">Follow The Team</h3>
                         <!-- 🟩 IMAGE: U11 Instagram QR Code -->
-                        <a href="https://www.instagram.com/southseftontornadoes/" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition duration-300 w-full flex justify-center bg-white p-2 rounded-xl">
-                            <img src="southseftontornadoes_qr.jpg" alt="Tornadoes Instagram" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="max-h-48 w-auto object-contain rounded-lg">
-                            <div class="w-full h-24 bg-gray-50 flex items-center justify-center rounded border-2 border-dashed border-gray-200 text-gray-400 hidden">
-                                <span class="font-bold text-xs uppercase tracking-wider">Add QR Code</span>
+                        <a href="https://www.instagram.com/southseftontornadoes/" target="_blank" rel="noopener noreferrer" class="bg-white p-4 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300 w-full flex flex-col items-center group">
+                            <img src="southseftontornadoes_qr.jpg" alt="Tornadoes Instagram" onerror="this.style.display='none';" class="max-h-40 w-auto object-contain rounded-xl border border-gray-100">
+                            <div class="mt-3 text-boroughBlue font-black uppercase tracking-wider text-sm group-hover:text-pink-600 transition-colors">
+                                @southseftontornadoes
                             </div>
                         </a>
                     </div>
@@ -838,6 +1227,16 @@
                             <div class="w-full h-24 bg-gray-50 flex items-center justify-center rounded border-2 border-dashed border-gray-200 text-gray-400 hidden">
                                 <span class="font-bold text-xs uppercase tracking-wider">Add Sponsor Logo</span>
                             </div>
+                        </a>
+                    </div>
+
+                    <!-- Hightown JFL Card -->
+                    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-boroughBlue text-center flex flex-col items-center justify-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Official League Portal</span>
+                        <h3 class="font-black text-boroughBlue uppercase mb-3 text-lg">Hightown JFL</h3>
+                        <p class="text-sm text-gray-500 mb-5 leading-relaxed">View all official fixtures, results, and comprehensive league tables for our division.</p>
+                        <a href="https://fulltime.thefa.com/index.html?league=540302684" target="_blank" rel="noopener noreferrer" class="w-full bg-boroughBlue text-white font-bold uppercase tracking-wider text-xs px-4 py-3 rounded shadow hover:bg-boroughLightBlue transition flex items-center justify-center gap-2 group">
+                            Visit Portal <i class="fa-solid fa-arrow-up-right-from-square group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition"></i>
                         </a>
                     </div>
                     
@@ -973,6 +1372,22 @@
                             <p class="font-bold text-gray-500 text-lg">Edit fixtures here.</p>
                         </div>
                     </div>
+
+                    <!-- Man of the Match Card -->
+                    <div class="bg-gradient-to-br from-boroughBlue to-boroughLightBlue rounded-xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-center sm:items-start gap-6 relative overflow-hidden">
+                        <i class="fa-solid fa-medal absolute -bottom-4 -right-4 text-8xl text-white opacity-10"></i>
+                        <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white border-4 border-boroughYellow flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- 🟩 IMAGE: U14 MOTM Photo -->
+                            <img src="" alt="Man of the Match" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                            <i class="fa-solid fa-user text-4xl text-gray-300 hidden"></i>
+                        </div>
+                        <div class="text-center sm:text-left z-10 flex-grow">
+                            <span class="text-xs font-bold bg-boroughYellow text-boroughBlue px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">Man of the Match</span>
+                            <h3 class="text-2xl font-black uppercase mb-2">Player Name</h3>
+                            <p class="text-sm text-blue-100 leading-relaxed">Awarded for an outstanding performance in the last match. Fantastic effort, teamwork, and dedication on the pitch!</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="space-y-8">
                     <!-- NEW MEET THE PLAYERS BUTTON -->
@@ -1707,7 +2122,7 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex flex-col sm:items-start items-center gap-1">
                 <p>&copy; 2026 South Sefton Borough FC. All Rights Reserved. <button onclick="showPage('ai-tools')" class="text-gray-900 hover:text-gray-500 transition duration-300 ml-2 text-sm" title="Admin Access"><i class="fa-solid fa-lock"></i></button></p>
-                <a href="https://fulltime.thefa.com/index.html?league=540302684" target="_blank" rel="noopener noreferrer" class="text-boroughYellow hover:text-white transition text-xs font-bold uppercase tracking-wider">Official FA Full-Time League Page</a>
+                <a href="https://www.thefa.com/" target="_blank" rel="noopener noreferrer" class="text-boroughYellow hover:text-white transition text-xs font-bold uppercase tracking-wider">Official FA Website</a>
             </div>
             <div class="flex gap-4 text-lg">
                 <a href="#" class="hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
