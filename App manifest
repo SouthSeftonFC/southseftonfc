@@ -1,0 +1,17 @@
+{
+"name": "South Sefton Football Club",
+"short_name": "South Sefton",
+"description": "Official home of South Sefton Football Club. Driven by community, passion, and local pride.",
+"start_url": ".",
+"display": "standalone",
+"background_color": "#f8fafc",
+"theme_color": "#0033A0",
+"icons": [
+{
+"src": "Badge.png",
+"sizes": "192x192 512x512",
+"type": "image/png",
+"purpose": "any maskable"
+}
+]
+}
