@@ -77,7 +77,7 @@
         .ticker-wrap { width: 100%; overflow: hidden; background-color: #1e293b; color: white; padding: 0.5rem 0; white-space: nowrap; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); border-bottom: 2px solid #FFD100;}
         .ticker { display: inline-block; animation: ticker 25s linear infinite; font-weight: 600; font-size: 0.9rem;}
         .ticker:hover { animation-play-state: paused; }
-        .ticker-item { padding: 0 2rem; display: inline-flex; items-center; gap: 0.5rem; }
+        .ticker-item { padding: 0 2rem; display: inline-flex; align-items: center; gap: 0.5rem; }
         @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
 
         /* Dynamic Gradients */
@@ -118,7 +118,7 @@
                         <button class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition flex items-center rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">
                             Teams <i class="fa-solid fa-chevron-down ml-1 lg:ml-2 text-[10px] lg:text-xs"></i>
                         </button>
-                        <div class="absolute left-0 top-[60px] w-48 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 transition-all dropdown-bridge">
+                        <div class="absolute left-0 top-[60px] w-48 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 transition-all dropdown-bridge z-[999]">
                             <button onclick="showPage('u7')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 7s</button>
                             <button onclick="showPage('u9')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 9s</button>
                             <button onclick="showPage('u11')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 11s</button>
@@ -173,25 +173,25 @@
     </div>
 
     <!-- MAIN CONTENT AREA (SPA) -->
-    <div id="main-content" class="flex-grow flex flex-col">
+    <div id="main-content" class="flex-grow flex flex-col relative z-10">
 
         <!-- HOME PAGE -->
         <section id="home" class="page-view active flex-grow">
             <!-- Hero -->
             <div class="relative bg-darkNavy overflow-hidden min-h-[500px] flex items-center">
                 <!-- CHANGE HERO BACKGROUND IMAGE HERE -->
-                <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('Screenshot\ 2026-07-06\ 12.01.29.png');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('Screenshot 2026-07-06 12.01.29.png');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent pointer-events-none"></div>
                 
-                <div class="relative max-w-7xl mx-auto px-4 py-20 text-center w-full">
+                <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center w-full">
                     <img src="1779912178231.png" alt="Crest" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl">
                     <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-4 drop-shadow-lg">
                         Pride of <span class="text-transparent bg-clip-text bg-gradient-to-r from-boroughYellow to-yellow-300">The Borough</span>
                     </h1>
                     <p class="text-xl md:text-2xl text-gray-200 mb-10 font-medium max-w-2xl mx-auto drop-shadow">Community, Passion, and Development through grassroots football in South Sefton.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <button onclick="showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all">Join A Team</button>
-                        <button onclick="showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl">Learn More</button>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20">
+                        <button onclick="showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all cursor-pointer">Join A Team</button>
+                        <button onclick="showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl cursor-pointer">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -243,6 +243,16 @@
                             <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> Sun 11:15 AM</div>
                             <div class="text-xs font-semibold text-gray-500 uppercase">Hightown JFL Cup</div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rolling Instagram Feed -->
+            <section class="py-12 bg-gray-50 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-black text-boroughBlue uppercase mb-8"><i class="fa-brands fa-instagram text-pink-500 mr-2"></i> Live From The Pitch</h2>
+                    <div class="max-w-4xl mx-auto bg-white p-2 rounded-xl shadow-lg border border-gray-100">
+                        <iframe src="https://app.mirror-app.com/feed-instagram/519b2312-8907-45d1-a4ca-26666d63d128/preview" style="width:100%; height: 600px; border:none; overflow:hidden;" scrolling="no"></iframe>
                     </div>
                 </div>
             </section>
@@ -299,6 +309,7 @@
             <section class="py-16 bg-blue-50/50">
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- ORIGINAL SEPARATE SPONSOR SECTION -->
                         <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughYellow flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
                             <div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                                 <i class="fa-solid fa-handshake-angle text-4xl text-boroughYellow"></i>
@@ -308,6 +319,7 @@
                             <a href="mailto:southseftonfootballclub@gmail.com" class="border-2 border-boroughYellow text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughYellow transition w-full block text-center">Email Us</a>
                         </div>
 
+                        <!-- ORIGINAL SEPARATE VOLUNTEER SECTION -->
                         <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughBlue flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
                             <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                                 <i class="fa-solid fa-users text-4xl text-boroughBlue"></i>
@@ -336,7 +348,7 @@
                     </div>
                     <div class="md:w-2/3 p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
-                            <span class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow">Hightown JFL</span>
+                            <a href="PASTE_LEAGUE_LINK_HERE" target="_blank" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                         </div>
                         <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 7s</h2>
                         <p class="text-gray-600 text-lg leading-relaxed">Our U7s squad is focused on the fundamentals of the game: having fun, making friends, and learning basic ball skills in a safe, encouraging environment.</p>
@@ -473,7 +485,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="player1.jpg" alt="Player Name" class="w-full h-full object-cover absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
@@ -598,7 +609,7 @@
                     </div>
                     <div class="md:w-2/3 p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
-                            <span class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow">Hightown JFL</span>
+                            <a href="PASTE_LEAGUE_LINK_HERE" target="_blank" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                         </div>
                         <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 9s</h2>
                         <p class="text-gray-600 text-lg leading-relaxed">Transitioning into slightly larger formats, our U9s focus on positional awareness, teamwork, and developing a love for competitive play.</p>
@@ -733,7 +744,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="player1.jpg" alt="Player Name" class="w-full h-full object-cover absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
@@ -858,7 +868,7 @@
                     </div>
                     <div class="md:w-2/3 p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
-                            <span class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow">Hightown JFL</span>
+                            <a href="PASTE_LEAGUE_LINK_HERE" target="_blank" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                         </div>
                         <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 11s</h2>
                         <p class="text-gray-600 text-lg leading-relaxed">Our U11s team competes in the 9v9 format, focusing on tactical understanding, physical development, and preparing for full 11-a-side football.</p>
@@ -989,13 +999,11 @@
                     
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                         
-                        <!-- ====== PLAYER 1 (Harry Turner - Captain) ====== -->
+                        <!-- ====== PLAYER 1 (Harry Turner) ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md border border-gray-200 group text-center flex flex-col relative">
-                            <!-- Optional Captain Badge -->
-                            <div class="absolute top-2 right-2 bg-boroughBlue text-white text-[10px] font-black uppercase px-2 py-1 rounded shadow z-20">Captain</div>
                             <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="harry-turner.jpg" alt="Harry Turner" class="w-full h-full object-cover absolute inset-0 z-10"> -->
+                                <img src="Harry.jpg" alt="Harry Turner" class="w-full h-full object-cover absolute inset-0 z-10">
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harry Turner</h4>
@@ -1012,7 +1020,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="player2.jpg" alt="Player Name" class="w-full h-full object-cover absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
@@ -1126,7 +1133,7 @@
                     </div>
                     <div class="md:w-2/3 p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
-                            <span class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow">Hightown JFL</span>
+                            <a href="PASTE_LEAGUE_LINK_HERE" target="_blank" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                         </div>
                         <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 14s</h2>
                         <p class="text-gray-600 text-lg leading-relaxed">Our most senior squad, the U14s play full 11-a-side football. The focus here is on advanced tactical awareness, fitness, and high-level competitive play.</p>
@@ -1353,7 +1360,7 @@
             </div>
 
             <!-- Darby Rimmer MND Foundation -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 mb-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-50 mb-8 flex flex-col md:flex-row items-center gap-6">
                 <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center shrink-0 border border-blue-100">
                     <i class="fa-solid fa-ribbon text-5xl text-blue-600"></i>
                 </div>
@@ -1410,7 +1417,7 @@
                 
                 <div class="w-full h-96 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.4927506692257!2d-2.9863486234033145!3d53.531238960855214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21235b2a3c7f%3A0xc6a82a0d9e7949a2!2sMill%20Dam%20Park!5e0!3m2!1sen!2suk!4v1704543210000!5m2!1sen!2suk" 
+                        src="https://maps.google.com/maps?q=Mill%20Dam%20Park,%20South%20Sefton&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
@@ -1448,14 +1455,6 @@
                         <!-- WELFARE OFFICER PHOTO -->
                         <div class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-4 overflow-hidden relative flex items-center justify-center border-4 border-blue-50 group shadow-inner">
                             <i class="fa-solid fa-user-shield text-5xl text-gray-300 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                            
-                            <!-- 
-                            HOW TO ADD JIM'S PHOTO:
-                            1. Upload his photo (e.g., jim.jpg) to your GitHub repository.
-                            2. Remove the comment tags wrapped around the img tag below.
-                            3. Put the exact file name inside src="".
-                            -->
-                            <!-- <img src="jim.jpg" alt="Jim Fitzpatrick - Welfare Officer" class="w-full h-full object-cover relative z-10"> -->
                         </div>
                         
                         <h3 class="text-2xl font-black text-boroughBlue uppercase mb-2">Welfare Officer</h3>
@@ -1525,7 +1524,7 @@
                                 <p class="text-gray-600 mb-2">Mill Dam Field, South Sefton</p>
                                 <div class="w-full h-48 rounded-lg overflow-hidden border border-gray-200">
                                     <iframe 
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.4927506692257!2d-2.9863486234033145!3d53.531238960855214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21235b2a3c7f%3A0xc6a82a0d9e7949a2!2sMill%20Dam%20Park!5e0!3m2!1sen!2suk!4v1704543210000!5m2!1sen!2suk" 
+                                        src="https://maps.google.com/maps?q=Mill%20Dam%20Park,%20South%20Sefton&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                                         width="100%" 
                                         height="100%" 
                                         style="border:0;" 
@@ -1541,7 +1540,6 @@
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-boroughYellow h-fit">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <!-- Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms key -->
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         <input type="hidden" name="redirect" value="https://southseftonfc.github.io/southseftonfc/">
                         <input type="hidden" name="subject" value="New Message from South Sefton FC Website">
