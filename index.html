@@ -1610,14 +1610,10 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-boroughYellow h-fit">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        
-                        <!-- 1. WEB3FORMS ACCESS KEY -->
+                    
+                    <form id="ssfc-contact-form" class="space-y-4">
+                        <!-- WEB3FORMS ACCESS KEY -->
                         <input type="hidden" name="access_key" value="e2ec31cf-904a-4f2d-a950-854d5c2aa1c7">
-                        
-                        <!-- 2. REDIRECTS THE USER TO THE HOMEPAGE AFTER SENDING -->
-                        <input type="hidden" name="redirect" value="https://www.southseftonfc.co.uk/">
-                        
                         <input type="hidden" name="subject" value="New Message from South Sefton FC Website">
                         
                         <div>
@@ -1627,6 +1623,10 @@
                         <div>
                             <label class="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
                             <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-boroughBlue bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Telephone Number</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-boroughBlue bg-gray-50">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-gray-700 mb-1">Interested Age Group (If applicable)</label>
@@ -1646,8 +1646,18 @@
                         <!-- Anti-Spam Check -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
-                        <button type="submit" class="w-full gradient-btn text-white font-bold uppercase tracking-wider py-4 rounded-lg shadow-lg">Send Message</button>
+                        <button type="submit" id="submit-btn" class="w-full gradient-btn text-white font-bold uppercase tracking-wider py-4 rounded-lg shadow-lg transition-all">Send Message</button>
                     </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="form-success-msg" class="hidden flex flex-col items-center text-center py-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 shadow-inner">
+                            <i class="fa-solid fa-check text-3xl text-green-500"></i>
+                        </div>
+                        <h4 class="text-2xl font-black text-boroughBlue uppercase mb-2">Thank You!</h4>
+                        <p class="text-gray-600 font-medium mb-6">Thank you for your enquiry, we will get back to you as soon as possible.</p>
+                        <button type="button" onclick="resetContactForm()" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-xs px-6 py-3 rounded-full hover:bg-boroughBlue hover:text-white transition">Send Another Message</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1742,6 +1752,60 @@
         function acceptCookies() {
             localStorage.setItem('southSeftonCookiesAccepted', 'true');
             document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        const contactForm = document.getElementById('ssfc-contact-form');
+        const successMsg = document.getElementById('form-success-msg');
+        const submitBtn = document.getElementById('submit-btn');
+
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Change button text to show loading state
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = "Sending...";
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                
+                const formData = new FormData(contactForm);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        // Success: Hide form, show thank you message
+                        contactForm.reset();
+                        contactForm.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                    } else {
+                        console.log(response);
+                        alert("Something went wrong. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert("Something went wrong. Please try again.");
+                })
+                .finally(() => {
+                    // Revert button back to normal
+                    submitBtn.innerText = originalText;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
+            });
+        }
+
+        function resetContactForm() {
+            successMsg.classList.add('hidden');
+            contactForm.classList.remove('hidden');
         }
     </script>
 </body>
