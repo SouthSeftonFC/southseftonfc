@@ -26,26 +26,6 @@
     <meta property="og:url" content="https://southseftonfc.github.io/southseftonfc/">
     <meta property="og:type" content="website">
 
-    <!-- Structured Data for Google (SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SportsClub",
-      "name": "South Sefton Football Club",
-      "image": "https://southseftonfc.github.io/southseftonfc/Badge.png",
-      "url": "https://southseftonfc.github.io/southseftonfc/",
-      "telephone": "",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mill Dam Field",
-        "addressLocality": "South Sefton",
-        "addressRegion": "Merseyside",
-        "addressCountry": "UK"
-      },
-      "description": "Welcome to the official home of South Sefton Football Club. Driven by community, passion, and local pride."
-    }
-    </script>
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -68,6 +48,7 @@
             }
         }
     </script>
+    
     <style>
         html, body { 
             font-family: 'Inter', sans-serif; 
@@ -262,11 +243,11 @@
                     <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-4 tracking-tight">Connect With The Club</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">Follow us on Instagram for live match updates, behind-the-scenes photos, tournament news, and more from across all age groups.</p>
                     
-                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-3xl">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-3xl">
                         
-                        <!-- QR Code -->
-                        <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-200 p-2">
-                            <img src="Screenshot 2026-09-21 09.53.44~2.jpg" alt="Scan to follow South Sefton FC on Instagram" class="w-full h-full object-contain rounded-xl hover:scale-105 transition duration-500">
+                        <!-- QR Code (Updated to user requested image) -->
+                        <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-200 p-2 flex items-center justify-center">
+                            <img src="Screenshot 2026-09-21 09.53.44~2.jpg" alt="Scan to follow South Sefton FC on Instagram" class="max-w-full max-h-full object-contain rounded-xl hover:scale-105 transition duration-500">
                         </div>
                         
                         <!-- Actions -->
@@ -362,9 +343,9 @@
         <!-- ============================================== -->
         <section id="u7" class="page-view flex-grow bg-gray-50 w-full">
             <div class="max-w-7xl mx-auto px-4 py-8">
-                <!-- Team Hero -->
+                <!-- Team Hero Banner -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-blue-100 flex flex-col items-center justify-center p-6 text-center z-0">
                             <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
                             <p class="text-sm text-blue-500 font-bold uppercase">Upload U7 Team Photo</p>
@@ -404,23 +385,11 @@
                                     <tr class="border-b border-gray-100 hover:bg-gray-50">
                                         <td class="px-3 py-3 font-bold">1</td><td class="px-3 py-3 font-bold">Formby FC</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
                                     </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">2</td><td class="px-3 py-3 font-bold">Crosby Colts</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
                                     <tr class="border-b border-gray-200 bg-blue-50 border-l-4 border-l-boroughYellow">
-                                        <td class="px-3 py-3 font-black text-boroughBlue">3</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
+                                        <td class="px-3 py-3 font-black text-boroughBlue">2</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
                                     </tr>
                                     <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">4</td><td class="px-3 py-3 font-bold">Hightown Rangers</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">5</td><td class="px-3 py-3 font-bold">Bootle Bucks</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">6</td><td class="px-3 py-3 font-bold">Maghull FC</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">7</td><td class="px-3 py-3 font-bold">Waterloo Boys</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
+                                        <td class="px-3 py-3 font-bold">3</td><td class="px-3 py-3 font-bold">Crosby Colts</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -461,13 +430,6 @@
                                     <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
-                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0"><i class="fa-solid fa-user"></i></div>
-                                <div>
-                                    <p class="font-bold text-gray-800">Assistant Coach</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- SPONSOR CARD -->
@@ -493,99 +455,45 @@
                     <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
                     
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+                        <!-- ====== PLAYER CARD TEMPLATE ====== -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <!-- Aspect ratio square logic for perfect responsive portrait cropping -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 1</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
                         
-                        <!-- ====== PLAYER 1 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 2 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 3 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 4 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 5 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 6 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 7 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 8 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
@@ -599,8 +507,9 @@
         <!-- ============================================== -->
         <section id="u9" class="page-view flex-grow bg-gray-50 w-full">
              <div class="max-w-7xl mx-auto px-4 py-8">
+                <!-- Team Hero Banner -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-blue-100 flex flex-col items-center justify-center p-6 text-center z-0">
                             <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
                             <p class="text-sm text-blue-500 font-bold uppercase">Upload U9 Team Photo</p>
@@ -639,23 +548,8 @@
                                     <tr class="border-b border-gray-100 hover:bg-gray-50">
                                         <td class="px-3 py-3 font-bold">1</td><td class="px-3 py-3 font-bold">Formby FC</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
                                     </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">2</td><td class="px-3 py-3 font-bold">Crosby Colts</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
                                     <tr class="border-b border-gray-200 bg-blue-50 border-l-4 border-l-boroughYellow">
-                                        <td class="px-3 py-3 font-black text-boroughBlue">3</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">4</td><td class="px-3 py-3 font-bold">Hightown Rangers</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">5</td><td class="px-3 py-3 font-bold">Bootle Bucks</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">6</td><td class="px-3 py-3 font-bold">Maghull FC</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">7</td><td class="px-3 py-3 font-bold">Waterloo Boys</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
+                                        <td class="px-3 py-3 font-black text-boroughBlue">2</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -696,13 +590,6 @@
                                     <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
-                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0"><i class="fa-solid fa-user"></i></div>
-                                <div>
-                                    <p class="font-bold text-gray-800">Assistant Coach</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- SPONSOR CARD -->
@@ -727,99 +614,44 @@
                     <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
                     
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+                        <!-- ====== PLAYER CARD TEMPLATE ====== -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 1</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
                         
-                        <!-- ====== PLAYER 1 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 2 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 3 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 4 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 5 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 6 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 7 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 8 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
@@ -834,7 +666,7 @@
         <section id="u11" class="page-view flex-grow bg-gray-50 w-full">
              <div class="max-w-7xl mx-auto px-4 py-8">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
                         <img src="Team_2.jpg" alt="Under 11s Team" class="w-full h-full object-cover object-center absolute inset-0 z-10">
                     </div>
                     <div class="w-full p-6 md:p-8 flex flex-col justify-center">
@@ -874,18 +706,6 @@
                                     </tr>
                                     <tr class="border-b border-gray-200 bg-blue-50 border-l-4 border-l-boroughYellow">
                                         <td class="px-3 py-3 font-black text-boroughBlue">3</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">4</td><td class="px-3 py-3 font-bold">Hightown Rangers</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">5</td><td class="px-3 py-3 font-bold">Bootle Bucks</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">6</td><td class="px-3 py-3 font-bold">Maghull FC</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-3 py-3 font-bold">7</td><td class="px-3 py-3 font-bold">Waterloo Boys</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -928,7 +748,7 @@
                             </div>
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
                                 <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover rounded-full">
+                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover object-top">
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">Jamie</p>
@@ -962,15 +782,15 @@
                         
                         <!-- ====== PLAYER 1 (Harry Turner) ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md border border-gray-200 group text-center flex flex-col relative">
-                            <!-- Aspect ratio square ensures it scales perfectly across all devices -->
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200">
-                                <img src="Harry.jpg" alt="Harry Turner" class="w-full h-full object-cover object-center absolute inset-0 z-10">
+                            <!-- Aspect ratio square ensures it scales perfectly across all devices and object-top frames the face -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Harry.jpg" alt="Harry Turner" class="w-full h-full object-cover object-top absolute inset-0 z-10">
                                 <!-- INSTAGRAM BUTTON FLOATING OVER IMAGE -->
                                 <a href="PASTE_HARRYS_INSTAGRAM_LINK_HERE" target="_blank" rel="noopener noreferrer" class="absolute bottom-2 right-2 z-20 bg-white p-1.5 rounded-lg text-pink-600 hover:text-pink-700 transition transform hover:scale-110 shadow-md flex items-center justify-center" title="Follow on Instagram">
                                     <i class="fa-brands fa-instagram text-xl"></i>
                                 </a>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harry Turner</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Midfielder</p>
                             </div>
@@ -978,184 +798,172 @@
 
                         <!-- ====== PLAYER 2 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
                         <!-- ====== PLAYER 3 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
                         <!-- ====== PLAYER 4 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <!-- ====== PLAYER 5 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+        <!-- ============================================== -->
+        <!-- U14 PAGE -->
+        <!-- ============================================== -->
+        <section id="u14" class="page-view flex-grow bg-gray-50 w-full">
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <!-- Team Hero Banner -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-blue-100 flex flex-col items-center justify-center p-6 text-center z-0">
+                            <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
+                            <p class="text-sm text-blue-500 font-bold uppercase">Upload U14 Team Photo</p>
+                        </div>
+                        <!-- <img src="YOUR_U14_TEAM_PHOTO.jpg" alt="Under 14s Team" class="w-full h-full object-cover object-center absolute inset-0 z-10"> -->
+                    </div>
+                    <div class="w-full p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2">
+                            <a href="https://www.bootlejfl.com/" target="_blank" rel="noopener noreferrer" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Bootle JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+                        <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 14s</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed">Our U14s squad is preparing for the transition to young adult football, focusing on advanced tactics, stamina, and competitive resilience.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
+                    <!-- Left Col: League Data & Awards -->
+                    <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        
+                        <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
+                            
+                            <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
+                                <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
+                                    <tr>
+                                        <th class="px-3 py-3 rounded-tl-lg">Pos</th>
+                                        <th class="px-3 py-3 w-full">Team</th>
+                                        <th class="px-2 py-3 text-center">P</th>
+                                        <th class="px-2 py-3 text-center">W</th>
+                                        <th class="px-2 py-3 text-center">D</th>
+                                        <th class="px-2 py-3 text-center">L</th>
+                                        <th class="px-2 py-3 text-center">GD</th>
+                                        <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                        <td class="px-3 py-3 font-bold">1</td><td class="px-3 py-3 font-bold">Bootle Bucks</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-2 py-3 text-center">0</td><td class="px-3 py-3 text-center font-bold">0</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 bg-blue-50 border-l-4 border-l-boroughYellow">
+                                        <td class="px-3 py-3 font-black text-boroughBlue">2</td><td class="px-3 py-3 font-black text-boroughBlue">South Sefton FC</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-2 py-3 text-center font-bold">0</td><td class="px-3 py-3 text-center font-black text-boroughBlue">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
+                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
+                                <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <p class="font-bold text-gray-800">Coach Name</p>
+                                    <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 6 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                        <!-- SPONSOR CARD -->
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
+                            <div class="w-full h-24 bg-gray-100 rounded flex items-center justify-center shrink-0 border border-gray-200 overflow-hidden relative group p-2">
+                                <i class="fa-solid fa-building text-3xl text-gray-400 absolute z-0 group-hover:opacity-0 transition"></i>
+                                <!-- <img src="sponsor-logo.png" alt="Sponsor Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300"> -->
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 7 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            <div>
+                                <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
+                                <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">Sponsor Name Here</h2>
+                                <p class="text-gray-600 text-xs mb-3">A huge thank you to our U14s kit sponsor for their generous support this season.</p>
+                                <a href="PASTE_SPONSOR_WEBSITE_LINK_HERE" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- ====== PLAYER 8 ====== -->
+                <!-- ========================================== -->
+                <!-- U14 MEET THE SQUAD                          -->
+                <!-- ========================================== -->
+                <div class="mt-8 md:mt-12 bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+                        <!-- ====== PLAYER CARD TEMPLATE ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 9 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 10 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 1</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
                         
-                        <!-- ====== PLAYER 11 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 12 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
 
-                        <!-- ====== PLAYER 13 ====== -->
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
                             </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
                                 <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
                             </div>
                         </div>
-
-                        <!-- ====== PLAYER 14 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 15 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
-                        <!-- ====== PLAYER 16 ====== -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden flex items-center justify-center shrink-0 bg-gray-200">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player Name</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -1411,6 +1219,7 @@
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-boroughYellow h-fit">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <!-- Replace with your actual Web3Forms access key if changed -->
                         <input type="hidden" name="access_key" value="e2ec31cf-904a-4f2d-a950-854d5c2aa1c7">
                         <input type="hidden" name="redirect" value="https://southseftonfc.github.io/southseftonfc/">
                         <input type="hidden" name="subject" value="New Message from South Sefton FC Website">
@@ -1627,7 +1436,7 @@
         
         // The API Key is injected automatically by Canvas at runtime.
         const API_KEY = ""; 
-        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
         // Helper function to call the Gemini API
         async function fetchGeminiResponse(prompt, systemInstruction, buttonId) {
