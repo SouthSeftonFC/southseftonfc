@@ -62,7 +62,7 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
         .ticker-wrap { width: 100%; overflow: hidden; background-color: #1e293b; color: white; padding: 0.5rem 0; white-space: nowrap; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); border-bottom: 2px solid #FFD100;}
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; font-weight: 600; font-size: 0.9rem;}
+        .ticker { display: inline-block; animation: ticker 60s linear infinite; font-weight: 600; font-size: 0.9rem;}
         .ticker:hover { animation-play-state: paused; }
         .ticker-item { padding: 0 2rem; display: inline-flex; align-items: center; gap: 0.5rem; }
         @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
@@ -147,15 +147,37 @@
         <div class="ticker">
             <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U7s won 4-2 vs Hightown Rangers</div>
             <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> U11s secured a 1-1 draw away at Crosby Colts</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U7s vs Litherland REMYCA - Sat 9:00 AM</div>
             <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT FIXTURE:</strong> U9s vs Formby FC - Saturday 10:00 AM</div>
+            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U9s won 3-0 vs Formby FC</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U9s vs Kirkby Town - Sat 10:00 AM</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U11s drew 1-1 vs Crosby Colts</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U11s vs Southport FC - Sun 10:30 AM</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U14s won 2-1 vs Everton INTC</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U14s vs Bootle Bucks - Sun 11:15 AM</div>
+            
+            <!-- Repeat for seamless looping -->
             <div class="ticker-item text-gray-500">|</div>
             <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U7s won 4-2 vs Hightown Rangers</div>
             <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> U11s secured a 1-1 draw away at Crosby Colts</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U7s vs Litherland REMYCA - Sat 9:00 AM</div>
             <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT FIXTURE:</strong> U9s vs Formby FC - Saturday 10:00 AM</div>
+            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U9s won 3-0 vs Formby FC</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U9s vs Kirkby Town - Sat 10:00 AM</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U11s drew 1-1 vs Crosby Colts</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U11s vs Southport FC - Sun 10:30 AM</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U14s won 2-1 vs Everton INTC</div>
+            <div class="ticker-item text-gray-500">|</div>
+            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U14s vs Bootle Bucks - Sun 11:15 AM</div>
         </div>
     </div>
 
@@ -874,7 +896,7 @@
                             </div>
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
                                 <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover object-top">
+                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover object-top rounded-full">
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">Jamie</p>
