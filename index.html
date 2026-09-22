@@ -1758,19 +1758,19 @@
                     const cleanCols = cols.map(c => c.replace(/^"|"$/g, '').trim());
                     
                     // Col A (0): Team
-                    // Col B (1): Date of Result
+                    // Col B (1): Opponent (Past)
                     // Col C (2): Our Score
                     // Col D (3): Opp Score
-                    // Col E (4): Opponent (Past)
+                    // Col E (4): Date of Result
                     // Col F (5): Next Opponent
                     // Col G (6): Next Time
                     // Col H (7): Next Competition
                     
                     const team = cleanCols[0];
-                    const pastDate = cleanCols[1];
+                    const pastOpponent = cleanCols[1];
                     const ourScore = cleanCols[2];
                     const oppScore = cleanCols[3];
-                    const pastOpponent = cleanCols[4];
+                    const pastDate = cleanCols[4];
                     
                     const nextOpponent = cleanCols[5];
                     const time = cleanCols[6];
