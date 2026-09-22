@@ -90,7 +90,7 @@
     <nav class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-boroughYellow">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-20">
-                <div class="flex items-center cursor-pointer group" onclick="showPage('home')">
+                <div class="flex items-center cursor-pointer group" onclick="window.showPage('home')">
                     <img src="Badge.png" alt="South Sefton FC Logo" class="h-10 w-10 md:h-16 md:w-16 mr-2 md:mr-3 group-hover:scale-105 transition duration-300 drop-shadow-md rounded-full object-cover">
                     <div class="flex flex-col">
                         <span class="font-black text-lg md:text-2xl tracking-tight text-boroughBlue uppercase leading-none">South Sefton</span>
@@ -100,27 +100,27 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-0 lg:space-x-1">
-                    <button onclick="showPage('home')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Home</button>
+                    <button onclick="window.showPage('home')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Home</button>
                     <div class="relative group h-full flex items-center">
                         <button class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition flex items-center rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">
                             Teams <i class="fa-solid fa-chevron-down ml-1 lg:ml-2 text-[10px] lg:text-xs"></i>
                         </button>
                         <div class="absolute left-0 top-[60px] w-48 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 transition-all dropdown-bridge z-[999]">
-                            <button onclick="showPage('u7')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 7s</button>
-                            <button onclick="showPage('u9')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 9s</button>
-                            <button onclick="showPage('u11')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 11s</button>
-                            <button onclick="showPage('u14')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 14s</button>
+                            <button onclick="window.showPage('u7')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 7s</button>
+                            <button onclick="window.showPage('u9')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 9s</button>
+                            <button onclick="window.showPage('u11')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 11s</button>
+                            <button onclick="window.showPage('u14')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 14s</button>
                         </div>
                     </div>
-                    <button onclick="showPage('news')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">News</button>
-                    <button onclick="showPage('about')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">About</button>
-                    <button onclick="showPage('safeguarding')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Safeguarding</button>
-                    <button onclick="showPage('contact')" class="ml-1 lg:ml-2 gradient-btn text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold shadow-md uppercase tracking-wide text-xs lg:text-sm whitespace-nowrap">Contact Us</button>
+                    <button onclick="window.showPage('news')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">News</button>
+                    <button onclick="window.showPage('about')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">About</button>
+                    <button onclick="window.showPage('safeguarding')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Safeguarding</button>
+                    <button onclick="window.showPage('contact')" class="ml-1 lg:ml-2 gradient-btn text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold shadow-md uppercase tracking-wide text-xs lg:text-sm whitespace-nowrap">Contact Us</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" class="text-boroughBlue hover:text-boroughLightBlue focus:outline-none p-2 bg-blue-50 rounded-lg">
+                    <button onclick="window.toggleMobileMenu()" class="text-boroughBlue hover:text-boroughLightBlue focus:outline-none p-2 bg-blue-50 rounded-lg">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -129,55 +129,25 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner absolute w-full z-40">
-            <button onclick="showPage('home')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Home</button>
+            <button onclick="window.showPage('home')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Home</button>
             <div class="px-6 py-4 text-gray-800 font-bold border-b border-gray-50 uppercase tracking-wide text-boroughBlue bg-gray-50">Our Teams</div>
-            <button onclick="showPage('u7')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 7s</button>
-            <button onclick="showPage('u9')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 9s</button>
-            <button onclick="showPage('u11')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 11s</button>
-            <button onclick="showPage('u14')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 14s</button>
-            <button onclick="showPage('news')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">News</button>
-            <button onclick="showPage('about')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">About</button>
-            <button onclick="showPage('safeguarding')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Safeguarding</button>
-            <button onclick="showPage('contact')" class="block w-full text-left px-6 py-4 text-boroughBlue font-bold hover:bg-blue-50 uppercase tracking-wide">Contact Us</button>
+            <button onclick="window.showPage('u7')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 7s</button>
+            <button onclick="window.showPage('u9')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 9s</button>
+            <button onclick="window.showPage('u11')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 11s</button>
+            <button onclick="window.showPage('u14')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 14s</button>
+            <button onclick="window.showPage('news')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">News</button>
+            <button onclick="window.showPage('about')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">About</button>
+            <button onclick="window.showPage('safeguarding')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Safeguarding</button>
+            <button onclick="window.showPage('contact')" class="block w-full text-left px-6 py-4 text-boroughBlue font-bold hover:bg-blue-50 uppercase tracking-wide">Contact Us</button>
         </div>
     </nav>
 
     <!-- SCORE TICKER -->
     <div class="ticker-wrap border-b border-gray-800">
-        <div class="ticker">
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U7s won 4-2 vs Hightown Rangers</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U7s vs Litherland REMYCA - Sat 9:00 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U9s won 3-0 vs Formby FC</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U9s vs Kirkby Town - Sat 10:00 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U11s drew 1-1 vs Crosby Colts</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U11s vs Southport FC - Sun 10:30 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U14s won 2-1 vs Everton INTC</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U14s vs Bootle Bucks - Sun 11:15 AM</div>
-            
-            <!-- Repeat for seamless looping -->
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U7s won 4-2 vs Hightown Rangers</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U7s vs Litherland REMYCA - Sat 9:00 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U9s won 3-0 vs Formby FC</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U9s vs Kirkby Town - Sat 10:00 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-trophy text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U11s drew 1-1 vs Crosby Colts</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U11s vs Southport FC - Sun 10:30 AM</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> U14s won 2-1 vs Everton INTC</div>
-            <div class="ticker-item text-gray-500">|</div>
-            <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> U14s vs Bootle Bucks - Sun 11:15 AM</div>
+        <div class="ticker" id="score-ticker-container">
+            <!-- Dynamic ticker content will go here -->
+            <!-- Placeholder for loading state -->
+            <div class="ticker-item"><i class="fa-solid fa-spinner fa-spin text-yellow-400 mr-2"></i> Loading Latest Fixtures...</div>
         </div>
     </div>
 
@@ -198,8 +168,8 @@
                     </h1>
                     <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 font-medium max-w-2xl mx-auto drop-shadow px-2">Community, Passion, and Development through grassroots football in South Sefton.</p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 px-4">
-                        <button onclick="showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all cursor-pointer w-full sm:w-auto">Join A Team</button>
-                        <button onclick="showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl cursor-pointer w-full sm:w-auto">Learn More</button>
+                        <button onclick="window.showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all cursor-pointer w-full sm:w-auto">Join A Team</button>
+                        <button onclick="window.showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl cursor-pointer w-full sm:w-auto">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -220,36 +190,11 @@
                             <div>Competition</div>
                         </div>
                         
-                        <!-- Fixture 1 (U7) -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 border-b border-gray-100 hover:bg-blue-50 transition items-center text-center">
-                            <div class="font-black text-lg text-boroughBlue flex items-center justify-center gap-2"><span class="bg-boroughYellow w-2 h-2 rounded-full block"></span> Under 7s</div>
-                            <div class="font-bold text-gray-700">vs Hightown Rangers</div>
-                            <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> Sat 9:00 AM</div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase">Hightown JFL</div>
-                        </div>
-
-                        <!-- Fixture 2 (U9) -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 border-b border-gray-100 hover:bg-blue-50 transition items-center text-center">
-                            <div class="font-black text-lg text-boroughBlue flex items-center justify-center gap-2"><span class="bg-boroughYellow w-2 h-2 rounded-full block"></span> Under 9s</div>
-                            <div class="font-bold text-gray-700">vs Formby FC</div>
-                            <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> Sat 10:00 AM</div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase">John O'leary Kirkby League</div>
-                        </div>
-
-                        <!-- Fixture 3 (U11) -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 border-b border-gray-100 hover:bg-blue-50 transition items-center text-center">
-                            <div class="font-black text-lg text-boroughBlue flex items-center justify-center gap-2"><span class="bg-boroughYellow w-2 h-2 rounded-full block"></span> Under 11s</div>
-                            <div class="font-bold text-gray-700">@ Crosby Colts</div>
-                            <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> Sun 10:30 AM</div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase">Hightown JFL</div>
-                        </div>
-
-                        <!-- Fixture 4 (U14) -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 hover:bg-blue-50 transition items-center text-center">
-                            <div class="font-black text-lg text-boroughBlue flex items-center justify-center gap-2"><span class="bg-boroughYellow w-2 h-2 rounded-full block"></span> Under 14s</div>
-                            <div class="font-bold text-gray-700">vs Bootle Bucks</div>
-                            <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> Sun 11:15 AM</div>
-                            <div class="text-xs font-semibold text-gray-500 uppercase">Bootle JFL Cup</div>
+                        <div id="fixtures-container">
+                            <!-- Placeholder Loading Text -->
+                            <div class="p-8 text-center text-gray-500 font-bold animate-pulse">
+                                <i class="fa-solid fa-futbol fa-spin mr-2"></i> Fetching latest fixtures...
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -291,7 +236,7 @@
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="flex justify-between items-end mb-8 border-b-2 border-gray-100 pb-4">
                         <h2 class="text-3xl font-black text-boroughBlue uppercase">Club News</h2>
-                        <button onclick="showPage('news')" class="text-boroughLightBlue font-bold hover:text-boroughYellow transition uppercase text-sm tracking-wider">View All <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        <button onclick="window.showPage('news')" class="text-boroughLightBlue font-bold hover:text-boroughYellow transition uppercase text-sm tracking-wider">View All <i class="fa-solid fa-arrow-right ml-1"></i></button>
                     </div>
                     
                     <div class="grid md:grid-cols-3 gap-8">
@@ -303,7 +248,7 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <p class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wider">12 July 2026</p>
                                 <h3 class="font-black text-xl mb-4 text-gray-800 leading-tight">U9s Lift The Summer Cup in Thrilling Final</h3>
-                                <button onclick="readArticle('article-1')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                                <button onclick="window.readArticle('article-1')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
                             </div>
                         </div>
 
@@ -315,7 +260,7 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <p class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wider">05 July 2026</p>
                                 <h3 class="font-black text-xl mb-4 text-gray-800 leading-tight">New Kits Sponsored by Local Business</h3>
-                                <button onclick="readArticle('article-2')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                                <button onclick="window.readArticle('article-2')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
                             </div>
                         </div>
 
@@ -327,7 +272,7 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <p class="text-xs text-gray-500 font-bold mb-2 uppercase tracking-wider">28 June 2026</p>
                                 <h3 class="font-black text-xl mb-4 text-gray-800 leading-tight">Open Trials Announced for Upcoming Season</h3>
-                                <button onclick="readArticle('article-3')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                                <button onclick="window.readArticle('article-3')" class="text-boroughLightBlue font-bold text-sm uppercase tracking-wide hover:text-boroughBlue transition self-start mt-auto">Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i></button>
                             </div>
                         </div>
                     </div>
@@ -353,7 +298,7 @@
                             </div>
                             <h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Volunteer With Us</h3>
                             <p class="text-gray-600 mb-8 flex-grow">We are always looking for passionate people to help out! Whether it's coaching, matchday assistance, or administrative support, we'd love to have you on the team.</p>
-                            <button onclick="showPage('contact'); setTimeout(() => document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'}), 100);" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughBlue hover:text-white transition w-full">Register Interest</button>
+                            <button onclick="window.showPage('contact'); setTimeout(() => document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'}), 100);" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughBlue hover:text-white transition w-full">Register Interest</button>
                         </div>
                     </div>
                 </div>
@@ -416,18 +361,18 @@
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-center w-2/5">
                                         <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
-                                        <p class="text-3xl md:text-4xl font-black text-green-500 mt-2">4</p>
+                                        <p class="text-3xl md:text-4xl font-black text-green-500 mt-2" id="u7-goals-for">?</p>
                                     </div>
                                     <div class="text-center w-1/5">
                                         <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
                                     </div>
                                     <div class="text-center w-2/5">
-                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words">Hightown</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2">2</p>
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u7-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u7-goals-against">?</p>
                                     </div>
                                 </div>
-                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto">
-                                    Sat 4th July • League
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u7-result-date">
+                                    Awaiting Latest Result
                                 </div>
                             </div>
                         </div>
@@ -632,18 +577,18 @@
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-center w-2/5">
                                         <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
-                                        <p class="text-3xl md:text-4xl font-black text-green-500 mt-2">3</p>
+                                        <p class="text-3xl md:text-4xl font-black text-green-500 mt-2" id="u9-goals-for">?</p>
                                     </div>
                                     <div class="text-center w-1/5">
                                         <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
                                     </div>
                                     <div class="text-center w-2/5">
-                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words">Formby FC</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2">0</p>
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u9-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u9-goals-against">?</p>
                                     </div>
                                 </div>
-                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto">
-                                    Sat 4th July • League
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u9-result-date">
+                                    Awaiting Latest Result
                                 </div>
                             </div>
                         </div>
@@ -842,18 +787,18 @@
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-center w-2/5">
                                         <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2">1</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2" id="u11-goals-for">?</p>
                                     </div>
                                     <div class="text-center w-1/5">
                                         <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
                                     </div>
                                     <div class="text-center w-2/5">
-                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words">Crosby</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2">1</p>
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u11-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u11-goals-against">?</p>
                                     </div>
                                 </div>
-                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto">
-                                    Sun 5th July • League
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u11-result-date">
+                                    Awaiting Latest Result
                                 </div>
                             </div>
                         </div>
@@ -1082,6 +1027,29 @@
                                     <!-- Table will be populated automatically by Google Sheets -->
                                 </tbody>
                             </table>
+                        </div>
+
+                        <div class="w-full max-w-md mx-auto">
+                            <!-- Latest Result Card -->
+                            <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-green-500 flex flex-col justify-between h-full w-full">
+                                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="text-center w-2/5">
+                                        <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
+                                        <p class="text-3xl md:text-4xl font-black text-green-500 mt-2" id="u14-goals-for">?</p>
+                                    </div>
+                                    <div class="text-center w-1/5">
+                                        <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
+                                    </div>
+                                    <div class="text-center w-2/5">
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u14-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u14-goals-against">?</p>
+                                    </div>
+                                </div>
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u14-result-date">
+                                    Awaiting Latest Result
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -1463,10 +1431,10 @@
                     <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
                         <h3 class="text-2xl font-black text-boroughBlue uppercase mb-4 flex items-center gap-3"><i class="fa-solid fa-file-contract text-boroughYellow"></i> Club Policies</h3>
                         <ul class="space-y-3">
-                            <li><a href="Safeguarding_Children_Policy.pdf" download class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Safeguarding Children Policy</a></li>
-                            <li><a href="Anti_Bullying_Policy.pdf" download class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Anti-Bullying Policy</a></li>
-                            <li><a href="Code_of_Conduct_Coaches.pdf" download class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Code of Conduct for Coaches</a></li>
-                            <li><a href="Code_of_Conduct_Parents.pdf" download class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-download text-gray-400 mr-3"></i> Code of Conduct for Parents</a></li>
+                            <li><a href="https://docs.google.com/document/d/e/2PACX-1vSmmFJc0VQTFCqIv7oAaRB3gx_FrmhUKq29qnO3rot65Ac3VKo4EkGA7mkHUPcGcexPez_cY5jFvC19/pub" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 mr-3"></i> Safeguarding Children Policy</a></li>
+                            <li><a href="https://docs.google.com/document/d/e/2PACX-1vSU5Jx6yIh3-hyPamdlyuoMkehSM0udGtDjRwNJtujT2g-VBDndhn3dLqhClSqEkzRunjJ96VjmxH_c/pub" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 mr-3"></i> Anti-Bullying Policy</a></li>
+                            <li><a href="https://docs.google.com/document/d/e/2PACX-1vTdUa1ygY6Mo75tIi7q5IZNkRzvi0fuWlJrFEs_-j1RGO1-Q5TiZNFrAhGEY3Eb9e_yzxPtGo97HNNg/pub" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 mr-3"></i> Code of Conduct for Coaches</a></li>
+                            <li><a href="https://docs.google.com/document/d/e/2PACX-1vQaQ66Hu5a4e6G5BwDu-tZYA-JEGXHr_xMs-_Pog2YiA9MAEOBN9k1OMyaTDbr9-_Rop0h028w8fxQ3/pub" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-boroughLightBlue transition font-semibold"><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 mr-3"></i> Code of Conduct for Parents</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1611,7 +1579,7 @@
                         </div>
                         <h4 class="text-2xl font-black text-boroughBlue uppercase mb-2">Thank You!</h4>
                         <p class="text-gray-600 font-medium mb-6">Thank you for your enquiry, we will get back to you as soon as possible.</p>
-                        <button type="button" onclick="resetContactForm()" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-xs px-6 py-3 rounded-full hover:bg-boroughBlue hover:text-white transition">Send Another Message</button>
+                        <button type="button" onclick="window.resetContactForm()" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-xs px-6 py-3 rounded-full hover:bg-boroughBlue hover:text-white transition">Send Another Message</button>
                     </div>
                 </div>
             </div>
@@ -1619,7 +1587,7 @@
 
         <!-- PRIVACY POLICY PAGE -->
         <section id="privacy" class="page-view max-w-4xl mx-auto px-4 py-12 w-full">
-            <button onclick="showPage('home')" class="mb-6 text-boroughLightBlue hover:text-boroughYellow font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition"><i class="fa-solid fa-arrow-left"></i> Back to Home</button>
+            <button onclick="window.showPage('home')" class="mb-6 text-boroughLightBlue hover:text-boroughYellow font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition"><i class="fa-solid fa-arrow-left"></i> Back to Home</button>
             <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughYellow">
                 <h2 class="text-3xl font-black text-boroughBlue uppercase mb-6 border-b border-gray-100 pb-4">Privacy & Cookie Policy</h2>
                 <div class="text-gray-700 space-y-4 leading-relaxed text-sm">
@@ -1644,7 +1612,7 @@
                 <div class="flex gap-3 mt-1">
                     <a href="https://www.thefa.com/" target="_blank" rel="noopener noreferrer" class="text-boroughYellow hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Official FA Website</a>
                     <span class="text-gray-700">|</span>
-                    <button onclick="showPage('privacy')" class="text-gray-400 hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Privacy Policy</button>
+                    <button onclick="window.showPage('privacy')" class="text-gray-400 hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Privacy Policy</button>
                 </div>
                 <p class="mt-3 text-[10px] text-gray-600 max-w-2xl text-left px-2 sm:px-0">Safeguarding & Privacy: All team and player photos are published with explicit parental consent. If you wish for an image to be removed, please contact our Welfare Officer immediately.</p>
             </div>
@@ -1659,16 +1627,16 @@
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-slate-900 text-white p-4 sm:p-6 z-[100] shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transform transition-transform duration-500 translate-y-full flex flex-col sm:flex-row justify-between items-center gap-4 border-t-4 border-boroughYellow">
         <div class="text-sm">
             <p class="font-black text-lg mb-1 text-boroughYellow"><i class="fa-solid fa-cookie-bite"></i> We use cookies!</p>
-            <p class="text-gray-300 text-xs max-w-2xl">South Sefton FC uses strictly essential cookies to ensure you get the best experience on our website and to remember your preferences. <button onclick="showPage('privacy')" class="text-boroughYellow underline hover:text-white transition">Read our Privacy Policy</button>.</p>
+            <p class="text-gray-300 text-xs max-w-2xl">South Sefton FC uses strictly essential cookies to ensure you get the best experience on our website and to remember your preferences. <button onclick="window.showPage('privacy')" class="text-boroughYellow underline hover:text-white transition">Read our Privacy Policy</button>.</p>
         </div>
-        <button onclick="acceptCookies()" class="shrink-0 bg-boroughYellow text-boroughBlue font-black uppercase tracking-wider text-xs px-8 py-3 rounded-full shadow hover:bg-white transition">
+        <button onclick="window.acceptCookies()" class="shrink-0 bg-boroughYellow text-boroughBlue font-black uppercase tracking-wider text-xs px-8 py-3 rounded-full shadow hover:bg-white transition">
             Accept & Close
         </button>
     </div>
 
     <!-- JAVASCRIPT -->
     <script>
-        function showPage(pageId) {
+        window.showPage = function(pageId) {
             document.querySelectorAll('.page-view').forEach(page => {
                 page.classList.remove('active');
             });
@@ -1681,8 +1649,8 @@
             }
         }
 
-        function readArticle(articleId) {
-            showPage('news');
+        window.readArticle = function(articleId) {
+            window.showPage('news');
             setTimeout(() => {
                 const element = document.getElementById(articleId);
                 if (element) {
@@ -1691,7 +1659,7 @@
             }, 100);
         }
 
-        function toggleMobileMenu() {
+        window.toggleMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
@@ -1704,7 +1672,7 @@
             u14: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=0&single=true&output=csv"
         };
 
-        async function loadLeagueTables() {
+        window.loadLeagueTables = async function() {
             for (const [league, url] of Object.entries(leagueSheetUrls)) {
                 if (!url) continue; // Skip if no URL is provided
 
@@ -1762,6 +1730,148 @@
             }
         }
 
+        // --- GOOGLE SHEETS FIXTURES AUTOMATION ---
+        const fixturesSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=544866445&single=true&output=csv";
+
+        window.loadFixturesAndTicker = async function() {
+            try {
+                const response = await fetch(fixturesSheetUrl);
+                const csvText = await response.text();
+                // Parse rows, handling potential commas inside quotes if needed, though simple split is usually fine for this data
+                const rows = csvText.split('\n').map(row => row.split(','));
+                
+                const container = document.getElementById('fixtures-container');
+                const tickerContainer = document.getElementById('score-ticker-container');
+                
+                if (!container || !tickerContainer) return;
+
+                let fixturesHtml = '';
+                let tickerHtml = '';
+                
+                // Track latest results for the team pages
+                let teamResults = {
+                    u7: null, u9: null, u11: null, u14: null
+                };
+
+                // Start from 1 to skip header row
+                for (let i = 1; i < rows.length; i++) {
+                    const cols = rows[i];
+                    // Make sure we have at least 8 columns to reach column H
+                    if (cols.length < 8) continue; 
+
+                    // Clean up formatting
+                    const cleanCols = cols.map(c => c.replace(/^"|"$/g, '').trim());
+                    
+                    // Map your columns based on your setup:
+                    // Col A (0): Team
+                    // Col B (1): Date of Result
+                    // Col C (2): Our Score
+                    // Col D (3): Opp Score
+                    // Col E (4): Opponent (Past)
+                    // Col F (5): Next Opponent
+                    // Col G (6): Next Time
+                    // Col H (7): Next Competition
+                    
+                    const team = cleanCols[0];
+                    const pastDate = cleanCols[1];
+                    const ourScore = cleanCols[2];
+                    const oppScore = cleanCols[3];
+                    const pastOpponent = cleanCols[4];
+                    
+                    const nextOpponent = cleanCols[5];
+                    const time = cleanCols[6];
+                    const competition = cleanCols[7];
+
+                    // 1. Build the "This Weekend's Action" board
+                    if (team && nextOpponent && time) {
+                         fixturesHtml += `
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 border-b border-gray-100 hover:bg-blue-50 transition items-center text-center">
+                            <div class="font-black text-lg text-boroughBlue flex items-center justify-center gap-2"><span class="bg-boroughYellow w-2 h-2 rounded-full block"></span> ${team}</div>
+                            <div class="font-bold text-gray-700">${nextOpponent}</div>
+                            <div class="text-gray-600 text-sm"><i class="fa-regular fa-clock mr-1 text-gray-400"></i> ${time}</div>
+                            <div class="text-xs font-semibold text-gray-500 uppercase">${competition || 'League'}</div>
+                        </div>`;
+                    }
+                    
+                    // 2. Build the Scrolling Ticker
+                    // We generate a "LATEST" item and a "NEXT" item for each row
+                    
+                    // Determine result logic for the ticker
+                    let resultText = "drew";
+                    if(parseInt(ourScore) > parseInt(oppScore)) resultText = "won";
+                    if(parseInt(ourScore) < parseInt(oppScore)) resultText = "lost";
+                    
+                    // Add Latest Score to Ticker
+                    if(team && pastOpponent && ourScore !== "" && oppScore !== "") {
+                        tickerHtml += `
+                        <div class="ticker-item"><i class="fa-solid fa-futbol text-yellow-400 mr-2"></i> <strong>LATEST:</strong> ${team} ${resultText} ${ourScore}-${oppScore} vs ${pastOpponent}</div>
+                        <div class="ticker-item text-gray-500">|</div>`;
+                    }
+                    
+                    // Add Next Fixture to Ticker
+                    if(team && nextOpponent && time) {
+                        tickerHtml += `
+                        <div class="ticker-item"><i class="fa-regular fa-calendar-check text-yellow-400 mr-2"></i> <strong>NEXT:</strong> ${team} vs ${nextOpponent} - ${time}</div>
+                        <div class="ticker-item text-gray-500">|</div>`;
+                    }
+                    
+                    // 3. Save the Latest Result data to inject into the individual team pages
+                    if(team.toLowerCase().includes('u7') || team.toLowerCase().includes('under 7')) {
+                        teamResults.u7 = { ourScore, oppScore, pastOpponent, pastDate };
+                    } else if(team.toLowerCase().includes('u9') || team.toLowerCase().includes('under 9')) {
+                        teamResults.u9 = { ourScore, oppScore, pastOpponent, pastDate };
+                    } else if(team.toLowerCase().includes('u11') || team.toLowerCase().includes('under 11')) {
+                        teamResults.u11 = { ourScore, oppScore, pastOpponent, pastDate };
+                    } else if(team.toLowerCase().includes('u14') || team.toLowerCase().includes('under 14')) {
+                        teamResults.u14 = { ourScore, oppScore, pastOpponent, pastDate };
+                    }
+                }
+                
+                // Inject the HTML into the page
+                if(fixturesHtml.trim() !== '') {
+                    container.innerHTML = fixturesHtml;
+                } else {
+                    container.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold">No upcoming fixtures currently scheduled.</div>`;
+                }
+                
+                if(tickerHtml.trim() !== '') {
+                    // Double it up so it loops seamlessly
+                    tickerContainer.innerHTML = tickerHtml + tickerHtml;
+                } else {
+                    tickerContainer.innerHTML = `<div class="ticker-item"><i class="fa-solid fa-circle-info text-yellow-400 mr-2"></i> Stay tuned for latest updates and fixtures</div>`;
+                }
+                
+                // 4. Update the individual team pages with their latest scores
+                Object.keys(teamResults).forEach(teamKey => {
+                    const result = teamResults[teamKey];
+                    if(result && result.ourScore !== "") {
+                        const goalsForEl = document.getElementById(`${teamKey}-goals-for`);
+                        const goalsAgainstEl = document.getElementById(`${teamKey}-goals-against`);
+                        const oppEl = document.getElementById(`${teamKey}-opponent`);
+                        const dateEl = document.getElementById(`${teamKey}-result-date`);
+                        
+                        if(goalsForEl) goalsForEl.innerText = result.ourScore;
+                        if(goalsAgainstEl) goalsAgainstEl.innerText = result.oppScore;
+                        if(oppEl) oppEl.innerText = result.pastOpponent;
+                        if(dateEl) dateEl.innerHTML = `${result.pastDate} &bull; Latest Result`;
+                        
+                        // Color code the score based on win/loss/draw
+                        if(parseInt(result.ourScore) > parseInt(result.oppScore)) {
+                            if(goalsForEl) { goalsForEl.className = "text-3xl md:text-4xl font-black text-green-500 mt-2"; }
+                        } else if(parseInt(result.ourScore) < parseInt(result.oppScore)) {
+                            if(goalsForEl) { goalsForEl.className = "text-3xl md:text-4xl font-black text-red-500 mt-2"; }
+                        } else {
+                            if(goalsForEl) { goalsForEl.className = "text-3xl md:text-4xl font-black text-gray-500 mt-2"; }
+                        }
+                    }
+                });
+                
+            } catch (error) {
+                console.error("Failed to load fixtures from Google Sheets:", error);
+                document.getElementById('fixtures-container').innerHTML = `<div class="p-8 text-center text-gray-500 font-bold">Unable to load fixtures at this time.</div>`;
+            }
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             if(!localStorage.getItem('southSeftonCookiesAccepted')) {
                 setTimeout(() => {
@@ -1769,11 +1879,12 @@
                 }, 1500);
             }
             
-            // Load tables automatically on startup
-            loadLeagueTables();
+            // Load tables and fixtures automatically on startup
+            window.loadLeagueTables();
+            window.loadFixturesAndTicker();
         });
 
-        function acceptCookies() {
+        window.acceptCookies = function() {
             localStorage.setItem('southSeftonCookiesAccepted', 'true');
             document.getElementById('cookie-banner').classList.add('translate-y-full');
         }
@@ -1827,7 +1938,7 @@
             });
         }
 
-        function resetContactForm() {
+        window.resetContactForm = function() {
             successMsg.classList.add('hidden');
             contactForm.classList.remove('hidden');
         }
