@@ -273,7 +273,6 @@
                             <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
                             <p class="text-sm text-blue-500 font-bold uppercase">Upload U7 Team Photo</p>
                         </div>
-                        <!-- <img src="YOUR_U7_TEAM_PHOTO.jpg" alt="Under 7s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10"> -->
                     </div>
                     <div class="w-full p-6 md:p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
@@ -285,11 +284,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
-                    <!-- Left Col: League Data & Awards -->
                     <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
                         <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
                             <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
-                            
                             <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
                                 <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
                                     <tr>
@@ -304,13 +301,11 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbody-u7" class="text-gray-700">
-                                    <!-- Table will be populated automatically by Google Sheets -->
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="w-full max-w-md mx-auto">
-                            <!-- Latest Result Card -->
                             <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-green-500 flex flex-col justify-between h-full w-full">
                                 <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
                                 <div class="flex items-center justify-between mb-4">
@@ -337,7 +332,6 @@
                         <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
                             <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
                             
-                            <!-- Manager -->
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
                                 <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
                                     <img src="Kev.jpg" alt="Kev - Manager" class="w-full h-full object-cover object-top rounded-full">
@@ -348,7 +342,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Assistant Coach -->
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
                                 <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
                                     <img src="Jamie.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
@@ -360,17 +353,436 @@
                             </div>
                         </div>
 
-                        <!-- SPONSOR CARD -->
                         <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
                             <div class="w-full h-24 bg-gray-100 rounded flex items-center justify-center shrink-0 border border-gray-200 overflow-hidden relative group p-2">
                                 <i class="fa-solid fa-building text-3xl text-gray-400 absolute z-0 group-hover:opacity-0 transition"></i>
-                                <!-- <img src="sponsor-logo.png" alt="Sponsor Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300"> -->
                             </div>
                             <div>
                                 <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
                                 <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">Sponsor Name Here</h2>
                                 <p class="text-gray-600 text-xs mb-3">A huge thank you to our U7s kit sponsor for their generous support this season.</p>
                                 <a href="PASTE_SPONSOR_WEBSITE_LINK_HERE" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- U7 MEET THE SQUAD (8 PLAYERS)              -->
+                <!-- ========================================== -->
+                <div class="mt-8 md:mt-12 bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+                        <!-- Player 1 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">James</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 2 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Tommy</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 3 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Oscar</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 4 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Rex</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 5 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Oliver</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 6 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Anthony</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 7 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Charlie</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                        <!-- Player 8 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Lucas</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- U9 PAGE -->
+        <!-- ============================================== -->
+        <section id="u9" class="page-view flex-grow bg-gray-50 w-full">
+             <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <img src="Under9.jpg" alt="Under 9s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10">
+                    </div>
+                    <div class="w-full p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2 flex-wrap">
+                            <a href="https://www.instagram.com/johnolearykirkby_league?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> John O'leary Kirkby League</a>
+                            <a href="https://www.instagram.com/southseftonu9?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> U9s Instagram</a>
+                        </div>
+                        <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 9s</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed">Transitioning into slightly larger formats, our U9s focus on positional awareness, teamwork, and developing a love for competitive play.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
+                    <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
+                            <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
+                                <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
+                                    <tr>
+                                        <th class="px-3 py-3 rounded-tl-lg">Pos</th>
+                                        <th class="px-3 py-3 w-full">Team</th>
+                                        <th class="px-2 py-3 text-center">P</th>
+                                        <th class="px-2 py-3 text-center">W</th>
+                                        <th class="px-2 py-3 text-center">D</th>
+                                        <th class="px-2 py-3 text-center">L</th>
+                                        <th class="px-2 py-3 text-center">GD</th>
+                                        <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-u9" class="text-gray-700">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="w-full max-w-md mx-auto">
+                            <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-green-500 flex flex-col justify-between h-full w-full">
+                                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="text-center w-2/5">
+                                        <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2" id="u9-goals-for">?</p>
+                                    </div>
+                                    <div class="text-center w-1/5">
+                                        <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
+                                    </div>
+                                    <div class="text-center w-2/5">
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u9-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u9-goals-against">?</p>
+                                    </div>
+                                </div>
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u9-result-date">
+                                    Awaiting Latest Result
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
+                            
+                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
+                                <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
+                                    <img src="Jamie.jpg" alt="Manager" class="w-full h-full object-cover object-top rounded-full">
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">Kev</p>
+                                    <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
+                                    <img src="Jamie.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">John</p>
+                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
+                            <div class="w-full h-32 bg-white rounded flex items-center justify-center shrink-0 border border-gray-100 overflow-hidden relative group p-2">
+                                <img src="U9 Sponsor.png" alt="John Reilly Civil Engineering Limited Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300">
+                            </div>
+                            <div>
+                                <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
+                                <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">John Reilly Civil Engineering</h2>
+                                <p class="text-gray-600 text-xs mb-3">A huge thank you to our U9s kit sponsor for their generous support this season.</p>
+                                <a href="https://www.johnreilly.co.uk/index.htm" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- U9 MEET THE SQUAD (11 PLAYERS)             -->
+                <!-- ========================================== -->
+                <div class="mt-8 md:mt-12 bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
+                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+                        <!-- Player 1 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Charlie.jpg" alt="Charlie" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Charlie</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Goalkeeper</p>
+                            </div>
+                        </div>
+                        <!-- Player 2 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Billy.jpg" alt="Billy" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Billy</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Right Back</p>
+                            </div>
+                        </div>
+                        <!-- Player 3 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Kristers.jpg" alt="Kristers" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Kristers</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Left Back</p>
+                            </div>
+                        </div>
+                        <!-- Player 4 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Jacob.jpg" alt="Jacob" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jacob</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Left Wing</p>
+                            </div>
+                        </div>
+                        <!-- Player 5 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                 <img src="Teddy.jpg" alt="Teddy" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Teddy</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Centre Mid</p>
+                            </div>
+                        </div>
+                        <!-- Player 6 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <img src="Louie.jpg" alt="Louie" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Louie</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Right Wing</p>
+                            </div>
+                        </div>
+                        <!-- Player 7 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                 <img src="Shaun.jpg" alt="Shaun" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Shaun</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Centre Mid</p>
+                            </div>
+                        </div>
+                        <!-- Player 8 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                 <img src="Jax.jpg" alt="Jax" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jax</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Striker</p>
+                            </div>
+                        </div>
+                        <!-- Player 9 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                 <img src="Harry1.jpg" alt="Harry" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harry</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Striker</p>
+                            </div>
+                        </div>
+                        <!-- Player 10 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Noah.jpg" alt="Noah" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Noah</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Attacker</p>
+                            </div>
+                        </div>
+                        <!-- Player 11 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                            </div>
+                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- U11 PAGE -->
+        <!-- ============================================== -->
+        <section id="u11" class="page-view flex-grow bg-gray-50 w-full">
+             <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
+                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <img src="Team_2.jpg" alt="Under 11s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10">
+                    </div>
+                    <div class="w-full p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2 flex-wrap">
+                            <a href="https://hightownjfl.co.uk/" target="_blank" rel="noopener noreferrer" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                            <a href="https://www.instagram.com/southseftontornadoes?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> South Sefton Tornadoes Instagram</a>
+                        </div>
+                        <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">South Sefton Tornadoes</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed">Our U11s team competes in the 9v9 format, focusing on tactical understanding, physical development, and preparing for full 11-a-side football.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
+                    <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
+                            <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
+                                <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
+                                    <tr>
+                                        <th class="px-3 py-3 rounded-tl-lg">Pos</th>
+                                        <th class="px-3 py-3 w-full">Team</th>
+                                        <th class="px-2 py-3 text-center">P</th>
+                                        <th class="px-2 py-3 text-center">W</th>
+                                        <th class="px-2 py-3 text-center">D</th>
+                                        <th class="px-2 py-3 text-center">L</th>
+                                        <th class="px-2 py-3 text-center">GD</th>
+                                        <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-u11" class="text-gray-700">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="w-full max-w-md mx-auto">
+                            <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-gray-400 flex flex-col justify-between h-full w-full">
+                                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="text-center w-2/5">
+                                        <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2" id="u11-goals-for">?</p>
+                                    </div>
+                                    <div class="text-center w-1/5">
+                                        <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
+                                    </div>
+                                    <div class="text-center w-2/5">
+                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u11-opponent">TBC</p>
+                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u11-goals-against">?</p>
+                                    </div>
+                                </div>
+                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u11-result-date">
+                                    Awaiting Latest Result
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
+                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
+                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
+                                <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
+                                    <img src="Kev.jpg" alt="Paul - Manager" class="w-full h-full object-cover object-top rounded-full">
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">Kev</p>
+                                    <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
+                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover object-top rounded-full">
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">Jamie</p>
+                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
+                            <div class="w-full h-32 bg-white rounded flex items-center justify-center shrink-0 border border-gray-100 overflow-hidden relative group p-2">
+                                <img src="U11 Sponsor.png" alt="Squires & Beaumont Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300">
+                            </div>
+                            <div>
+                                <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
+                                <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">Squires & Beaumont</h2>
+                                <p class="text-gray-600 text-xs mb-3">A huge thank you to our U11s kit sponsor for their generous support this season.</p>
+                                <a href="https://squires-beaumont.co.uk/" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </div>
                         </div>
                     </div>
@@ -512,557 +924,16 @@
         </section>
 
         <!-- ============================================== -->
-        <!-- U9 PAGE -->
-        <!-- ============================================== -->
-        <section id="u9" class="page-view flex-grow bg-gray-50 w-full">
-             <div class="max-w-7xl mx-auto px-4 py-8">
-                <!-- Team Hero Banner -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                        <img src="Under9.jpg" alt="Under 9s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10">
-                    </div>
-                    <div class="w-full p-6 md:p-8 flex flex-col justify-center">
-                        <div class="flex items-center gap-3 mb-2 flex-wrap">
-                            <a href="https://www.instagram.com/johnolearykirkby_league?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> John O'leary Kirkby League</a>
-                            <a href="https://www.instagram.com/southseftonu9?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> U9s Instagram</a>
-                        </div>
-                        <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">Under 9s</h2>
-                        <p class="text-gray-600 text-lg leading-relaxed">Transitioning into slightly larger formats, our U9s focus on positional awareness, teamwork, and developing a love for competitive play.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
-                    <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
-                        <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
-                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
-                            
-                            <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
-                                <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
-                                    <tr>
-                                        <th class="px-3 py-3 rounded-tl-lg">Pos</th>
-                                        <th class="px-3 py-3 w-full">Team</th>
-                                        <th class="px-2 py-3 text-center">P</th>
-                                        <th class="px-2 py-3 text-center">W</th>
-                                        <th class="px-2 py-3 text-center">D</th>
-                                        <th class="px-2 py-3 text-center">L</th>
-                                        <th class="px-2 py-3 text-center">GD</th>
-                                        <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody-u9" class="text-gray-700">
-                                    <!-- Table will be populated automatically by Google Sheets -->
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="w-full max-w-md mx-auto">
-                            <!-- Latest Result Card -->
-                            <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-green-500 flex flex-col justify-between h-full w-full">
-                                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
-                                <div class="flex items-center justify-between mb-4">
-                                    <div class="text-center w-2/5">
-                                        <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2" id="u9-goals-for">?</p>
-                                    </div>
-                                    <div class="text-center w-1/5">
-                                        <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
-                                    </div>
-                                    <div class="text-center w-2/5">
-                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u9-opponent">TBC</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u9-goals-against">?</p>
-                                    </div>
-                                </div>
-                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u9-result-date">
-                                    Awaiting Latest Result
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
-                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
-                            
-                            <!-- Manager -->
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
-                                <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Jamie.jpg" alt="Manager" class="w-full h-full object-cover object-top rounded-full">
-                                </div>
-                                <div>
-                                    <p class="font-bold text-gray-800">Kev</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Assistant Coach -->
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
-                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Jamie.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
-                                </div>
-                                <div>
-                                    <p class="font-bold text-gray-800">John</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SPONSOR CARD -->
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
-                            <div class="w-full h-32 bg-white rounded flex items-center justify-center shrink-0 border border-gray-100 overflow-hidden relative group p-2">
-                                <img src="U9 Sponsor.png" alt="John Reilly Civil Engineering Limited Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300">
-                            </div>
-                            <div>
-                                <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
-                                <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">John Reilly Civil Engineering</h2>
-                                <p class="text-gray-600 text-xs mb-3">A huge thank you to our U9s kit sponsor for their generous support this season.</p>
-                                <a href="https://www.johnreilly.co.uk/index.htm" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========================================== -->
-                <!-- U9 MEET THE SQUAD (11 PLAYERS)             -->
-                <!-- ========================================== -->
-                <div class="mt-8 md:mt-12 bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
-                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
-                        <!-- Player 1 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Charlie.jpg" alt="Charlie" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Charlie</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Goalkeeper</p>
-                            </div>
-                        </div>
-                        <!-- Player 2 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Billy.jpg" alt="Billy" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Billy</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Right Back</p>
-                            </div>
-                        </div>
-                        <!-- Player 3 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Kristers.jpg" alt="Kristers" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Kristers</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Left Back</p>
-                            </div>
-                        </div>
-                        <!-- Player 4 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Jacob.jpg" alt="Jacob" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jacob</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Left Wing</p>
-                            </div>
-                        </div>
-                        <!-- Player 5 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Teddy.jpg" alt="Teddy" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Teddy</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Centre Mid</p>
-                            </div>
-                        </div>
-                        <!-- Player 6 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Louie.jpg" alt="Louie" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Louie</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Right Wing</p>
-                            </div>
-                        </div>
-                        <!-- Player 7 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Shaun.jpg" alt="Shaun" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Shaun</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Centre Mid</p>
-                            </div>
-                        </div>
-                        <!-- Player 8 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Jax.jpg" alt="Jax" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jax</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Striker</p>
-                            </div>
-                        </div>
-                        <!-- Player 9 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Harry1.jpg" alt="Harry" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harry</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Striker</p>
-                            </div>
-                        </div>
-                        <!-- Player 10 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Noah.jpg" alt="Noah" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Noah</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Attacker</p>
-                            </div>
-                        </div>
-                        <!-- Player 11 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================== -->
-        <!-- U11 PAGE -->
-        <!-- ============================================== -->
-        <section id="u11" class="page-view flex-grow bg-gray-50 w-full">
-             <div class="max-w-7xl mx-auto px-4 py-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                        <img src="Team_2.jpg" alt="Under 11s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10">
-                    </div>
-                    <div class="w-full p-6 md:p-8 flex flex-col justify-center">
-                        <div class="flex items-center gap-3 mb-2 flex-wrap">
-                            <a href="https://hightownjfl.co.uk/" target="_blank" rel="noopener noreferrer" class="bg-boroughYellow text-boroughBlue text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition inline-flex items-center gap-1">Hightown JFL <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
-                            <a href="https://www.instagram.com/southseftontornadoes?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow hover:opacity-90 transition inline-flex items-center gap-1"><i class="fa-brands fa-instagram"></i> South Sefton Tornadoes Instagram</a>
-                        </div>
-                        <h2 class="text-4xl font-black text-boroughBlue uppercase mb-4">South Sefton Tornadoes</h2>
-                        <p class="text-gray-600 text-lg leading-relaxed">Our U11s team competes in the 9v9 format, focusing on tactical understanding, physical development, and preparing for full 11-a-side football.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
-                    <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
-                        <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
-                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
-                            
-                            <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
-                                <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
-                                    <tr>
-                                        <th class="px-3 py-3 rounded-tl-lg">Pos</th>
-                                        <th class="px-3 py-3 w-full">Team</th>
-                                        <th class="px-2 py-3 text-center">P</th>
-                                        <th class="px-2 py-3 text-center">W</th>
-                                        <th class="px-2 py-3 text-center">D</th>
-                                        <th class="px-2 py-3 text-center">L</th>
-                                        <th class="px-2 py-3 text-center">GD</th>
-                                        <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody-u11" class="text-gray-700">
-                                    <!-- Table will be populated automatically by Google Sheets -->
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="w-full max-w-md mx-auto">
-                            <!-- Latest Result Card -->
-                            <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-gray-400 flex flex-col justify-between h-full w-full">
-                                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
-                                <div class="flex items-center justify-between mb-4">
-                                    <div class="text-center w-2/5">
-                                        <p class="font-black text-xs md:text-sm text-boroughBlue uppercase leading-tight break-words">South Sefton</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-500 mt-2" id="u11-goals-for">?</p>
-                                    </div>
-                                    <div class="text-center w-1/5">
-                                        <span class="bg-gray-100 text-gray-400 font-bold px-2 py-1 rounded text-[10px]">VS</span>
-                                    </div>
-                                    <div class="text-center w-2/5">
-                                        <p class="font-bold text-xs md:text-sm text-gray-600 uppercase leading-tight break-words" id="u11-opponent">TBC</p>
-                                        <p class="text-3xl md:text-4xl font-black text-gray-800 mt-2" id="u11-goals-against">?</p>
-                                    </div>
-                                </div>
-                                <div class="pt-3 border-t border-gray-100 text-center text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-auto" id="u11-result-date">
-                                    Awaiting Latest Result
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
-                            <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
-                                <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Kev.jpg" alt="Paul - Manager" class="w-full h-full object-cover object-top rounded-full">
-                                </div>
-                                <div>
-                                    <p class="font-bold text-gray-800">Kev</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Manager</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
-                                <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
-                                    <img src="Jamie.jpg" alt="Jamie - Coach" class="w-full h-full object-cover object-top rounded-full">
-                                </div>
-                                <div>
-                                    <p class="font-bold text-gray-800">Jamie</p>
-                                    <p class="text-xs text-gray-500 uppercase font-semibold">Coach</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SPONSOR CARD -->
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
-                            <div class="w-full h-32 bg-white rounded flex items-center justify-center shrink-0 border border-gray-100 overflow-hidden relative group p-2">
-                                <img src="U11 Sponsor.png" alt="Squires & Beaumont Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300">
-                            </div>
-                            <div>
-                                <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
-                                <h2 class="text-xl font-black text-boroughBlue uppercase mb-1">Squires & Beaumont</h2>
-                                <p class="text-gray-600 text-xs mb-3">A huge thank you to our U11s kit sponsor for their generous support this season.</p>
-                                <a href="https://squires-beaumont.co.uk/" target="_blank" rel="noopener noreferrer" class="text-boroughBlue font-bold text-xs uppercase tracking-wide hover:text-boroughLightBlue transition flex items-center justify-center gap-1">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========================================== -->
-                <!-- U11 MEET THE SQUAD (16 PLAYERS)            -->
-                <!-- ========================================== -->
-                <div class="mt-8 md:mt-12 bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
-                    <h3 class="text-2xl font-black text-boroughBlue uppercase mb-6 border-b-2 border-gray-100 pb-4"><i class="fa-solid fa-users-viewfinder text-boroughYellow mr-2"></i> Meet The Squad</h3>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
-                        <!-- Player 1 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <img src="Harry.jpg" alt="Harry Turner" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                                <a href="https://www.instagram.com/harrythesweeperkeeper?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="absolute bottom-2 right-2 z-20 bg-white p-1.5 rounded-lg text-pink-600 hover:text-pink-700 transition transform hover:scale-110 shadow-md flex items-center justify-center" title="Follow on Instagram">
-                                    <i class="fa-brands fa-instagram text-xl"></i>
-                                </a>
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harry</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Goalkeeper</p>
-                            </div>
-                        </div>
-                        <!-- Player 2 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Tommy.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Tommy</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Defender</p>
-                            </div>
-                        </div>
-                        <!-- Player 3 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Jack.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jack</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Defender</p>
-                            </div>
-                        </div>
-                        <!-- Player 4 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Tom.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Tom</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Defender</p>
-                            </div>
-                        </div>
-                        <!-- Player 5 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Harrison.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Harrison</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Defender</p>
-                            </div>
-                        </div>
-                        <!-- Player 6 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Archie.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Archie</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Midfielder</p>
-                            </div>
-                        </div>
-                        <!-- Player 7 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Jesse.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jesse</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Midfielder</p>
-                            </div>
-                        </div>
-                        <!-- Player 8 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Mason.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Mason</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Midfielder</p>
-                            </div>
-                        </div>
-                        <!-- Player 9 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Theo.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Theo</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Attacker</p>
-                            </div>
-                        </div>
-                        <!-- Player 10 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <img src="Noah.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10">
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Noah</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Attacker</p>
-                            </div>
-                        </div>
-                        <!-- Player 11 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                        <!-- Player 12 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 12</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                        <!-- Player 13 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 13</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                        <!-- Player 14 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 14</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                        <!-- Player 15 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 15</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                        <!-- Player 16 -->
-                        <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
-                            <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
-                            </div>
-                            <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
-                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 16</h4>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================== -->
         <!-- U14 PAGE -->
         <!-- ============================================== -->
         <section id="u14" class="page-view flex-grow bg-gray-50 w-full">
             <div class="max-w-7xl mx-auto px-4 py-8">
-                <!-- Team Hero Banner -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
                     <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-blue-100 flex flex-col items-center justify-center p-6 text-center z-0">
                             <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
                             <p class="text-sm text-blue-500 font-bold uppercase">Upload U14 Team Photo</p>
                         </div>
-                        <!-- <img src="YOUR_U14_TEAM_PHOTO.jpg" alt="Under 14s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10"> -->
                     </div>
                     <div class="w-full p-6 md:p-8 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-2">
@@ -1077,7 +948,6 @@
                     <div class="md:col-span-2 space-y-6 md:space-y-8 min-w-0 w-full px-1 md:px-0">
                         <div class="bg-white p-3 md:p-6 rounded-xl shadow border border-gray-100 overflow-x-auto w-full">
                             <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-table-list mr-2"></i> Current League Standings</h3>
-                            
                             <table class="w-full text-sm text-left whitespace-nowrap min-w-[500px]">
                                 <thead class="bg-boroughBlue text-white uppercase font-bold text-xs">
                                     <tr>
@@ -1092,13 +962,11 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tbody-u14" class="text-gray-700">
-                                    <!-- Table will be populated automatically by Google Sheets -->
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="w-full max-w-md mx-auto">
-                            <!-- Latest Result Card -->
                             <div class="bg-white p-4 md:p-6 rounded-xl shadow border-t-4 border-green-500 flex flex-col justify-between h-full w-full">
                                 <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Latest Result</h3>
                                 <div class="flex items-center justify-between mb-4">
@@ -1125,7 +993,6 @@
                         <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-boroughBlue w-full">
                             <h3 class="text-lg md:text-xl font-black text-boroughBlue uppercase mb-4"><i class="fa-solid fa-clipboard-user mr-2"></i> Coaching Staff</h3>
                             
-                            <!-- Manager -->
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg mb-3">
                                 <div class="w-12 h-12 bg-boroughBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
                                     <img src="Jamie.jpg" alt="Manager" class="w-full h-full object-cover object-top rounded-full">
@@ -1136,7 +1003,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Assistant Coach -->
                             <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
                                 <div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
                                     <img src="Jamie.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
@@ -1148,11 +1014,9 @@
                             </div>
                         </div>
 
-                        <!-- SPONSOR CARD -->
                         <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg border-t-4 border-blue-500 flex flex-col items-center text-center gap-4 w-full">
                             <div class="w-full h-24 bg-gray-100 rounded flex items-center justify-center shrink-0 border border-gray-200 overflow-hidden relative group p-2">
                                 <i class="fa-solid fa-building text-3xl text-gray-400 absolute z-0 group-hover:opacity-0 transition"></i>
-                                <!-- <img src="sponsor-logo.png" alt="Sponsor Logo" class="max-h-full max-w-full object-contain relative z-10 hover:scale-105 transition duration-300"> -->
                             </div>
                             <div>
                                 <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Proudly Sponsored By</h3>
@@ -1186,7 +1050,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
@@ -1197,7 +1060,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
@@ -1208,7 +1070,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
@@ -1219,7 +1080,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 5</h4>
@@ -1230,7 +1090,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 6</h4>
@@ -1241,7 +1100,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 7</h4>
@@ -1252,7 +1110,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 8</h4>
@@ -1263,7 +1120,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 9</h4>
@@ -1274,7 +1130,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 10</h4>
@@ -1285,7 +1140,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
@@ -1296,7 +1150,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 12</h4>
@@ -1307,7 +1160,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 13</h4>
@@ -1318,7 +1170,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 14</h4>
@@ -1329,7 +1180,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 15</h4>
@@ -1340,7 +1190,6 @@
                         <div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
                             <div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
                                 <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
-                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
                             </div>
                             <div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
                                 <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 16</h4>
@@ -1368,7 +1217,7 @@
 
         <!-- INDIVIDUAL ARTICLE PAGE TEMPLATE (Reused dynamically) -->
         <section id="full-article-page" class="page-view max-w-4xl mx-auto px-4 py-12 w-full">
-            <button onclick="window.showPage('news')" class="mb-6 text-boroughLightBlue hover:text-boroughYellow font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition"><i class="fa-solid fa-arrow-left"></i> Back to News</button>
+            <button id="article-back-btn" onclick="window.showPage('news')" class="mb-6 text-boroughLightBlue hover:text-boroughYellow font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition"><i class="fa-solid fa-arrow-left"></i> Back to News</button>
             <article class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <div class="flex items-center gap-3 mb-4">
                     <span id="dynamic-article-category" class="bg-boroughBlue text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow">Category</span>
@@ -1651,7 +1500,7 @@
                 <div class="flex gap-3 mt-1">
                     <a href="https://www.thefa.com/" target="_blank" rel="noopener noreferrer" class="text-boroughYellow hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Official FA Website</a>
                     <span class="text-gray-700">|</span>
-                    <button onclick="window.showPage('privacy')" class="text-boroughLightBlue hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Privacy Policy</button>
+                    <button onclick="window.showPage('privacy')" class="text-gray-400 hover:text-white transition text-[10px] font-bold uppercase tracking-wider">Privacy Policy</button>
                 </div>
                 <p class="mt-3 text-[10px] text-gray-600 max-w-2xl text-left px-2 sm:px-0">Safeguarding & Privacy: All team and player photos are published with explicit parental consent. If you wish for an image to be removed, please contact our Welfare Officer immediately.</p>
             </div>
@@ -1723,7 +1572,7 @@
 
         window.loadLeagueTables = async function() {
             for (const [league, url] of Object.entries(leagueSheetUrls)) {
-                if (!url) continue; // Skip if no URL is provided
+                if (!url) continue;
 
                 try {
                     const response = await fetch(url);
@@ -1734,16 +1583,13 @@
                     if (!tbody) continue;
 
                     let newHtml = '';
-                    // Start from 1 to skip header row (Pos, Team, P, W, D, L, GD, Pts)
                     for (let i = 1; i < rows.length; i++) {
                         const cols = rows[i];
-                        if (cols.length < 8) continue; // Skip empty rows
+                        if (cols.length < 8) continue;
 
-                        // Clean up Google Sheets formatting
                         const cleanCols = cols.map(c => c.replace(/^"|"$/g, '').trim());
                         const [pos, team, p, w, d, l, gd, pts] = cleanCols;
 
-                        // Check if the team is South Sefton
                         const isSouthSefton = team.toLowerCase().includes('south sefton');
 
                         if (isSouthSefton) {
@@ -1786,7 +1632,6 @@
             try {
                 const response = await fetch(fixturesSheetUrl);
                 const csvText = await response.text();
-                // Safely split rows and handle hidden carriage returns
                 const rows = csvText.split(/\r?\n/).map(row => row.split(','));
                 
                 const container = document.getElementById('fixtures-container');
@@ -1797,33 +1642,25 @@
                 let fixturesHtml = '';
                 let tickerHtml = '';
                 
-                // Track latest results for the team pages
-                let teamResults = {
-                    u7: null, u9: null, u11: null, u14: null
-                };
+                let teamResults = { u7: null, u9: null, u11: null, u14: null };
 
-                // Start from 1 to skip header row
                 for (let i = 1; i < rows.length; i++) {
                     const cols = rows[i];
-                    
                     if (cols.length === 0 || !cols[0] || cols[0].trim() === "") continue; 
 
-                    // Extract columns based EXACTLY on the spreadsheet layout provided
                     const cleanCols = Array.from({length: 8}).map((_, index) => {
                         return cols[index] ? cols[index].replace(/^"|"$/g, '').trim() : '';
                     });
                     
-                    const team = cleanCols[0];         // Col A: Team
-                    const pastOpponent = cleanCols[1]; // Col B: Latest_Opponent
-                    const ourScore = cleanCols[2];     // Col C: SSFC_Goals
-                    const oppScore = cleanCols[3];     // Col D: Opp_Goals
-                    const pastDate = cleanCols[4];     // Col E: Latest_Date
-                    
-                    const nextOpponent = cleanCols[5]; // Col F: Next_Opponent
-                    const time = cleanCols[6];         // Col G: Next_Time
-                    const competition = cleanCols[7];  // Col H: Next_Comp
+                    const team = cleanCols[0];
+                    const pastOpponent = cleanCols[1];
+                    const ourScore = cleanCols[2];
+                    const oppScore = cleanCols[3];
+                    const pastDate = cleanCols[4];
+                    const nextOpponent = cleanCols[5];
+                    const time = cleanCols[6];
+                    const competition = cleanCols[7];
 
-                    // 1. Build the "This Weekend's Action" board
                     if (nextOpponent && time) {
                          fixturesHtml += `
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 p-4 border-b border-gray-100 hover:bg-blue-50 transition items-center text-center">
@@ -1834,7 +1671,6 @@
                         </div>`;
                     }
                     
-                    // 2. Build the Scrolling Ticker
                     let resultText = "drew";
                     if(parseInt(ourScore) > parseInt(oppScore)) resultText = "won";
                     if(parseInt(ourScore) < parseInt(oppScore)) resultText = "lost";
@@ -1851,7 +1687,6 @@
                         <div class="ticker-item text-gray-500">|</div>`;
                     }
                     
-                    // 3. Save the Latest Result data to inject into the individual team pages
                     if(pastOpponent && ourScore !== "") {
                         const teamLower = team.toLowerCase();
                         if(teamLower.includes('u7') || teamLower.includes('under 7')) {
@@ -1878,7 +1713,6 @@
                     tickerContainer.innerHTML = `<div class="ticker-item"><i class="fa-solid fa-circle-info text-yellow-400 mr-2"></i> Stay tuned for latest updates and fixtures</div>`;
                 }
                 
-                // --- PUSH THE SAVED RESULTS TO THE HTML CARDS ---
                 const pushToDOM = (league, data) => {
                     if (data) {
                         const scoreFor = document.getElementById(`${league}-goals-for`);
@@ -1889,7 +1723,6 @@
                         if (scoreFor) {
                             scoreFor.innerText = data.ourScore;
                             scoreFor.className = "text-3xl md:text-4xl font-black mt-2"; 
-                            // Add win/loss/draw colors
                             if (parseInt(data.ourScore) > parseInt(data.oppScore)) {
                                 scoreFor.classList.add("text-green-500");
                             } else if (parseInt(data.ourScore) < parseInt(data.oppScore)) {
@@ -1923,22 +1756,32 @@
             try {
                 const response = await fetch(NEWS_TSV_URL);
                 const data = await response.text();
-                const rows = data.split('\n');
+                
+                // Use a safe split to handle newlines
+                const rows = data.split(/\n/);
                 allNews = [];
 
                 for(let i = 1; i < rows.length; i++) {
-                    if(!rows[i].trim()) continue;
-                    const cols = rows[i].split('\t'); 
+                    // DESTROY invisible carriage returns (the \r glitch) that break images!
+                    const row = rows[i].replace(/\r$/, ''); 
                     
-                    let imageVal = cols[3] && cols[3].trim() !== '' ? cols[3].trim() : 'Badge.png';
+                    if(!row.trim()) continue; // Skip blank rows
                     
+                    const cols = row.split('\t'); 
+                    
+                    // Safely grab columns, defaulting to empty strings if missing
+                    let imageVal = cols[3] ? cols[3].trim() : '';
+                    if (!imageVal) imageVal = 'Badge2.jpeg'; // use Badge2.jpeg as fallback
+                    
+                    let contentVal = cols[4] ? cols[4].trim() : '';
+
                     allNews.push({
                         id: i,
                         date: cols[0] ? cols[0].trim() : '',
                         category: cols[1] ? cols[1].trim() : 'Club Update',
                         headline: cols[2] ? cols[2].trim() : 'News Update',
                         image: imageVal,
-                        content: cols[4] ? cols[4].trim() : ''
+                        content: contentVal
                     });
                 }
                 
@@ -1962,11 +1805,11 @@
                 if(newsItem.category.toLowerCase().includes("league") || newsItem.category.toLowerCase().includes("tournament")) badgeColor = "bg-boroughYellow text-boroughBlue";
                 if(newsItem.category.toLowerCase().includes("recruitment") || newsItem.category.toLowerCase().includes("trials")) badgeColor = "bg-green-500 text-white";
 
-                // We pass the 'source' into the button so it knows where we came from
+                // Pass the 'source' into the button so it knows where we came from
                 const getCardHtml = (source) => `
                     <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col">
                         <div class="h-48 bg-gray-200 overflow-hidden relative shrink-0">
-                            <img src="${newsItem.image}" alt="${newsItem.headline}" class="w-full h-full object-contain object-center absolute inset-0 z-10" onerror="this.src='Badge.png'">
+                            <img src="${newsItem.image}" alt="${newsItem.headline}" class="w-full h-full object-contain object-center absolute inset-0 z-10" onerror="this.src='Badge2.jpeg'">
                             <div class="absolute top-4 left-4 z-20 ${badgeColor} text-xs font-black uppercase px-3 py-1 rounded-full shadow">${newsItem.category}</div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -1979,6 +1822,7 @@
                 
                 hubHtml += getCardHtml('news');
                 
+                // Only show 3 items on the home page!
                 if (index < 3) {
                     homeHtml += getCardHtml('home');
                 }
@@ -1995,7 +1839,11 @@
             document.getElementById('dynamic-article-date').innerText = article.date;
             document.getElementById('dynamic-article-category').innerText = article.category;
             document.getElementById('dynamic-article-headline').innerText = article.headline;
-            document.getElementById('dynamic-article-image').src = article.image;
+            
+            const imgEl = document.getElementById('dynamic-article-image');
+            imgEl.src = article.image;
+            imgEl.onerror = () => { imgEl.src = 'Badge2.jpeg'; }; // Extra safety for broken links
+
             document.getElementById('dynamic-article-content').innerHTML = `<p>${article.content.replace(/<br>/g, '</p><p>')}</p>`;
 
             let badgeColor = "bg-boroughBlue text-white";
@@ -2011,7 +1859,7 @@
                     backBtn.innerHTML = '<i class="fa-solid fa-arrow-left"></i> Back to Home';
                 } else {
                     backBtn.setAttribute('onclick', "window.showPage('news')");
-                    backBtn.innerHTML = '<i class="fa-solid fa-arrow-left"></i> Back to News';
+                    backBtn.innerHTML = '<i class="fa-solid fa-arrow-left"></i> Back to News Archive';
                 }
             }
 
@@ -2020,14 +1868,12 @@
         };
 
         window.addEventListener('DOMContentLoaded', () => {
-            // Cookie Banner Logic
             if(!localStorage.getItem('southSeftonCookiesAccepted')) {
                 setTimeout(() => {
                     document.getElementById('cookie-banner').classList.remove('translate-y-full');
                 }, 1500);
             }
             
-            // Initialize History state on load (If they click a link that has #u9 at the end)
             const hash = window.location.hash.substring(1);
             if (hash && document.getElementById(hash)) {
                 window.showPage(hash, false);
@@ -2036,7 +1882,6 @@
                 history.replaceState({ page: 'home' }, '', '#home');
             }
             
-            // Load external data automatically
             window.loadLeagueTables();
             window.loadFixturesAndTicker();
             fetchNews();
@@ -2055,7 +1900,6 @@
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Change button text to show loading state
                 const originalText = submitBtn.innerText;
                 submitBtn.innerText = "Sending...";
                 submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
@@ -2075,7 +1919,6 @@
                 .then(async (response) => {
                     let jsonResponse = await response.json();
                     if (response.status == 200) {
-                        // Success: Hide form, show thank you message
                         contactForm.reset();
                         contactForm.classList.add('hidden');
                         successMsg.classList.remove('hidden');
@@ -2089,7 +1932,6 @@
                     alert("Something went wrong. Please try again.");
                 })
                 .finally(() => {
-                    // Revert button back to normal
                     submitBtn.innerText = originalText;
                     submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
                 });
