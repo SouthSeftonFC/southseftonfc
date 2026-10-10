@@ -1086,17 +1086,17 @@
                 <div id="dynamic-article-content" class="prose max-w-none text-gray-700 space-y-4"></div>
             </article>
         </section>
-
+        
         <!-- ABOUT PAGE -->
         <section id="about" class="page-view max-w-5xl mx-auto px-4 py-12 w-full">
             <h2 class="text-4xl font-black text-boroughBlue uppercase mb-8 border-b-2 border-gray-100 pb-4">About South Sefton FC</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-boroughYellow mb-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our History</h3>
-                <p class="text-gray-700 leading-relaxed mb-6">Founded with a passion to provide local children a safe, fun, and competitive environment to play football, South Sefton FC has grown from a single squad to multiple teams competing across various age groups. We pride ourselves on being a community-first club.</p>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Philosophy</h3>
-                <p class="text-gray-700 leading-relaxed">Development over winning. While we compete fiercely on the pitch, our primary goal is the physical, mental, and social development of our young players. We believe in respect for referees, opponents, and each other.</p>
+            
+            <!-- DYNAMIC ABOUT TEXT -->
+            <div id="dynamic-about-container" class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-boroughYellow mb-8">
+                 <p class="text-gray-500 font-bold animate-pulse"><i class="fa-solid fa-spinner fa-spin mr-2"></i> Loading club details...</p>
             </div>
 
+            <!-- Darby Rimmer MND Foundation -->
             <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 mb-8 flex flex-col md:flex-row items-center gap-6">
                 <div class="w-32 md:w-48 h-auto flex items-center justify-center shrink-0">
                     <img src="DarbyRimmer.jpg" alt="Darby Rimmer MND Foundation Logo" class="w-full h-full object-contain">
@@ -1115,6 +1115,7 @@
                 </div>
                 <h3 class="text-3xl font-black text-boroughYellow uppercase mb-6 relative z-10"><i class="fa-solid fa-award mr-2"></i> Club Honours</h3>
                 
+                <!-- Dynamic Honours Container -->
                 <div id="honours-container" class="grid md:grid-cols-2 gap-6 relative z-10">
                     <div class="text-gray-400 font-bold animate-pulse col-span-2">
                         <i class="fa-solid fa-spinner fa-spin mr-2"></i> Loading club honours...
@@ -1125,6 +1126,7 @@
             <div class="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 class="text-2xl font-bold text-gray-800 mb-4"><i class="fa-solid fa-location-dot text-boroughBlue mr-2"></i> Our Home Ground</h3>
                 <p class="text-gray-700 mb-6">We play our home fixtures and conduct training sessions at the Mill Dam field.</p>
+                
                 <div class="w-full h-96 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=South%20Sefton%20Football%20Club,%20Lunt%20Road,%20Sefton&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
@@ -1577,7 +1579,7 @@
         }
 
         // --- GOOGLE SHEETS CLUB HONOURS AUTOMATION ---
-        const HONOURS_TSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=1867028577&single=true&output=tsv";
+        const HONOURS_TSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=644756220&single=true&output=tsv";
 
         window.loadHonours = async function() {
             try {
@@ -1599,6 +1601,7 @@
                     const trophyName = cols[0] ? cols[0].trim() : '';
                     const achievement = cols[1] ? cols[1].trim() : '';
                     
+                    // Smart Icon logic: Gold Trophy for winners, Silver Medal for runners up
                     let iconBgColor = "bg-boroughYellow";
                     let iconHtml = '<i class="fa-solid fa-trophy text-darkNavy text-xl"></i>';
                     
@@ -1629,6 +1632,50 @@
                 console.error("Failed to load honours from Google Sheets:", error);
                 const container = document.getElementById('honours-container');
                 if (container) container.innerHTML = `<div class="text-gray-400 font-bold col-span-2">Unable to load honours.</div>`;
+            }
+        }
+
+        // --- GOOGLE SHEETS DYNAMIC ABOUT SECTION ---
+        const ABOUT_TSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=1867028577&single=true&output=tsv";
+
+        window.loadAboutSection = async function() {
+            try {
+                const response = await fetch(ABOUT_TSV_URL);
+                const data = await response.text();
+                
+                const rows = data.split(/\n/);
+                const container = document.getElementById('dynamic-about-container');
+                if (!container) return;
+
+                let aboutHtml = '';
+
+                // Start loop at 1 to skip header row
+                for(let i = 1; i < rows.length; i++) {
+                    const row = rows[i].replace(/\r$/, ''); 
+                    if(!row.trim()) continue;
+                    
+                    const cols = row.split('\t'); 
+                    const heading = cols[0] ? cols[0].trim() : '';
+                    const bodyText = cols[1] ? cols[1].trim() : '';
+                    
+                    const formattedBody = bodyText.replace(/<br>/g, '</p><p class="text-gray-700 leading-relaxed mb-6">');
+
+                    aboutHtml += `
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">${heading}</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">${formattedBody}</p>
+                    `;
+                }
+                
+                if (aboutHtml !== '') {
+                    container.innerHTML = aboutHtml;
+                } else {
+                    container.innerHTML = `<p class="text-gray-500 italic">About details coming soon.</p>`;
+                }
+
+            } catch (error) {
+                console.error("Failed to load About details from Google Sheets:", error);
+                const container = document.getElementById('dynamic-about-container');
+                if (container) container.innerHTML = `<p class="text-gray-500 italic">Unable to load club details.</p>`;
             }
         }
 
@@ -1761,6 +1808,7 @@
             window.loadLeagueTables();
             window.loadFixturesAndTicker();
             window.loadHonours(); 
+            window.loadAboutSection(); 
             fetchNews();
         });
 
