@@ -296,7 +296,6 @@
                                         <th class="px-2 py-3 text-center">W</th>
                                         <th class="px-2 py-3 text-center">D</th>
                                         <th class="px-2 py-3 text-center">L</th>
-                                        <th class="px-2 py-3 text-center">GD</th>
                                         <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
                                     </tr>
                                 </thead>
@@ -726,7 +725,6 @@
                                         <th class="px-2 py-3 text-center">W</th>
                                         <th class="px-2 py-3 text-center">D</th>
                                         <th class="px-2 py-3 text-center">L</th>
-                                        <th class="px-2 py-3 text-center">GD</th>
                                         <th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
                                     </tr>
                                 </thead>
@@ -1577,9 +1575,9 @@
             u14: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=0&single=true&output=csv"
         };
 
-        window.loadLeagueTables = async function() {
+       window.loadLeagueTables = async function() {
             for (const [league, url] of Object.entries(leagueSheetUrls)) {
-                if (!url) continue;
+                if (!url) continue; // Skip if no URL is provided
 
                 try {
                     const response = await fetch(url);
@@ -1590,14 +1588,22 @@
                     if (!tbody) continue;
 
                     let newHtml = '';
+                    // Start from 1 to skip header row
                     for (let i = 1; i < rows.length; i++) {
                         const cols = rows[i];
-                        if (cols.length < 8) continue;
+                        if (cols.length < 8) continue; // Skip empty rows
 
+                        // Clean up Google Sheets formatting
                         const cleanCols = cols.map(c => c.replace(/^"|"$/g, '').trim());
                         const [pos, team, p, w, d, l, gd, pts] = cleanCols;
 
+                        // Check if the team is South Sefton
                         const isSouthSefton = team.toLowerCase().includes('south sefton');
+                        
+                        // SMART CHECK: Only show the GD cell if the league is NOT u7 and NOT u11
+                        const gdCellHtml = (league !== 'u7' && league !== 'u11') 
+                            ? `<td class="px-2 py-3 text-center font-bold">${gd}</td>` 
+                            : '';
 
                         if (isSouthSefton) {
                             newHtml += `
@@ -1608,7 +1614,7 @@
                                 <td class="px-2 py-3 text-center font-bold">${w}</td>
                                 <td class="px-2 py-3 text-center font-bold">${d}</td>
                                 <td class="px-2 py-3 text-center font-bold">${l}</td>
-                                <td class="px-2 py-3 text-center font-bold">${gd}</td>
+                                ${gdCellHtml}
                                 <td class="px-3 py-3 text-center font-black text-boroughBlue">${pts}</td>
                             </tr>`;
                         } else {
@@ -1620,7 +1626,7 @@
                                 <td class="px-2 py-3 text-center">${w}</td>
                                 <td class="px-2 py-3 text-center">${d}</td>
                                 <td class="px-2 py-3 text-center">${l}</td>
-                                <td class="px-2 py-3 text-center">${gd}</td>
+                                ${gdCellHtml}
                                 <td class="px-3 py-3 text-center font-bold">${pts}</td>
                             </tr>`;
                         }
@@ -1631,7 +1637,7 @@
                 }
             }
         }
-
+        
         // --- GOOGLE SHEETS FIXTURES AUTOMATION ---
         const fixturesSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=544866445&single=true&output=csv";
 
