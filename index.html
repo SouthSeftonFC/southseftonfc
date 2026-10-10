@@ -1,273 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Sefton FC | Grassroots Football in Merseyside</title>
-    
-    <!-- PWA / App-ify Tags -->
-    <meta name="theme-color" content="#0033A0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="South Sefton FC">
-    <link rel="apple-touch-icon" href="Badge.png">
-    <link rel="manifest" href="site.webmanifest">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Sefton FC | Grassroots Football in Merseyside</title>
 
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="GJYVa7T4WweVic84hkZRBT1B8iElFJlXxmPBdhruQGE" />
+<!-- PWA / App-ify Tags -->
+<meta name="theme-color" content="#0033A0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="South Sefton FC">
+<link rel="apple-touch-icon" href="Badge.png">
+<link rel="manifest" href="site.webmanifest">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Badge.png">
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="GJYVa7T4WweVic84hkZRBT1B8iElFJlXxmPBdhruQGE" />
 
-    <!-- Open Graph Sharing Tags (For WhatsApp & Facebook) -->
-    <meta property="og:title" content="South Sefton FC | Official Website">
-    <meta property="og:description" content="Welcome to the official home of South Sefton Football Club. Driven by community, passion, and local pride.">
-    <meta property="og:image" content="https://southseftonfc.github.io/southseftonfc/Badge.png">
-    <meta property="og:url" content="https://southseftonfc.github.io/southseftonfc/">
-    <meta property="og:type" content="website">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="Badge.png">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<!-- Open Graph Sharing Tags (For WhatsApp & Facebook) -->
+<meta property="og:title" content="South Sefton FC | Official Website">
+<meta property="og:description" content="Welcome to the official home of South Sefton Football Club. Driven by community, passion, and local pride.">
+<meta property="og:image" content="https://southseftonfc.github.io/southseftonfc/Badge.png">
+<meta property="og:url" content="https://southseftonfc.github.io/southseftonfc/">
+<meta property="og:type" content="website">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        boroughBlue: '#0033A0',
-                        boroughYellow: '#FFD100',
-                        boroughLightBlue: '#0055FF',
-                        darkNavy: '#001b5e'
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        html, body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #f8fafc; 
-            overflow-x: hidden; 
-            width: 100%; 
-            max-width: 100vw;
-        }
-        .page-view { display: none; animation: fadeIn 0.4s ease-in-out; }
-        .page-view.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .ticker-wrap { width: 100%; overflow: hidden; background-color: #1e293b; color: white; padding: 0.5rem 0; white-space: nowrap; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); border-bottom: 2px solid #FFD100;}
-        .ticker { display: inline-block; animation: ticker 60s linear infinite; font-weight: 600; font-size: 0.9rem;}
-        .ticker:hover { animation-play-state: paused; }
-        .ticker-item { padding: 0 2rem; display: inline-flex; align-items: center; gap: 0.5rem; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-        /* Dynamic Gradients */
-        .gradient-btn { background: linear-gradient(135deg, #0033A0 0%, #001b5e 100%); transition: all 0.3s ease; }
-        .gradient-btn:hover { background: linear-gradient(135deg, #0055FF 0%, #0033A0 100%); box-shadow: 0 4px 15px rgba(0,51,160,0.4); transform: translateY(-2px); }
-        .photo-btn { background: linear-gradient(135deg, #FFD100 0%, #f59e0b 100%); color: #001b5e; transition: all 0.3s ease; }
-        .photo-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,209,0,0.4); }
-        
-        /* Dropdown Bridge */
-        .dropdown-bridge::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            height: 10px;
-        }
-    </style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: { sans: ['Inter', 'sans-serif'] },
+colors: {
+boroughBlue: '#0033A0',
+boroughYellow: '#FFD100',
+boroughLightBlue: '#0055FF',
+darkNavy: '#001b5e'
+}
+}
+}
+}
+</script>
+
+<style>
+html, body { 
+font-family: 'Inter', sans-serif; 
+background-color: #f8fafc; 
+overflow-x: hidden; 
+width: 100%; 
+max-width: 100vw;
+}
+.page-view { display: none; animation: fadeIn 0.4s ease-in-out; }
+.page-view.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.ticker-wrap { width: 100%; overflow: hidden; background-color: #1e293b; color: white; padding: 0.5rem 0; white-space: nowrap; box-shadow: inset 0 0 10px rgba(0,0,0,0.5); border-bottom: 2px solid #FFD100;}
+.ticker { display: inline-block; animation: ticker 60s linear infinite; font-weight: 600; font-size: 0.9rem;}
+.ticker:hover { animation-play-state: paused; }
+.ticker-item { padding: 0 2rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+@keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+
+/* Dynamic Gradients */
+.gradient-btn { background: linear-gradient(135deg, #0033A0 0%, #001b5e 100%); transition: all 0.3s ease; }
+.gradient-btn:hover { background: linear-gradient(135deg, #0055FF 0%, #0033A0 100%); box-shadow: 0 4px 15px rgba(0,51,160,0.4); transform: translateY(-2px); }
+.photo-btn { background: linear-gradient(135deg, #FFD100 0%, #f59e0b 100%); color: #001b5e; transition: all 0.3s ease; }
+.photo-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,209,0,0.4); }
+
+/* Dropdown Bridge */
+.dropdown-bridge::before {
+content: '';
+position: absolute;
+top: -10px;
+left: 0;
+right: 0;
+height: 10px;
+}
+</style>
 </head>
 <body class="text-gray-800 antialiased flex flex-col min-h-screen">
 
-    <!-- HEADER & NAV -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-boroughYellow">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center cursor-pointer group" onclick="window.showPage('home')">
-                    <img src="Badge.png" alt="South Sefton FC Logo" class="h-10 w-10 md:h-16 md:w-16 mr-2 md:mr-3 group-hover:scale-105 transition duration-300 drop-shadow-md rounded-full object-cover">
-                    <div class="flex flex-col">
-                        <span class="font-black text-lg md:text-2xl tracking-tight text-boroughBlue uppercase leading-none">South Sefton</span>
-                        <span class="font-bold text-[10px] md:text-sm text-boroughYellow tracking-widest uppercase">Football Club</span>
-                    </div>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-0 lg:space-x-1">
-                    <button onclick="window.showPage('home')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Home</button>
-                    <div class="relative group h-full flex items-center">
-                        <button class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition flex items-center rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">
-                            Teams <i class="fa-solid fa-chevron-down ml-1 lg:ml-2 text-[10px] lg:text-xs"></i>
-                        </button>
-                        <div class="absolute left-0 top-[60px] w-48 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 transition-all dropdown-bridge z-[999]">
-                            <button onclick="window.showPage('u7')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 7s</button>
-                            <button onclick="window.showPage('u9')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 9s</button>
-                            <button onclick="window.showPage('u11')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 11s</button>
-                            <button onclick="window.showPage('u14')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 14s</button>
+<!-- HEADER & NAV -->
+<nav class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-boroughYellow">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between h-20">
+<div class="flex items-center cursor-pointer group" onclick="window.showPage('home')">
+<img src="Badge.png" alt="South Sefton FC Logo" class="h-10 w-10 md:h-16 md:w-16 mr-2 md:mr-3 group-hover:scale-105 transition duration-300 drop-shadow-md rounded-full object-cover">
+<div class="flex flex-col">
+<span class="font-black text-lg md:text-2xl tracking-tight text-boroughBlue uppercase leading-none">South Sefton</span>
+<span class="font-bold text-[10px] md:text-sm text-boroughYellow tracking-widest uppercase">Football Club</span>
+</div>
+</div>
+
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center space-x-0 lg:space-x-1">
+<button onclick="window.showPage('home')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Home</button>
+<div class="relative group h-full flex items-center">
+<button class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition flex items-center rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">
+Teams <i class="fa-solid fa-chevron-down ml-1 lg:ml-2 text-[10px] lg:text-xs"></i>
+</button>
+<div class="absolute left-0 top-[60px] w-48 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 transition-all dropdown-bridge z-[999]">
+<button onclick="window.showPage('u7')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 7s</button>
+<button onclick="window.showPage('u9')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 9s</button>
+<button onclick="window.showPage('u11')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 11s</button>
+<button onclick="window.showPage('u14')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-boroughBlue font-bold border-l-4 border-transparent hover:border-boroughYellow transition">Under 14s</button>
+</div>
+</div>
+<button onclick="window.showPage('news')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">News</button>
+<button onclick="window.showPage('about')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">About</button>
+<button onclick="window.showPage('safeguarding')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Safeguarding</button>
+<button onclick="window.showPage('contact')" class="ml-1 lg:ml-2 gradient-btn text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold shadow-md uppercase tracking-wide text-xs lg:text-sm whitespace-nowrap">Contact Us</button>
+</div>
+
+<!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center">
+<button onclick="window.toggleMobileMenu()" class="text-boroughBlue hover:text-boroughLightBlue focus:outline-none p-2 bg-blue-50 rounded-lg">
+<i class="fa-solid fa-bars text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner absolute w-full z-40">
+<button onclick="window.showPage('home')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Home</button>
+<div class="px-6 py-4 text-gray-800 font-bold border-b border-gray-50 uppercase tracking-wide text-boroughBlue bg-gray-50">Our Teams</div>
+<button onclick="window.showPage('u7')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 7s</button>
+<button onclick="window.showPage('u9')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 9s</button>
+<button onclick="window.showPage('u11')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 11s</button>
+<button onclick="window.showPage('u14')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 14s</button>
+<button onclick="window.showPage('news')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">News</button>
+<button onclick="window.showPage('about')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">About</button>
+<button onclick="window.showPage('safeguarding')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Safeguarding</button>
+<button onclick="window.showPage('contact')" class="block w-full text-left px-6 py-4 text-boroughBlue font-bold hover:bg-blue-50 uppercase tracking-wide">Contact Us</button>
+</div>
+</nav>
+
+<!-- SCORE TICKER -->
+<div class="ticker-wrap border-b border-gray-800">
+<div class="ticker" id="score-ticker-container">
+<!-- Dynamic ticker content will go here -->
+<div class="ticker-item"><i class="fa-solid fa-spinner fa-spin text-yellow-400 mr-2"></i> Loading Latest Fixtures...</div>
+</div>
+</div>
+
+<!-- MAIN CONTENT AREA (SPA) -->
+<div id="main-content" class="flex-grow flex flex-col relative z-10 w-full overflow-x-hidden">
+
+<!-- HOME PAGE -->
+<section id="home" class="page-view active flex-grow w-full">
+<!-- Hero -->
+<div class="relative bg-gray-900 overflow-hidden min-h-[500px] flex items-center">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Ground.png');"></div>
+<div class="absolute inset-0 bg-black/50"></div>
+
+<div class="relative max-w-7xl mx-auto px-4 py-20 text-center w-full z-10">
+<img src="Badge.png" alt="Crest" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl rounded-full object-cover">
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-4 drop-shadow-lg leading-tight">
+Pride of <br class="block md:hidden"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-boroughYellow to-yellow-300">The Borough</span>
+</h1>
+<p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 font-medium max-w-2xl mx-auto drop-shadow px-2">Community, Passion, and Development through grassroots football in South Sefton.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 px-4">
+<button onclick="window.showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all cursor-pointer w-full sm:w-auto">Join A Team</button>
+<button onclick="window.showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl cursor-pointer w-full sm:w-auto">Learn More</button>
+</div>
+</div>
+</div>
+
+<!-- WEEKEND FIXTURES BOARD -->
+<section class="py-12 bg-blue-50 border-b border-gray-200">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-black text-boroughBlue uppercase mb-6 flex items-center justify-center gap-3 text-center">
+<i class="fa-regular fa-calendar-days text-boroughYellow"></i> This Weekend's Action
+</h2>
+
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+<div class="hidden md:grid grid-cols-4 bg-boroughBlue text-white font-bold uppercase tracking-wider text-sm p-4 text-center">
+<div>Team</div>
+<div>Opponent</div>
+<div>Time</div>
+<div>Competition</div>
+</div>
+<div id="fixtures-container">
+<div class="p-8 text-center text-gray-500 font-bold animate-pulse">
+<i class="fa-solid fa-futbol fa-spin mr-2"></i> Fetching latest fixtures...
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Instagram Connect Section -->
+<section class="py-16 bg-gray-50 border-b border-gray-200">
+<div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-2xl mb-6 shadow-lg text-white text-3xl">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+<h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-4 tracking-tight">Connect With The Club</h2>
+<p class="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">Follow us on Instagram for live match updates, behind-the-scenes photos, tournament news, and more from across all age groups.</p>
+
+<div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-3xl">
+<div class="w-48 h-48 md:w-64 md:h-64 shrink-0 bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-200 p-2 flex items-center justify-center">
+<img src="Screenshot 2026-09-21 09.53.44~2.jpg" alt="Scan to follow South Sefton FC on Instagram" class="max-w-full max-h-full object-contain rounded-xl hover:scale-105 transition duration-500">
+</div>
+<div class="flex flex-col text-center md:text-left items-center md:items-start w-full">
+<h3 class="font-black text-2xl text-gray-800 mb-2">@southseftonfootballclub</h3>
+<p class="text-gray-500 font-medium mb-6">Scan the code or tap below to join our community online.</p>
+<a href="https://www.instagram.com/southseftonfootballclub" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-pink-500/30 hover:-translate-y-1 transition duration-300 w-full md:w-auto text-center flex items-center justify-center gap-2">
+<i class="fa-brands fa-instagram text-xl"></i> Follow Us Now
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Latest News Snippets -->
+<section class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between items-end mb-8 border-b-2 border-gray-100 pb-4">
+<h2 class="text-3xl font-black text-boroughBlue uppercase">Club News</h2>
+<button onclick="window.showPage('news')" class="text-boroughLightBlue font-bold hover:text-boroughYellow transition uppercase text-sm tracking-wider">View All <i class="fa-solid fa-arrow-right ml-1"></i></button>
+</div>
+
+<div id="home-news-grid" class="grid md:grid-cols-3 gap-8">
+<p class="text-gray-500 italic col-span-3">Loading latest news...</p>
+</div>
+</div>
+</section>
+
+<!-- Get Involved / Sponsor / Volunteer Action -->
+<section class="py-16 bg-blue-50/50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughYellow flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
+<div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+<i class="fa-solid fa-handshake-angle text-4xl text-boroughYellow"></i>
+</div>
+<h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Sponsor A Team</h3>
+<p class="text-gray-600 mb-8 flex-grow">Support grassroots football and get your brand in front of hundreds of local families every weekend. Packages available for kits, training gear, and pitch-side banners.</p>
+<a href="mailto:southseftonfootballclub@gmail.com" class="border-2 border-boroughYellow text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughYellow transition w-full block text-center">Email Us</a>
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughBlue flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
+<div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+<i class="fa-solid fa-users text-4xl text-boroughBlue"></i>
+</div>
+<h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Volunteer With Us</h3>
+<p class="text-gray-600 mb-8 flex-grow">We are always looking for passionate people to help out! Whether it's coaching, matchday assistance, or administrative support, we'd love to have you on the team.</p>
+<button onclick="window.showPage('contact'); setTimeout(() => document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'}), 100);" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughBlue hover:text-white transition w-full">Register Interest</button>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+<!-- ============================================== -->
+<!-- U7 PAGE -->
+<!-- ============================================== -->
+<section id="u7" class="page-view flex-grow bg-gray-50 w-full">
+<div class="max-w-7xl mx-auto px-4 py-8">
+<!-- Team Hero Banner -->
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
+<div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-blue-100 flex flex-col items-center justify-center p-6 text-center z-0">
+                            <i class="fa-solid fa-users text-5xl text-blue-300 mb-4"></i>
+                            <p class="text-sm text-blue-500 font-bold uppercase">Upload U7 Team Photo</p>
                         </div>
-                    </div>
-                    <button onclick="window.showPage('news')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">News</button>
-                    <button onclick="window.showPage('about')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">About</button>
-                    <button onclick="window.showPage('safeguarding')" class="px-2 lg:px-4 py-2 font-bold text-gray-700 hover:text-boroughLightBlue transition rounded-lg hover:bg-blue-50 uppercase tracking-wide text-xs lg:text-sm">Safeguarding</button>
-                    <button onclick="window.showPage('contact')" class="ml-1 lg:ml-2 gradient-btn text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full font-bold shadow-md uppercase tracking-wide text-xs lg:text-sm whitespace-nowrap">Contact Us</button>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button onclick="window.toggleMobileMenu()" class="text-boroughBlue hover:text-boroughLightBlue focus:outline-none p-2 bg-blue-50 rounded-lg">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner absolute w-full z-40">
-            <button onclick="window.showPage('home')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Home</button>
-            <div class="px-6 py-4 text-gray-800 font-bold border-b border-gray-50 uppercase tracking-wide text-boroughBlue bg-gray-50">Our Teams</div>
-            <button onclick="window.showPage('u7')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 7s</button>
-            <button onclick="window.showPage('u9')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 9s</button>
-            <button onclick="window.showPage('u11')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 11s</button>
-            <button onclick="window.showPage('u14')" class="block w-full text-left px-8 py-3 text-gray-600 font-semibold hover:bg-blue-50 hover:text-boroughBlue border-b border-gray-50"><i class="fa-solid fa-caret-right text-boroughYellow mr-2"></i>Under 14s</button>
-            <button onclick="window.showPage('news')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">News</button>
-            <button onclick="window.showPage('about')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">About</button>
-            <button onclick="window.showPage('safeguarding')" class="block w-full text-left px-6 py-4 text-gray-800 font-bold hover:bg-blue-50 border-b border-gray-50 uppercase tracking-wide">Safeguarding</button>
-            <button onclick="window.showPage('contact')" class="block w-full text-left px-6 py-4 text-boroughBlue font-bold hover:bg-blue-50 uppercase tracking-wide">Contact Us</button>
-        </div>
-    </nav>
-
-    <!-- SCORE TICKER -->
-    <div class="ticker-wrap border-b border-gray-800">
-        <div class="ticker" id="score-ticker-container">
-            <!-- Dynamic ticker content will go here -->
-            <div class="ticker-item"><i class="fa-solid fa-spinner fa-spin text-yellow-400 mr-2"></i> Loading Latest Fixtures...</div>
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT AREA (SPA) -->
-    <div id="main-content" class="flex-grow flex flex-col relative z-10 w-full overflow-x-hidden">
-
-        <!-- HOME PAGE -->
-        <section id="home" class="page-view active flex-grow w-full">
-            <!-- Hero -->
-            <div class="relative bg-gray-900 overflow-hidden min-h-[500px] flex items-center">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Ground.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-                
-                <div class="relative max-w-7xl mx-auto px-4 py-20 text-center w-full z-10">
-                    <img src="Badge.png" alt="Crest" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl rounded-full object-cover">
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-4 drop-shadow-lg leading-tight">
-                        Pride of <br class="block md:hidden"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-boroughYellow to-yellow-300">The Borough</span>
-                    </h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 font-medium max-w-2xl mx-auto drop-shadow px-2">Community, Passion, and Development through grassroots football in South Sefton.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 px-4">
-                        <button onclick="window.showPage('contact')" class="photo-btn text-boroughBlue font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all cursor-pointer w-full sm:w-auto">Join A Team</button>
-                        <button onclick="window.showPage('about')" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/20 transition-all shadow-xl cursor-pointer w-full sm:w-auto">Learn More</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- WEEKEND FIXTURES BOARD -->
-            <section class="py-12 bg-blue-50 border-b border-gray-200">
-                <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-3xl font-black text-boroughBlue uppercase mb-6 flex items-center justify-center gap-3 text-center">
-                        <i class="fa-regular fa-calendar-days text-boroughYellow"></i> This Weekend's Action
-                    </h2>
-                    
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                        <div class="hidden md:grid grid-cols-4 bg-boroughBlue text-white font-bold uppercase tracking-wider text-sm p-4 text-center">
-                            <div>Team</div>
-                            <div>Opponent</div>
-                            <div>Time</div>
-                            <div>Competition</div>
-                        </div>
-                        <div id="fixtures-container">
-                            <div class="p-8 text-center text-gray-500 font-bold animate-pulse">
-                                <i class="fa-solid fa-futbol fa-spin mr-2"></i> Fetching latest fixtures...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Instagram Connect Section -->
-            <section class="py-16 bg-gray-50 border-b border-gray-200">
-                <div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-2xl mb-6 shadow-lg text-white text-3xl">
-                        <i class="fa-brands fa-instagram"></i>
-                    </div>
-                    
-                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-4 tracking-tight">Connect With The Club</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">Follow us on Instagram for live match updates, behind-the-scenes photos, tournament news, and more from across all age groups.</p>
-                    
-                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 w-full max-w-3xl">
-                        <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-200 p-2 flex items-center justify-center">
-                            <img src="Screenshot 2026-09-21 09.53.44~2.jpg" alt="Scan to follow South Sefton FC on Instagram" class="max-w-full max-h-full object-contain rounded-xl hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="flex flex-col text-center md:text-left items-center md:items-start w-full">
-                            <h3 class="font-black text-2xl text-gray-800 mb-2">@southseftonfootballclub</h3>
-                            <p class="text-gray-500 font-medium mb-6">Scan the code or tap below to join our community online.</p>
-                            <a href="https://www.instagram.com/southseftonfootballclub" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:shadow-pink-500/30 hover:-translate-y-1 transition duration-300 w-full md:w-auto text-center flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-instagram text-xl"></i> Follow Us Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Latest News Snippets -->
-            <section class="py-16 bg-white">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="flex justify-between items-end mb-8 border-b-2 border-gray-100 pb-4">
-                        <h2 class="text-3xl font-black text-boroughBlue uppercase">Club News</h2>
-                        <button onclick="window.showPage('news')" class="text-boroughLightBlue font-bold hover:text-boroughYellow transition uppercase text-sm tracking-wider">View All <i class="fa-solid fa-arrow-right ml-1"></i></button>
-                    </div>
-                    
-                    <div id="home-news-grid" class="grid md:grid-cols-3 gap-8">
-                        <p class="text-gray-500 italic col-span-3">Loading latest news...</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Get Involved / Sponsor / Volunteer Action -->
-            <section class="py-16 bg-blue-50/50">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughYellow flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
-                            <div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-                                <i class="fa-solid fa-handshake-angle text-4xl text-boroughYellow"></i>
-                            </div>
-                            <h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Sponsor A Team</h3>
-                            <p class="text-gray-600 mb-8 flex-grow">Support grassroots football and get your brand in front of hundreds of local families every weekend. Packages available for kits, training gear, and pitch-side banners.</p>
-                            <a href="mailto:southseftonfootballclub@gmail.com" class="border-2 border-boroughYellow text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughYellow transition w-full block text-center">Email Us</a>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-boroughBlue flex flex-col items-center text-center group hover:-translate-y-1 transition duration-300">
-                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-                                <i class="fa-solid fa-users text-4xl text-boroughBlue"></i>
-                            </div>
-                            <h3 class="text-2xl font-black text-boroughBlue uppercase mb-3">Volunteer With Us</h3>
-                            <p class="text-gray-600 mb-8 flex-grow">We are always looking for passionate people to help out! Whether it's coaching, matchday assistance, or administrative support, we'd love to have you on the team.</p>
-                            <button onclick="window.showPage('contact'); setTimeout(() => document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'}), 100);" class="border-2 border-boroughBlue text-boroughBlue font-bold uppercase tracking-wider text-sm px-8 py-4 rounded-full shadow hover:bg-boroughBlue hover:text-white transition w-full">Register Interest</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- ============================================== -->
-        <!-- U7 PAGE -->
-        <!-- ============================================== -->
-        <section id="u7" class="page-view flex-grow bg-gray-50 w-full">
-            <div class="max-w-7xl mx-auto px-4 py-8">
-                <!-- Team Hero Banner -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 border border-gray-100 flex flex-col">
-                    <div class="w-full h-64 md:h-[400px] bg-gray-200 relative overflow-hidden flex items-center justify-center">
                        <img src="U7Team.jpg" alt="Under 7s Team" class="w-full h-full object-contain object-center absolute inset-0 z-10">
-                    </div>
+</div>
+<div class="w-full p-6 md:p-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-2">
+@@ -296,7 +293,6 @@
+<th class="px-2 py-3 text-center">W</th>
+<th class="px-2 py-3 text-center">D</th>
+<th class="px-2 py-3 text-center">L</th>
+                                        <th class="px-2 py-3 text-center">GD</th>
+<th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
+</tr>
+</thead>
+@@ -344,7 +340,7 @@
+
+<div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+<div class="w-12 h-12 bg-boroughLightBlue text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0 overflow-hidden">
+                                    <img src="Jamie.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
+                                    <img src="Nick.jpg" alt="Coach" class="w-full h-full object-cover object-top rounded-full">
+</div>
+<div>
+<p class="font-bold text-gray-800">Nick</p>
+@@ -378,81 +374,88 @@
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+                                <img src="James.jpg" alt="James" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">James</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 2 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Tommy1.jpg" alt="Tommy" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Tommy</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 3 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Oscar.jpg" alt="Oscar" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Oscar</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 4 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Rex.jpg" alt="Rex" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Rex</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 5 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Oliver.jpg" alt="Oliver" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Oliver</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 6 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Anthony.jpg" alt="Anthony" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Anthony</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 7 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Charlie1.jpg" alt="Charlie" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Charlie</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+<!-- Player 8 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Alfie.jpg" alt="Alfie" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Lucas</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Alfie</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider"></p>
+</div>
+</div>
+</div>
+@@ -664,18 +667,16 @@
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <img src="Noah.jpg" alt="Noah" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Noah</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Attacker</p>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 10</h4>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+<!-- Player 11 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+<h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
+@@ -719,7 +720,6 @@
+<th class="px-2 py-3 text-center">W</th>
+<th class="px-2 py-3 text-center">D</th>
+<th class="px-2 py-3 text-center">L</th>
+                                        <th class="px-2 py-3 text-center">GD</th>
+<th class="px-3 py-3 text-center rounded-tr-lg">Pts</th>
+</tr>
+</thead>
+@@ -813,7 +813,6 @@
+<!-- Player 2 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Tommy.jpg" alt="Tommy" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -825,7 +824,6 @@
+<!-- Player 3 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Jack.jpg" alt="Jack" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -837,7 +835,6 @@
+<!-- Player 4 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Tom.jpg" alt="Tom" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -849,7 +846,6 @@
+<!-- Player 5 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Harrison.jpg" alt="Harrison" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -861,7 +857,6 @@
+<!-- Player 6 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Archie.jpg" alt="Archie" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -873,7 +868,6 @@
+<!-- Player 7 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Jesse.jpg" alt="Jesse" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -885,7 +879,6 @@
+<!-- Player 8 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Mason.jpg" alt="Mason" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -897,7 +890,6 @@
+<!-- Player 9 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Theo.jpg" alt="Theo" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -909,7 +901,6 @@
+<!-- Player 10 -->
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+<img src="Noah.jpg" alt="Noah" class="w-full h-full object-cover object-top absolute inset-0 z-10" onerror="this.style.display='none'">
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+@@ -1039,10 +1030,9 @@
+<div class="bg-gray-50 rounded-xl overflow-hidden shadow border border-gray-200 group text-center flex flex-col relative">
+<div class="aspect-square relative w-full overflow-hidden shrink-0 bg-gray-200 flex items-center justify-center">
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+                                <!-- <img src="PLAYER_FILE_NAME.jpg" alt="Player Name" class="w-full h-full object-cover object-top absolute inset-0 z-10"> -->
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 1</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Benjamin Burke</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1052,7 +1042,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 2</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jayden Williams</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1062,7 +1052,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 3</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Oscar Clarke</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1072,7 +1062,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 4</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Bobby Jost</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1082,7 +1072,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 5</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Vincent Logan</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1092,7 +1082,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 6</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Josh Coulson</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1102,7 +1092,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 7</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Xavi Graham</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1112,7 +1102,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 8</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Kian Graham</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1122,7 +1112,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 9</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Will Hughes</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1132,7 +1122,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 10</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Sid Bond</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1142,7 +1132,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 11</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Ollie Hesp</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1152,7 +1142,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 12</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Gabe Kinsella</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1162,7 +1152,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 13</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jude Taylor</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1172,7 +1162,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 14</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jacob Beatson</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1182,7 +1172,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 15</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Jacob Garth</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1192,7 +1182,7 @@
+<i class="fa-solid fa-user text-5xl text-gray-400 absolute z-0 group-hover:scale-110 transition duration-300"></i>
+</div>
+<div class="p-4 border-t-4 border-boroughYellow flex-grow flex flex-col justify-center bg-white z-20">
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Player 16</h4>
+                                <h4 class="font-black text-gray-800 text-lg uppercase tracking-tight leading-none mb-1">Theo Wright</h4>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Position</p>
+</div>
+</div>
+@@ -1403,11 +1393,11 @@
+<a href="https://www.facebook.com/south.sefton.football.club" target="_blank" rel="noopener noreferrer" class="text-boroughLightBlue hover:underline">South Sefton FC Facebook</a>
+</div>
+</div>
+
+                        
+<!-- X (Twitter) -->
+<div class="flex items-start pt-4 border-t border-gray-100">
+                            <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center shrink-0 mr-4">
+                                <i class="fa-brands fa-x-twitter text-black text-xl"></i>
+                            <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center shrink-0 mr-4">
+                                <img src="X.png" alt="X Logo" class="w-5 h-5 object-contain">
+</div>
+<div>
+<h4 class="font-bold text-gray-800">Follow Us on X</h4>
+@@ -1515,10 +1505,10 @@
+</div>
+<p class="mt-3 text-[10px] text-gray-600 max-w-2xl text-left px-2 sm:px-0">Safeguarding & Privacy: All team and player photos are published with explicit parental consent. If you wish for an image to be removed, please contact our Welfare Officer immediately.</p>
+</div>
+            <div class="flex gap-6 text-2xl mt-4 sm:mt-0 shrink-0">
+            <div class="flex gap-6 text-2xl mt-4 sm:mt-0 shrink-0 items-center">
+<a href="https://www.facebook.com/south.sefton.football.club" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition duration-300" title="South Sefton FC Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/southseftonfootballclub" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/ssbfc2001" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition duration-300" title="South Sefton FC on X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://x.com/ssbfc2001" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition duration-300" title="South Sefton FC X"><img src="X.png" alt="X Logo" class="w-6 h-6 object-contain"></a>
+</div>
+</div>
+</footer>
+@@ -1537,7 +1527,6 @@
+<!-- JAVASCRIPT -->
+<script>
+window.showPage = function(pageId, addToHistory = true) {
+            // Safety check in case the page doesn't exist
+const targetPage = document.getElementById(pageId);
+if (!targetPage) return;
+
+@@ -1552,20 +1541,18 @@
+mobileMenu.classList.add('hidden');
+}
+
+            // Add back button memory
+if (addToHistory) {
+history.pushState({ pageId: pageId }, '', `#${pageId}`);
+}
+}
+
+        // Listen for the browser's Back Button
+window.addEventListener('popstate', function(event) {
+if (event.state && event.state.pageId) {
+                window.showPage(event.state.pageId, false); // false = don't add to history again
+                window.showPage(event.state.pageId, false);
+} else if (event.state && event.state.page) {
+window.showPage(event.state.page, false);
+} else {
+                window.showPage('home', false); // default to home
+                window.showPage('home', false);
+}
+});
+
+@@ -1603,6 +1590,11 @@
+const [pos, team, p, w, d, l, gd, pts] = cleanCols;
+
+const isSouthSefton = team.toLowerCase().includes('south sefton');
+                        
+                        // SMART CHECK: Only show GD column on U9 and U14
+                        const gdCellHtml = (league !== 'u7' && league !== 'u11') 
+                            ? `<td class="px-2 py-3 text-center font-bold">${gd}</td>` 
+                            : '';
+
+if (isSouthSefton) {
+newHtml += `
+@@ -1613,7 +1605,7 @@
+                               <td class="px-2 py-3 text-center font-bold">${w}</td>
+                               <td class="px-2 py-3 text-center font-bold">${d}</td>
+                               <td class="px-2 py-3 text-center font-bold">${l}</td>
+                                <td class="px-2 py-3 text-center font-bold">${gd}</td>
+                                ${gdCellHtml}
+                               <td class="px-3 py-3 text-center font-black text-boroughBlue">${pts}</td>
+                           </tr>`;
+} else {
+@@ -1625,7 +1617,7 @@
+                               <td class="px-2 py-3 text-center">${w}</td>
+                               <td class="px-2 py-3 text-center">${d}</td>
+                               <td class="px-2 py-3 text-center">${l}</td>
+                                <td class="px-2 py-3 text-center">${gd}</td>
+                                ${gdCellHtml}
+                               <td class="px-3 py-3 text-center font-bold">${pts}</td>
+                           </tr>`;
+}
+@@ -1636,7 +1628,7 @@
+}
+}
+}
+
+        
+// --- GOOGLE SHEETS FIXTURES AUTOMATION ---
+const fixturesSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=544866445&single=true&output=csv";
+
+@@ -1653,7 +1645,6 @@
+
+let fixturesHtml = '';
+let tickerHtml = '';
+                
+let teamResults = { u7: null, u9: null, u11: null, u14: null };
+
+for (let i = 1; i < rows.length; i++) {
+@@ -1769,21 +1760,16 @@
+const response = await fetch(NEWS_TSV_URL);
+const data = await response.text();
+
+                // Use a safe split to handle newlines
+const rows = data.split(/\n/);
+allNews = [];
+
+for(let i = 1; i < rows.length; i++) {
+                    // DESTROY invisible carriage returns (the \r glitch) that break images!
+const row = rows[i].replace(/\r$/, ''); 
+                    
+                    if(!row.trim()) continue; // Skip blank rows
+                    if(!row.trim()) continue;
+
+const cols = row.split('\t'); 
+                    
+                    // Safely grab columns, defaulting to empty strings if missing
+let imageVal = cols[3] ? cols[3].trim() : '';
+                    if (!imageVal) imageVal = 'Badge2.jpeg'; // use Badge2.jpeg as fallback
+                    if (!imageVal) imageVal = 'Badge2.jpeg';
+
+let contentVal = cols[4] ? cols[4].trim() : '';
+
+@@ -1817,7 +1803,6 @@
+if(newsItem.category.toLowerCase().includes("league") || newsItem.category.toLowerCase().includes("tournament")) badgeColor = "bg-boroughYellow text-boroughBlue";
+if(newsItem.category.toLowerCase().includes("recruitment") || newsItem.category.toLowerCase().includes("trials")) badgeColor = "bg-green-500 text-white";
+
+                // Pass the 'source' into the button so it knows where we came from
+const getCardHtml = (source) => `
+                   <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group flex flex-col">
+                       <div class="h-48 bg-gray-200 overflow-hidden relative shrink-0">
+@@ -1834,7 +1819,6 @@
+
+hubHtml += getCardHtml('news');
+
+                // Only show 3 items on the home page!
+if (index < 3) {
+homeHtml += getCardHtml('home');
+}
+@@ -1854,7 +1838,7 @@
+
+const imgEl = document.getElementById('dynamic-article-image');
+imgEl.src = article.image;
+            imgEl.onerror = () => { imgEl.src = 'Badge2.jpeg'; }; // Extra safety for broken links
+            imgEl.onerror = () => { imgEl.src = 'Badge2.jpeg'; };
+
+document.getElementById('dynamic-article-content').innerHTML = `<p>${article.content.replace(/<br>/g, '</p><p>')}</p>`;
+
+@@ -1863,7 +1847,6 @@
+if(article.category.toLowerCase().includes("recruitment") || article.category.toLowerCase().includes("trials")) badgeColor = "bg-green-500 text-white";
+document.getElementById('dynamic-article-category').className = `text-xs font-black uppercase px-3 py-1 rounded-full shadow ${badgeColor}`;
+
+            // Smart Back Button Logic
+const backBtn = document.getElementById('article-back-btn');
+if (backBtn) {
+if (sourcePage === 'home') {
