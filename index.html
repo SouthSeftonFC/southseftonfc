@@ -1608,7 +1608,6 @@
                         iconHtml = '<i class="fa-solid fa-medal text-darkNavy text-lg"></i>';
                     }
 
-                    // SHRUNK: text-base instead of text-lg, text-xs instead of text-sm, smaller icon circle
                     honoursHtml += `
                     <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl flex items-center gap-3">
                         <div class="w-10 h-10 ${iconBgColor} rounded-full flex items-center justify-center shrink-0">
@@ -1648,7 +1647,6 @@
 
                 let aboutHtml = '';
 
-                // Start loop at 1 to skip header row
                 for(let i = 1; i < rows.length; i++) {
                     const row = rows[i].replace(/\r$/, ''); 
                     if(!row.trim()) continue;
@@ -1657,15 +1655,14 @@
                     const heading = cols[0] ? cols[0].trim() : '';
                     let bodyText = cols[1] ? cols[1].trim() : '';
                     
-                    // SMARTER PARAGRAPH FIX: Catches ALT+ENTER spacing from Google Sheets
                     let formattedBody = bodyText
-                        .replace(/<br>/gi, '\n') // Turn fake breaks into real breaks
-                        .replace(/"/g, '')       // Strip annoying quotes google sheets adds
-                        .split(/\n+/)            // Split by any number of line breaks
-                        .map(para => para.trim()) // Clean up edges
-                        .filter(para => para.length > 0) // Remove empty lines
+                        .replace(/<br>/gi, '\n')
+                        .replace(/"/g, '')
+                        .split(/\n+/)
+                        .map(para => para.trim())
+                        .filter(para => para.length > 0)
                         .map(para => `<p class="text-sm text-gray-700 leading-relaxed mb-4">${para}</p>`)
-                        .join(''); // Glue them back together
+                        .join(''); 
 
                     aboutHtml += `
                         <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6 first:mt-0">${heading}</h3>
