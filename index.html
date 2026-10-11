@@ -1578,7 +1578,7 @@
             }
         }
 
-        // --- GOOGLE SHEETS CLUB HONOURS AUTOMATION ---
+// --- GOOGLE SHEETS CLUB HONOURS AUTOMATION ---
         const HONOURS_TSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWhKHtcUbgrKvPsEnCCN-OnVmJGr5gj7jdfcvr7LTwrt2_rHi5e25eN11x7a16lmk8fRHW_q6PzJkR/pub?gid=644756220&single=true&output=tsv";
 
         window.loadHonours = async function() {
@@ -1592,7 +1592,6 @@
 
                 let honoursHtml = '';
 
-                // Start loop at 1 to skip header row
                 for(let i = 1; i < rows.length; i++) {
                     const row = rows[i].replace(/\r$/, ''); 
                     if(!row.trim()) continue;
@@ -1601,23 +1600,23 @@
                     const trophyName = cols[0] ? cols[0].trim() : '';
                     const achievement = cols[1] ? cols[1].trim() : '';
                     
-                    // Smart Icon logic: Gold Trophy for winners, Silver Medal for runners up
                     let iconBgColor = "bg-boroughYellow";
-                    let iconHtml = '<i class="fa-solid fa-trophy text-darkNavy text-xl"></i>';
+                    let iconHtml = '<i class="fa-solid fa-trophy text-darkNavy text-lg"></i>';
                     
                     if (achievement.toLowerCase().includes('runner')) {
-                        iconBgColor = "bg-gray-300"; // Silver
-                        iconHtml = '<i class="fa-solid fa-medal text-darkNavy text-xl"></i>';
+                        iconBgColor = "bg-gray-300"; 
+                        iconHtml = '<i class="fa-solid fa-medal text-darkNavy text-lg"></i>';
                     }
 
+                    // SHRUNK: text-base instead of text-lg, text-xs instead of text-sm, smaller icon circle
                     honoursHtml += `
-                    <div class="bg-white/10 backdrop-blur border border-white/20 p-5 rounded-xl flex items-center gap-4">
-                        <div class="w-12 h-12 ${iconBgColor} rounded-full flex items-center justify-center shrink-0">
+                    <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl flex items-center gap-3">
+                        <div class="w-10 h-10 ${iconBgColor} rounded-full flex items-center justify-center shrink-0">
                             ${iconHtml}
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg leading-tight">${trophyName}</h4>
-                            <p class="text-gray-300 text-sm font-semibold uppercase tracking-wider">${achievement}</p>
+                            <h4 class="font-bold text-base leading-tight mb-1">${trophyName}</h4>
+                            <p class="text-gray-300 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">${achievement}</p>
                         </div>
                     </div>`;
                 }
@@ -1643,7 +1642,7 @@
                 const response = await fetch(ABOUT_TSV_URL);
                 const data = await response.text();
                 
-                const rows = data.split(/\n/);
+                const rows = data.split('\n');
                 const container = document.getElementById('dynamic-about-container');
                 if (!container) return;
 
@@ -1656,13 +1655,21 @@
                     
                     const cols = row.split('\t'); 
                     const heading = cols[0] ? cols[0].trim() : '';
-                    const bodyText = cols[1] ? cols[1].trim() : '';
+                    let bodyText = cols[1] ? cols[1].trim() : '';
                     
-                    const formattedBody = bodyText.replace(/<br>/g, '</p><p class="text-gray-700 leading-relaxed mb-6">');
+                    // SMARTER PARAGRAPH FIX: Catches ALT+ENTER spacing from Google Sheets
+                    let formattedBody = bodyText
+                        .replace(/<br>/gi, '\n') // Turn fake breaks into real breaks
+                        .replace(/"/g, '')       // Strip annoying quotes google sheets adds
+                        .split(/\n+/)            // Split by any number of line breaks
+                        .map(para => para.trim()) // Clean up edges
+                        .filter(para => para.length > 0) // Remove empty lines
+                        .map(para => `<p class="text-sm text-gray-700 leading-relaxed mb-4">${para}</p>`)
+                        .join(''); // Glue them back together
 
                     aboutHtml += `
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">${heading}</h3>
-                        <p class="text-gray-700 leading-relaxed mb-6">${formattedBody}</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6 first:mt-0">${heading}</h3>
+                        ${formattedBody}
                     `;
                 }
                 
