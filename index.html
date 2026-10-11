@@ -1641,23 +1641,16 @@
                 const response = await fetch(ABOUT_TSV_URL);
                 let data = await response.text();
                 
-                // Clean up Windows spacing glitches
+                // 1. Nuke Windows carriage returns
                 data = data.replace(/\r/g, '');
                 
-                // ADVANCED FIX: Reconstruct rows that got split in half by ALT+ENTER in Google Sheets
-                const rawRows = data.split('\n');
-                const rows = [];
-                let tempRow = '';
-                
-                for(let line of rawRows) {
-                    tempRow += (tempRow ? '\n' : '') + line;
-                    // If the number of quote marks is even, the cell is finished!
-                    if ((tempRow.match(/"/g) || []).length % 2 === 0) {
-                        rows.push(tempRow);
-                        tempRow = '';
-                    }
-                }
+                // 2. The ultimate fix for Google Sheets wrapping cells with newlines in double quotes
+                // This regex finds content inside quotes, and replaces the newlines inside them with a special marker
+                let processedData = data.replace(/"([^"]*)"/g, function(match, p1) {
+                    return p1.replace(/\n/g, '||||');
+                });
 
+                const rows = processedData.split('\n');
                 const container = document.getElementById('dynamic-about-container');
                 if (!container) return;
 
@@ -1669,22 +1662,19 @@
                     if(!row.trim()) continue;
                     
                     const cols = row.split('\t'); 
-                    // Remove the surrounding quotes from the heading if they exist
-                    const heading = cols[0] ? cols[0].replace(/^"|"$/g, '').trim() : '';
-                    // Remove the surrounding quotes from the body text
-                    let bodyText = cols[1] ? cols[1].replace(/^"|"$/g, '').trim() : '';
+                    const heading = cols[0] ? cols[0].trim() : '';
+                    let bodyText = cols[1] ? cols[1].trim() : '';
                     
-                    // Now safely split the body text by those new lines to create paragraphs
+                    // 3. Now split by our special marker to get the paragraphs back
                     let formattedBody = bodyText
-                        .replace(/<br\s*\/?>/gi, '\n') // Still works if you manually typed <br>
-                        .replace(/""/g, '"')           // Fix internal quotes that Google Sheets doubled up
-                        .split(/\n+/)                  // Split by any number of line breaks
-                        .map(para => para.trim())       // Clean up edges
-                        .filter(para => para.length > 0) // Remove empty lines
-                        // Apply the much cleaner, smaller, non-bold styling here!
+                        .split('||||')
+                        .map(para => para.trim())
+                        .filter(para => para.length > 0)
+                        // FORCE text-sm and font-normal so it is no longer big and bulky!
                         .map(para => `<p class="text-sm font-normal text-gray-700 leading-relaxed mb-4">${para}</p>`)
-                        .join(''); // Glue them back together
+                        .join(''); 
 
+                    // FORCE text-xl so the heading isn't massive either
                     aboutHtml += `
                         <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6 first:mt-0">${heading}</h3>
                         ${formattedBody}
